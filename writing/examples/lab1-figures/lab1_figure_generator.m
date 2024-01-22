@@ -1,3 +1,17 @@
+% lab1_figure_generator.m
+% Lab 1 Figure Generator
+% 
+% Author information:
+%   Name: Josh Brake
+%   Contact: jbrake@hmc.edu
+%   Created: 2023-01-21
+%   Last Update: 2023-01-21
+%
+% 
+% Purpose: This script loads data from a file and generates a figure 
+%   plotting the elevation from the gpx track vs. elapsed time.
+%
+%
 %% Import data
 
 trk = gpxread("example-data.gpx");
