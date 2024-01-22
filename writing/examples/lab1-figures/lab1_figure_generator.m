@@ -35,3 +35,9 @@ ax.FontSize = 14;
 
 % Set title
 ax.Title.String = "Relative Elevation vs. Elapsed Time";
+
+%% Save figure to file
+
+% Save as raster and vector
+exportgraphics(gca, 'lab1_figure_example.png', 'Resolution',300); % Save at resolution of at least 300 dots per inch (DPI)
+exportgraphics(gca, 'lab1_figure_example.pdf'); % Save as vector
