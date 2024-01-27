@@ -187,7 +187,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Keep answers as short as possible while still meeting specifications. Submit as a PDF.</p>
 <section id="what-is-one-teensy-unit" class="level2">
 <h2 class="anchored" data-anchor-id="what-is-one-teensy-unit">What is one ‘Teensy Unit’?</h2>
-<p>i.e.: How much has the Voltage input to the Teensy changed when the number reported by matlablogging.m increases by 1? Include a graph of Teensy output vs.&nbsp;sample number, any other relevant measurement setup information or measurements, and calculations showing how you did your conversion from measured units to Teensy units.</p>
+<p>i.e.: How much has the Voltage input to the Teensy changed when the number reported by <code>matlablogging.m</code> increases by 1? Include a graph of Teensy output vs.&nbsp;sample number, any other relevant information about your test setup or measurements, and calculations showing how you did your conversion from Voltage to Teensy units.</p>
 <p>Effort Specification:</p>
 <ul class="task-list">
 <li><input type="checkbox">Includes a graph of data sampled from the Teensy</li>
@@ -204,14 +204,31 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="what-is-the-sample-rate-of-the-teensy-running-matlablogging.ino" class="level2">
 <h2 class="anchored" data-anchor-id="what-is-the-sample-rate-of-the-teensy-running-matlablogging.ino">What is the sample rate of the Teensy running matlablogging.ino?</h2>
-<p>Effort Specification: 1. Includes a graph of data sampled from the Teensy 2. Includes information (an oscilloscope measurement or a detail of how the function generator is set up) that can be used to calibrate the horizontal scale of the Teensy graph. 3. Some calculations present</p>
-<p>Complete Specification: 1. Calculations are correct and yield the proper Teensy unit value.</p>
+<p>Effort Specification:</p>
+<ul class="task-list">
+<li><input type="checkbox">Includes a graph of data sampled from the Teensy</li>
+<li><input type="checkbox">Includes information (an oscilloscope measurement or a detail of how the function generator is set up) that can be used to calibrate the horizontal scale of the Teensy graph.</li>
+<li><input type="checkbox">Some calculations present</li>
+</ul>
+<p>Complete Specification:</p>
+<ul class="task-list">
+<li><input type="checkbox">Calculations are correct and yield the proper Teensy unit value.</li>
+</ul>
 <div style="page-break-after: always;"></div>
 </section>
 <section id="fill-in-this-table-of-properties-for-voltage-dividers" class="level2">
 <h2 class="anchored" data-anchor-id="fill-in-this-table-of-properties-for-voltage-dividers">Fill in this table of properties for voltage dividers</h2>
 <p>Fill in only one of the “Measured Output Voltage” columns for each measurement, whichever is appropriate to the instrument that you are using to measure. If you are using the “Measured Output Voltage (Vpp)” column, then also convert that measured voltage to an RMS value in the “Converted Output Voltage (Vrms)” column.</p>
-<p>Several column names have been abbreviated to make that table easier to fit on one page: - VOPI refers to “Predicted output Voltage with ideal components”, which is the prediction you are able to make before the start of lab. - VOPC refers to “Prediction output Voltage with measured components”, which refers to predictions of the output voltage that you make once you have measured your exact component values in lab. - VOM refers to “Measured output voltage”. There are two VOM columns, one in units of Vrms, and the other in units of Vpp. Fill in only the column appropriate to the instrument you are using. - VOC refers to “Converted output voltage”. This column will only be filled in for VOM measurements that use the Vpp units. It should contain the RMS Voltage that corresponds to your measured peak-peak Voltage. - <span class="math inline">\(\lambda\)</span> refers to the 95% confidence bounds you predicted for VOPI. - ERRI refers to the percent error between your VOPI and VOM/VOC. - ERRC refers to the percent error between your VOPC and VOM/VOC.</p>
+<p>Several column names have been abbreviated to make that table easier to fit on one page:</p>
+<ul>
+<li>VOPI refers to “Predicted output Voltage with ideal components”, which is the prediction you are able to make before the start of lab.</li>
+<li>VOPC refers to “Prediction output Voltage with measured components”, which refers to predictions of the output voltage that you make once you have measured your exact component values in lab.</li>
+<li>VOM refers to “Measured output voltage”. There are two VOM columns, one in units of Vrms, and the other in units of Vpp. Fill in only the column appropriate to the instrument you are using.</li>
+<li>VOC refers to “Converted output voltage”. This column will only be filled in for VOM measurements that use the Vpp units. It should contain the RMS Voltage that corresponds to your measured peak-peak Voltage.</li>
+<li><span class="math inline">\(\lambda\)</span> refers to the 95% confidence bounds you predicted for VOPI.</li>
+<li>ERRI refers to the percent error between your VOPI and VOM/VOC.</li>
+<li>ERRC refers to the percent error between your VOPC and VOM/VOC.</li>
+</ul>
 <p>Provide example calculations showing how you calculated the predicted output voltage and the predicted uncertainty bounds of the case where Z1=10 M<span class="math inline">\(\Omega\)</span>, Z2=20 M<span class="math inline">\(\Omega\)</span> and you measured the output with the multimeter.</p>
 <table class="table">
 <colgroup>
@@ -231,7 +248,7 @@ ul.task-list li input[type="checkbox"] {
 <th>Z1 &amp; Z2</th>
 <th>Instrument</th>
 <th>VOPI (Vrms)</th>
-<th>VOPM (Vrms)</th>
+<th>VOPC (Vrms)</th>
 <th>VOM (Vrms)</th>
 <th>VOM (Vpp)</th>
 <th>VOC (Vrms)</th>
@@ -423,7 +440,13 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-<p>Effort Specification: - [ ] At least half of the measurements are filled in with plausible values. - [ ] Measured values also have a corresponding predicted value that shows understanding of the divider equation. - [ ] Example calculation shows understanding of divider equations. - [ ] Example calculation uses error propagation to find the uncertainty bounds in the output voltage.</p>
+<p>Effort Specification:</p>
+<ul class="task-list">
+<li><input type="checkbox">At least half of the measurements are filled in with plausible values.</li>
+<li><input type="checkbox">Measured values also have a corresponding predicted value that shows understanding of the divider equation.</li>
+<li><input type="checkbox">Example calculation shows understanding of divider equations.</li>
+<li><input type="checkbox">Example calculation uses error propagation to find the uncertainty bounds in the output voltage.</li>
+</ul>
 <p>Complete Specification:</p>
 <ul class="task-list">
 <li><input type="checkbox">All measurements are filled in with correct values that match theory.</li>
@@ -450,7 +473,7 @@ ul.task-list li input[type="checkbox"] {
 <tr class="header">
 <th>Op-amp at</th>
 <th>VOPI (Vrms)</th>
-<th>VOPM (Vrms)</th>
+<th>VOPC (Vrms)</th>
 <th>VOM (Vrms)</th>
 <th><span class="math inline">\(\lambda\)</span> (V)</th>
 <th>ERRI (%)</th>
