@@ -2,142 +2,146 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://HMC-E80.github.io/E80/history/index.html</loc>
-    <lastmod>2024-01-27T18:22:55.355Z</lastmod>
+    <lastmod>2024-02-02T17:35:06.813Z</lastmod>
   </url>
   <url>
     <loc>https://HMC-E80.github.io/E80/index.html</loc>
-    <lastmod>2024-01-27T18:22:57.050Z</lastmod>
+    <lastmod>2024-02-02T17:35:09.026Z</lastmod>
   </url>
   <url>
     <loc>https://HMC-E80.github.io/E80/labs/lab0/index.html</loc>
-    <lastmod>2024-01-27T18:22:59.522Z</lastmod>
+    <lastmod>2024-02-02T17:35:12.656Z</lastmod>
   </url>
   <url>
     <loc>https://HMC-E80.github.io/E80/labs/lab0/matlab-startup.html</loc>
-    <lastmod>2024-01-27T18:23:00.657Z</lastmod>
+    <lastmod>2024-02-02T17:35:14.253Z</lastmod>
   </url>
   <url>
     <loc>https://HMC-E80.github.io/E80/labs/lab1/index.html</loc>
-    <lastmod>2024-01-27T18:23:02.804Z</lastmod>
+    <lastmod>2024-02-02T17:35:17.138Z</lastmod>
   </url>
   <url>
     <loc>https://HMC-E80.github.io/E80/labs/lab1/lab1-writing.html</loc>
-    <lastmod>2024-01-27T18:23:03.884Z</lastmod>
+    <lastmod>2024-02-02T17:35:18.717Z</lastmod>
   </url>
   <url>
     <loc>https://HMC-E80.github.io/E80/labs/lab1/prelab.html</loc>
-    <lastmod>2024-01-27T18:23:04.886Z</lastmod>
+    <lastmod>2024-02-02T17:35:20.347Z</lastmod>
   </url>
   <url>
     <loc>https://HMC-E80.github.io/E80/labs/lab1/submission.html</loc>
-    <lastmod>2024-01-27T18:23:06.908Z</lastmod>
+    <lastmod>2024-02-02T17:35:22.791Z</lastmod>
   </url>
   <url>
     <loc>https://HMC-E80.github.io/E80/labs/lab2/index.html</loc>
-    <lastmod>2024-01-27T18:23:09.388Z</lastmod>
+    <lastmod>2024-02-02T17:35:25.621Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E80.github.io/E80/labs/lab2/lab2-writing-template.html</loc>
+    <lastmod>2024-02-02T17:35:28.079Z</lastmod>
   </url>
   <url>
     <loc>https://HMC-E80.github.io/E80/labs/lab2/lab2-writing.html</loc>
-    <lastmod>2024-01-27T18:23:10.471Z</lastmod>
+    <lastmod>2024-02-02T17:35:29.674Z</lastmod>
   </url>
   <url>
     <loc>https://HMC-E80.github.io/E80/labs/lab2/prelab.html</loc>
-    <lastmod>2024-01-27T18:23:11.513Z</lastmod>
+    <lastmod>2024-02-02T17:35:31.284Z</lastmod>
   </url>
   <url>
     <loc>https://HMC-E80.github.io/E80/labs/lab2/submission.html</loc>
-    <lastmod>2024-01-27T18:23:14.212Z</lastmod>
+    <lastmod>2024-02-02T17:35:34.398Z</lastmod>
   </url>
   <url>
     <loc>https://HMC-E80.github.io/E80/labs/lab3/index.html</loc>
-    <lastmod>2024-01-27T18:23:17.348Z</lastmod>
+    <lastmod>2024-02-02T17:35:36.679Z</lastmod>
   </url>
   <url>
     <loc>https://HMC-E80.github.io/E80/labs/lab3/lab3-writing.html</loc>
-    <lastmod>2024-01-27T18:23:18.650Z</lastmod>
+    <lastmod>2024-02-02T17:35:38.076Z</lastmod>
   </url>
   <url>
     <loc>https://HMC-E80.github.io/E80/labs/lab3/submission.html</loc>
-    <lastmod>2024-01-27T18:23:20.584Z</lastmod>
+    <lastmod>2024-02-02T17:35:40.250Z</lastmod>
   </url>
   <url>
     <loc>https://HMC-E80.github.io/E80/labs/lab4/index.html</loc>
-    <lastmod>2024-01-27T18:23:22.577Z</lastmod>
+    <lastmod>2024-02-02T17:35:42.488Z</lastmod>
   </url>
   <url>
     <loc>https://HMC-E80.github.io/E80/labs/lab4/lab4-writing.html</loc>
-    <lastmod>2024-01-27T18:23:24.221Z</lastmod>
+    <lastmod>2024-02-02T17:35:44.075Z</lastmod>
   </url>
   <url>
     <loc>https://HMC-E80.github.io/E80/labs/lab4/submission.html</loc>
-    <lastmod>2024-01-27T18:23:25.766Z</lastmod>
+    <lastmod>2024-02-02T17:35:46.269Z</lastmod>
   </url>
   <url>
     <loc>https://HMC-E80.github.io/E80/labs/lab5/index.html</loc>
-    <lastmod>2024-01-27T18:23:27.822Z</lastmod>
+    <lastmod>2024-02-02T17:35:48.484Z</lastmod>
   </url>
   <url>
     <loc>https://HMC-E80.github.io/E80/labs/lab5/lab5-writing.html</loc>
-    <lastmod>2024-01-27T18:23:29.143Z</lastmod>
+    <lastmod>2024-02-02T17:35:50.033Z</lastmod>
   </url>
   <url>
     <loc>https://HMC-E80.github.io/E80/labs/lab5/submission.html</loc>
-    <lastmod>2024-01-27T18:23:30.486Z</lastmod>
+    <lastmod>2024-02-02T17:35:51.946Z</lastmod>
   </url>
   <url>
     <loc>https://HMC-E80.github.io/E80/labs/lab6/index.html</loc>
-    <lastmod>2024-01-27T18:23:32.882Z</lastmod>
+    <lastmod>2024-02-02T17:35:54.473Z</lastmod>
   </url>
   <url>
     <loc>https://HMC-E80.github.io/E80/labs/lab6/lab6-writing.html</loc>
-    <lastmod>2024-01-27T18:23:34.232Z</lastmod>
+    <lastmod>2024-02-02T17:35:55.834Z</lastmod>
   </url>
   <url>
     <loc>https://HMC-E80.github.io/E80/labs/lab6/submission.html</loc>
-    <lastmod>2024-01-27T18:23:35.559Z</lastmod>
+    <lastmod>2024-02-02T17:35:57.685Z</lastmod>
   </url>
   <url>
     <loc>https://HMC-E80.github.io/E80/labs/lab7/index.html</loc>
-    <lastmod>2024-01-27T18:23:37.458Z</lastmod>
+    <lastmod>2024-02-02T17:35:59.839Z</lastmod>
   </url>
   <url>
     <loc>https://HMC-E80.github.io/E80/labs/lab7/lab7-writing.html</loc>
-    <lastmod>2024-01-27T18:23:38.331Z</lastmod>
+    <lastmod>2024-02-02T17:36:01.213Z</lastmod>
   </url>
   <url>
     <loc>https://HMC-E80.github.io/E80/labs/lab_overview/index.html</loc>
-    <lastmod>2024-01-27T18:23:39.420Z</lastmod>
+    <lastmod>2024-02-02T17:36:02.839Z</lastmod>
   </url>
   <url>
     <loc>https://HMC-E80.github.io/E80/lectures/index.html</loc>
-    <lastmod>2024-01-27T18:23:40.453Z</lastmod>
+    <lastmod>2024-02-02T17:36:04.400Z</lastmod>
   </url>
   <url>
     <loc>https://HMC-E80.github.io/E80/presentation/kickoff/kickoff-presentation.html</loc>
-    <lastmod>2024-01-27T18:23:44.407Z</lastmod>
+    <lastmod>2024-02-02T17:36:08.075Z</lastmod>
   </url>
   <url>
     <loc>https://HMC-E80.github.io/E80/presentation/kickoff/team-contract-guidelines.html</loc>
-    <lastmod>2024-01-27T18:23:45.375Z</lastmod>
+    <lastmod>2024-02-02T17:36:09.372Z</lastmod>
   </url>
   <url>
     <loc>https://HMC-E80.github.io/E80/presentation/kickoff/team-contract-specs.html</loc>
-    <lastmod>2024-01-27T18:23:46.762Z</lastmod>
+    <lastmod>2024-02-02T17:36:11.841Z</lastmod>
   </url>
   <url>
     <loc>https://HMC-E80.github.io/E80/presentation/kickoff/team-contract-template.html</loc>
-    <lastmod>2024-01-27T18:23:48.435Z</lastmod>
+    <lastmod>2024-02-02T17:36:14.331Z</lastmod>
   </url>
   <url>
     <loc>https://HMC-E80.github.io/E80/project/index.html</loc>
-    <lastmod>2024-01-27T18:23:50.549Z</lastmod>
+    <lastmod>2024-02-02T17:36:16.572Z</lastmod>
   </url>
   <url>
     <loc>https://HMC-E80.github.io/E80/project/specifications.html</loc>
-    <lastmod>2024-01-27T18:23:51.378Z</lastmod>
+    <lastmod>2024-02-02T17:36:17.751Z</lastmod>
   </url>
   <url>
     <loc>https://HMC-E80.github.io/E80/reference/index.html</loc>
-    <lastmod>2024-01-27T18:23:52.244Z</lastmod>
+    <lastmod>2024-02-02T17:36:19.158Z</lastmod>
   </url>
 </urlset>

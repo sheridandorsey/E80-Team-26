@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>E80 SP24 - Lab 2 Writing Assignment</title>
+<title>E80 SP24 - Lab 3 Prelab Help Sheet</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -165,15 +165,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#writing-assignment" id="toc-writing-assignment" class="nav-link active" data-scroll-target="#writing-assignment">Writing Assignment</a></li>
-  <li><a href="#statement-of-work" id="toc-statement-of-work" class="nav-link" data-scroll-target="#statement-of-work">Statement of Work</a></li>
-  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
-  <li><a href="#required-resources" id="toc-required-resources" class="nav-link" data-scroll-target="#required-resources">Required Resources</a></li>
-  <li><a href="#specifications" id="toc-specifications" class="nav-link" data-scroll-target="#specifications">Specifications</a>
-  <ul class="collapse">
-  <li><a href="#effort" id="toc-effort" class="nav-link" data-scroll-target="#effort">Effort</a></li>
-  <li><a href="#completion" id="toc-completion" class="nav-link" data-scroll-target="#completion">Completion</a></li>
-  </ul></li>
+  <li><a href="#circuit-design" id="toc-circuit-design" class="nav-link active" data-scroll-target="#circuit-design">Circuit Design</a></li>
+  <li><a href="#schematics" id="toc-schematics" class="nav-link" data-scroll-target="#schematics">Schematics</a></li>
+  <li><a href="#turbidity" id="toc-turbidity" class="nav-link" data-scroll-target="#turbidity">Turbidity</a></li>
+  <li><a href="#statistics" id="toc-statistics" class="nav-link" data-scroll-target="#statistics">Statistics</a></li>
   </ul>
 </nav>
     </div>
@@ -182,8 +177,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Lab 2 Writing Assignment</h1>
-<p class="subtitle lead">Methods, Results, Equations, and Tables</p>
+<h1 class="title">Lab 3 Prelab Help Sheet</h1>
 </div>
 
 
@@ -198,91 +192,40 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="writing-assignment" class="level2">
-<h2 class="anchored" data-anchor-id="writing-assignment">Writing Assignment</h2>
-<p>In this writing assignment you will learn to make high quality tables that follow the conventions of scientific writing In addition, you will write text to describe how you collected the data presented in the tables, describe the equations used to interpret the data, and make an argument based on the data presented in the table.</p>
-</section>
-<section id="statement-of-work" class="level2">
-<h2 class="anchored" data-anchor-id="statement-of-work">Statement of Work</h2>
-<p>Prepare an example methods and results section of a technical memo.</p>
-<p>The <strong>methods</strong> section describes how you collected the data presented in the results section and should include any diagrams or figures needed to explain the data collection process. For this lab, the figures must include an electrical schematic of the voltage divider circuit and clearly show where the measurement was made. The figure should have a descriptive caption and follow the best practices outlined in the Lab 1 writing assignment. Your figure should include 150-250 word section of text describing the schematic and explaining how the measurement was made.</p>
-<p>The <strong>results</strong> section should present the data you collected. For this lab, the results section will be tables presenting the measured and predicted output voltage values. You should present one table which demonstrates the impact of measuring different resistance values with the same instrument (e.g., the multimeter). Another table should contains data to demonstrate the influence of different measurement devices used on the same circuit (e.g., comparing data from a set value of Z1 and Z2 across the multimeter, both oscilloscope probes, and Teensy) The predicted values should be calculated using the appropriate model for the electrical measurement tools you used and the appropriate error bounds (i.e., your model should include the internal resistance of any measurement tool and the resultant loading effects.) A 100-150 word section of text should be included beneath each table describing the results and what they mean, along with noting any particular notable features or discrepancies (e.g., if the measured value is outside of the 95% confidence interval).</p>
-<p>As usual in E80 writing assignments, these sections are going to be presented without an introduction, and therefore you need to exercise some caution in topic sentences to provide the barest introduction to the material. For example, don’t lead by writing “The robot navigated the course”. Instead, write “This data describes a robot navigating an obstacle course in an underwater test tank.”</p>
-</section>
-<section id="learning-objectives" class="level2">
-<h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
-<p>By the end of this writing assignment you will…</p>
-<ul>
-<li>Learn how to create a high quality table which presents collected data</li>
-<li>Understand the information that should be included in a methods section</li>
-<li>Write equations in methods section to explain the data collection procedure</li>
-<li>Created clear circuit schematics for the methods section</li>
-<li>Write text to describe how the data presented in the table was collected</li>
-<li>Write text to explain what the data presented in the table means</li>
-</ul>
-</section>
-<section id="required-resources" class="level2">
-<h2 class="anchored" data-anchor-id="required-resources">Required Resources</h2>
+<p>This help sheet is not going to be as comprehensive as the prelab help sheet for lab 1, and next week will be even less thorough. Part of the goal fo this class is for you to be able to devise prelab activities on your own. So if you’re running out of ideas for things to do, please review last week’s help sheet.</p>
+<p>Think carefully about which group members you want to complete each section. Many of the topics here are interconnected, so it often helps to make sure everyone does them (or, at minimum, that you meet and share out what you learned during prelab.) We especially encourage everyone to do the reading and watch the videos.</p>
+<section id="circuit-design" class="level2">
+<h2 class="anchored" data-anchor-id="circuit-design">Circuit Design</h2>
 <ul class="task-list">
-<li><input type="checkbox">Tables of measurement data from Lab 2</li>
-<li><input type="checkbox">Source file for the schematics of measurement circuits used in lab 2. This should be a diagrammatic format, not a breadboard layout.</li>
+<li><input type="checkbox">Design all the circuits in advance and analyze them on paper.</li>
+<li><input type="checkbox">Test out your designs using a simulator program like <a href="https://falstad.com/circuit/">Falstad</a> or <a href="https://www.analog.com/en/resources/design-tools-and-calculators/ltspice-simulator.html">ltSpice</a></li>
+<li><input type="checkbox">Plan how your circuits will fit on your breadboard ahead of time using a breadboard simulator like <a href="https://fritzing.org/">fritzing</a> or <a href="https://www.tinkercad.com/learn/overview/OPRHCXXL20FZS3N?type=circuits">Tinkercad</a></li>
+<li><input type="checkbox">What formula describes a non-inverting amplifier’s output?</li>
+<li><input type="checkbox">What formula describes an offset amplifier’s output?</li>
+<li><input type="checkbox">What formula describes a transimpedance amplifier’s output?</li>
+<li><input type="checkbox">What formula describes a 555 timer’s frequency when it is configured as an oscillator?</li>
+<li><input type="checkbox">What formula describes a 555 timer’s duty cycle when it is configured as an oscillator?</li>
+<li><input type="checkbox">What formula describes current through a series resistor-diode?</li>
+<li><input type="checkbox">What is the maximum current allowed in our IR LEDs?</li>
 </ul>
 </section>
-<section id="specifications" class="level2">
-<h2 class="anchored" data-anchor-id="specifications">Specifications</h2>
-<section id="effort" class="level3">
-<h3 class="anchored" data-anchor-id="effort">Effort</h3>
+<section id="schematics" class="level2">
+<h2 class="anchored" data-anchor-id="schematics">Schematics</h2>
 <ul class="task-list">
-<li><input type="checkbox">A schematic of the measurement circuit is included.</li>
-<li><input type="checkbox">The schematic has a caption.</li>
-<li><input type="checkbox">A table with measured data is presented and completed.</li>
-<li><input type="checkbox">Text is present to explain the contents of each table and figure.</li>
+<li><input type="checkbox">Try drawing a schematic using schematic drawing software like XX or YY or ZZ.</li>
+<li><input type="checkbox">Draw all the schamtics for the circuits you have designed, paste copies in appropriate places in the submission sheet, and distribute schematic source to both subteams.</li>
+<li><input type="checkbox">Have a professor review your schematics for style considerations in office hours.</li>
+<li><input type="checkbox">Can you quickly modify your schematic if you find that you need to change a component value in the lab?</li>
+<li><input type="checkbox">What’s an implicit connection?</li>
 </ul>
 </section>
-<section id="completion" class="level3">
-<h3 class="anchored" data-anchor-id="completion">Completion</h3>
-<section id="methods" class="level4">
-<h4 class="anchored" data-anchor-id="methods">Methods</h4>
-<ul class="task-list">
-<li><input type="checkbox">Documents the experimental setup with schematics</li>
-<li><input type="checkbox">Each schematic labeled as a figure with a figure number and caption</li>
-<li><input type="checkbox">Figures properly referenced in the text (e.g., “Fig. 1 demonstrates…”)</li>
-</ul>
+<section id="turbidity" class="level2">
+<h2 class="anchored" data-anchor-id="turbidity">Turbidity</h2>
 </section>
-<section id="tables" class="level4">
-<h4 class="anchored" data-anchor-id="tables">Tables</h4>
-<ul class="task-list">
-<li><input type="checkbox">Column headers and/or row headers are properly labeled.</li>
-<li><input type="checkbox">Column headers have correct units.</li>
-<li><input type="checkbox">Appropriate fonts and font sizes (e.g., 11 or 12 point, professional font like Times New Roman, Arial, Calibri, or Cambria)</li>
-<li><input type="checkbox">Elements in table neatly aligned</li>
-<li><input type="checkbox">All the entries, including the headers, fit comfortably in the width or height of the columns or rows</li>
-</ul>
-</section>
-<section id="results" class="level4">
-<h4 class="anchored" data-anchor-id="results">Results</h4>
-<ul class="task-list">
-<li><input type="checkbox">States the main conclusion of the experiment which we expect to how error bounds related to measure quantities and the influence of instrument loading.</li>
-<li><input type="checkbox">States any shortcomings or outlier data for future exploration along with suggested mechanisms.</li>
-</ul>
-</section>
-<section id="supporting-text" class="level4">
-<h4 class="anchored" data-anchor-id="supporting-text">Supporting Text</h4>
-<ul class="task-list">
-<li><input type="checkbox">Refers to each table.</li>
-<li><input type="checkbox">Explains the contents of the table.</li>
-<li><input type="checkbox">Every sentence is clear about what it refers to.</li>
-<li><input type="checkbox">No factually incorrect or vague statements.</li>
-<li><input type="checkbox">Correct sentence mechanics like cohesion and coherence between sentences and no run-ons.</li>
-<li><input type="checkbox">Correct paragraph mechanics like topic sentences and placement at breaks between ideas.</li>
-<li><input type="checkbox">Language is not stilted and jargon is kept to a reasonable minimum.</li>
-<li><input type="checkbox">Includes explanations of units of measurements representative of the data type, duration of the experiment, etc.</li>
-<li><input type="checkbox">Written text is within the specified word count.</li>
-</ul>
+<section id="statistics" class="level2">
+<h2 class="anchored" data-anchor-id="statistics">Statistics</h2>
 
 
-</section>
-</section>
 </section>
 
 </main> <!-- /main -->

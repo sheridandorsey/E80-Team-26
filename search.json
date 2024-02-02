@@ -396,7 +396,7 @@
     "href": "labs/lab2/index.html",
     "title": "Lab 2: Basic Electrical Measurements",
     "section": "",
-    "text": "Team size: 2\nSubmission Sheet: html Word\nPrelab Help Sheet: html"
+    "text": "Team size: 2\nSubmission Sheet: html Word\nPrelab Help Sheet: html\nWriting Assignment: html\nWriting Template: html Word"
   },
   {
     "objectID": "labs/lab2/index.html#introduction",
@@ -448,18 +448,39 @@
     "text": "7 Extra Credit 3\n\n\nTable 2: Table of RC divider measurements\n\n\n\n\n\n\n\nZ1\nZ2\nTest Frequencies\n\n\n\n\n10 k\\(\\Omega\\)\n0.47 \\(\\mu\\)F\n1 Hz, 10 Hz, 100 Hz, 1 kHz, 10 kHz, 100 kHz\n\n\n0.47 \\(\\mu\\)F\n10 k\\(\\Omega\\)\n1 Hz, 10 Hz, 100 Hz, 1 kHz, 10 kHz, 100 kHz\n\n\n220 \\(\\Omega\\)\n1 \\(\\mu\\)F\n1 Hz, 10 Hz, 100 Hz, 1 kHz, 10 kHz, 100 kHz\n\n\n10 M\\(\\Omega\\)\n1000 pF\n1 Hz, 10 Hz, 100 Hz, 1 kHz, 10 kHz, 100 kHz\n\n\n\n\nBuild the circuits in table Table 2 in the same manner as the dividers in Section 3, then repeat the predictions and measurements as in Section 3. Vary the input frequency to each of the values listed in the “Test Frequencies” column as you perform these measurements. Use an input amplitude of 5Vpp and, if using the Teensy, be sure to offset the signal. Note that the multimeter can measure capacitance. Measure the output voltages with any appropriate equipment (justify your choice). Measure the phase difference between the input and output Voltages where possible. Explain the results of your measurements and possible function for each circuit. Consider carefully in what (graphical) format(s) you want to present your results."
   },
   {
+    "objectID": "labs/lab2/lab2-writing-template.html",
+    "href": "labs/lab2/lab2-writing-template.html",
+    "title": "Lab 2 Writing Template",
+    "section": "",
+    "text": "Name:"
+  },
+  {
+    "objectID": "labs/lab2/lab2-writing-template.html#methods",
+    "href": "labs/lab2/lab2-writing-template.html#methods",
+    "title": "Lab 2 Writing Template",
+    "section": "Methods",
+    "text": "Methods\n::: {#fig-measurement-schematic} \nInsert the schematic used to make your measurements here. Note that your schematic should include any additional components needed to represent any output impedances of sources or input impedances of measurement devices.\nInsert table here containing measurements across different resistance values with the same instrument.\nText to explain what the table above means. The text should address and highlight:\n\nTrends in the data\nUnexpected results\nConclusions to be drawn\n\nInsert table here containing measurements across different instruments with the same resistance values.\nText to explain what the table above means. The text should address and highlight:\n\nTrends in the data\nUnexpected results\nConclusions to be drawn\nHow instrument loading influences the"
+  },
+  {
     "objectID": "labs/lab2/lab2-writing.html",
     "href": "labs/lab2/lab2-writing.html",
     "title": "Lab 2 Writing Assignment",
     "section": "",
-    "text": "In this writing assignment you will learn to make high quality tables that follow the conventions of scientific writing In addition, you will write text to describe how you collected the data presented in the tables, describe the equations used to interpret the data, and make an argument based on the data presented in the table.\nTo do this, you will write two sections of a technical memo: methods and results. The methods section describes how you collected the data presented in the results section and should include any diagrams or figures needed to explain the data collection process. In this lab, these figures must include an electrical schematic of the circuit used to make the resistance measurements.\nYou will also write a section to describe the results of your experiment and present the data you collected. For this lab, the main portion of the results section will be a table presenting the measured and predicted resistance values. The predicted values should be calculated using the appropropriate model for the electrical measurement tools you used (i.e., your model should include the internal resistance of any measurement tool and the resultant loading effects.)"
+    "text": "In this writing assignment you will learn to make high quality tables that follow the conventions of scientific writing In addition, you will write text to describe how you collected the data presented in the tables, describe the equations used to interpret the data, and make an argument based on the data presented in the table."
   },
   {
     "objectID": "labs/lab2/lab2-writing.html#writing-assignment",
     "href": "labs/lab2/lab2-writing.html#writing-assignment",
     "title": "Lab 2 Writing Assignment",
     "section": "",
-    "text": "In this writing assignment you will learn to make high quality tables that follow the conventions of scientific writing In addition, you will write text to describe how you collected the data presented in the tables, describe the equations used to interpret the data, and make an argument based on the data presented in the table.\nTo do this, you will write two sections of a technical memo: methods and results. The methods section describes how you collected the data presented in the results section and should include any diagrams or figures needed to explain the data collection process. In this lab, these figures must include an electrical schematic of the circuit used to make the resistance measurements.\nYou will also write a section to describe the results of your experiment and present the data you collected. For this lab, the main portion of the results section will be a table presenting the measured and predicted resistance values. The predicted values should be calculated using the appropropriate model for the electrical measurement tools you used (i.e., your model should include the internal resistance of any measurement tool and the resultant loading effects.)"
+    "text": "In this writing assignment you will learn to make high quality tables that follow the conventions of scientific writing In addition, you will write text to describe how you collected the data presented in the tables, describe the equations used to interpret the data, and make an argument based on the data presented in the table."
+  },
+  {
+    "objectID": "labs/lab2/lab2-writing.html#statement-of-work",
+    "href": "labs/lab2/lab2-writing.html#statement-of-work",
+    "title": "Lab 2 Writing Assignment",
+    "section": "Statement of Work",
+    "text": "Statement of Work\nPrepare an example methods and results section of a technical memo.\nThe methods section describes how you collected the data presented in the results section and should include any diagrams or figures needed to explain the data collection process. For this lab, the figures must include an electrical schematic of the voltage divider circuit and clearly show where the measurement was made. The figure should have a descriptive caption and follow the best practices outlined in the Lab 1 writing assignment. Your figure should include 150-250 word section of text describing the schematic and explaining how the measurement was made.\nThe results section should present the data you collected. For this lab, the results section will be tables presenting the measured and predicted output voltage values. You should present one table which demonstrates the impact of measuring different resistance values with the same instrument (e.g., the multimeter). Another table should contains data to demonstrate the influence of different measurement devices used on the same circuit (e.g., comparing data from a set value of Z1 and Z2 across the multimeter, both oscilloscope probes, and Teensy) The predicted values should be calculated using the appropriate model for the electrical measurement tools you used and the appropriate error bounds (i.e., your model should include the internal resistance of any measurement tool and the resultant loading effects.) A 100-150 word section of text should be included beneath each table describing the results and what they mean, along with noting any particular notable features or discrepancies (e.g., if the measured value is outside of the 95% confidence interval).\nAs usual in E80 writing assignments, these sections are going to be presented without an introduction, and therefore you need to exercise some caution in topic sentences to provide the barest introduction to the material. For example, don’t lead by writing “The robot navigated the course”. Instead, write “This data describes a robot navigating an obstacle course in an underwater test tank.”"
   },
   {
     "objectID": "labs/lab2/lab2-writing.html#learning-objectives",
@@ -473,14 +494,14 @@
     "href": "labs/lab2/lab2-writing.html#required-resources",
     "title": "Lab 2 Writing Assignment",
     "section": "Required Resources",
-    "text": "Required Resources\n\nRaw resistance measurement data from Lab 2\nSchematics of measurement circuits"
+    "text": "Required Resources\n\nTables of measurement data from Lab 2\nSource file for the schematics of measurement circuits used in lab 2. This should be a diagrammatic format, not a breadboard layout."
   },
   {
     "objectID": "labs/lab2/lab2-writing.html#specifications",
     "href": "labs/lab2/lab2-writing.html#specifications",
     "title": "Lab 2 Writing Assignment",
     "section": "Specifications",
-    "text": "Specifications\n\nTables\n\nProperly labeled column headers and/or row headers\nIncludes explanations of units of measurements representative of the data type, duration of the experiment, etc.\nAppropriate fonts and font sizes (e.g., 11 or 12 point, professional font like Times New Roman, Arial, Calibri, or Cambria)\nLine weights visible but not overly thick\nElements in table neatly aligned\nAll the entries, including the headers, fit comfortably in the width or height of the columns or rows\n\n\n\nMethods\n\nDocuments the experimental setup with schematics\nEach schematic labeled as a figure with a figure number and caption\nFigures properly referenced in the text (e.g., “Fig. 1 demonstrates…”)\n\n\n\nResults\n\nStates the main conclusion of the experiment\nStates any shortcomings or outlier data for future exploration along with suggested mechanisms.\n\n\n\nEquations\n\nEach equation is labeled\nEach equation is referenced in the text\nVariables of the equations are described in the text\n\n\n\nSupporting Text\n\nRefers to each table\nExplains the contents of the table\nCorrect sentence mechanics like cohesion and coherence between sentences and no run-ons\nCorrect paragraph mechanics like topic sentences and placement at breaks between ideas\nLanguage is not stilted and jargon is kept to a reasonable minimum."
+    "text": "Specifications\n\nEffort\n\nA schematic of the measurement circuit is included.\nThe schematic has a caption.\nA table with measured data is presented and completed.\nText is present to explain the contents of each table and figure.\n\n\n\nCompletion\n\nMethods\n\nDocuments the experimental setup with schematics\nEach schematic labeled as a figure with a figure number and caption\nFigures properly referenced in the text (e.g., “Fig. 1 demonstrates…”)\n\n\n\nTables\n\nColumn headers and/or row headers are properly labeled.\nColumn headers have correct units.\nAppropriate fonts and font sizes (e.g., 11 or 12 point, professional font like Times New Roman, Arial, Calibri, or Cambria)\nElements in table neatly aligned\nAll the entries, including the headers, fit comfortably in the width or height of the columns or rows\n\n\n\nResults\n\nStates the main conclusion of the experiment which we expect to how error bounds related to measure quantities and the influence of instrument loading.\nStates any shortcomings or outlier data for future exploration along with suggested mechanisms.\n\n\n\nSupporting Text\n\nRefers to each table.\nExplains the contents of the table.\nEvery sentence is clear about what it refers to.\nNo factually incorrect or vague statements.\nCorrect sentence mechanics like cohesion and coherence between sentences and no run-ons.\nCorrect paragraph mechanics like topic sentences and placement at breaks between ideas.\nLanguage is not stilted and jargon is kept to a reasonable minimum.\nIncludes explanations of units of measurements representative of the data type, duration of the experiment, etc.\nWritten text is within the specified word count."
   },
   {
     "objectID": "labs/lab2/prelab.html",
