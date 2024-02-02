@@ -165,9 +165,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#circuit-design" id="toc-circuit-design" class="nav-link active" data-scroll-target="#circuit-design">Circuit Design</a></li>
+  <li><a href="#reading-and-reference" id="toc-reading-and-reference" class="nav-link active" data-scroll-target="#reading-and-reference">Reading and Reference</a></li>
+  <li><a href="#circuit-design" id="toc-circuit-design" class="nav-link" data-scroll-target="#circuit-design">Circuit Design</a></li>
   <li><a href="#schematics" id="toc-schematics" class="nav-link" data-scroll-target="#schematics">Schematics</a></li>
-  <li><a href="#turbidity" id="toc-turbidity" class="nav-link" data-scroll-target="#turbidity">Turbidity</a></li>
+  <li><a href="#mechanical" id="toc-mechanical" class="nav-link" data-scroll-target="#mechanical">Mechanical</a></li>
   <li><a href="#statistics" id="toc-statistics" class="nav-link" data-scroll-target="#statistics">Statistics</a></li>
   </ul>
 </nav>
@@ -192,12 +193,30 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>This help sheet is not going to be as comprehensive as the prelab help sheet for lab 1, and next week will be even less thorough. Part of the goal fo this class is for you to be able to devise prelab activities on your own. So if you’re running out of ideas for things to do, please review last week’s help sheet.</p>
+<p>This help sheet is not going to be as comprehensive as the prelab help sheet for lab 1, and next week will be even less thorough. Part of the goal of this class is for you to be able to devise prelab activities on your own. So if you’re running out of ideas for things to do, please review last week’s help sheet.</p>
 <p>Think carefully about which group members you want to complete each section. Many of the topics here are interconnected, so it often helps to make sure everyone does them (or, at minimum, that you meet and share out what you learned during prelab.) We especially encourage everyone to do the reading and watch the videos.</p>
+<section id="reading-and-reference" class="level2">
+<h2 class="anchored" data-anchor-id="reading-and-reference">Reading and Reference</h2>
+<ul class="task-list">
+<li><input type="checkbox">Watch lecture videos.</li>
+<li><input type="checkbox">Watch op-amp videos 1 &amp; 2.</li>
+<li><input type="checkbox">Read the lab.</li>
+<li><input type="checkbox">Flag parts of the lab that didn’t make sense for discussion with your team or a prof.</li>
+<li><input type="checkbox">Read the submission sheet and notice:
+<ol type="1">
+<li>What are the deliverables?</li>
+<li>What are the specifications on those deliverables?</li>
+</ol></li>
+<li><input type="checkbox">Read the reference document about diodes</li>
+<li><input type="checkbox">Read the reference document about turbidity, and make note of the visual reference of what different turbidities look like.</li>
+<li><input type="checkbox">Read the turbidity meter instruction manual</li>
+<li><input type="checkbox">Read all linked datasheets</li>
+</ul>
+</section>
 <section id="circuit-design" class="level2">
 <h2 class="anchored" data-anchor-id="circuit-design">Circuit Design</h2>
 <ul class="task-list">
-<li><input type="checkbox">Design all the circuits in advance and analyze them on paper.</li>
+<li><input type="checkbox">Design all the circuits in advance and analyze them on paper. Analysis should include predicted output Voltages and component selection calculations.</li>
 <li><input type="checkbox">Test out your designs using a simulator program like <a href="https://falstad.com/circuit/">Falstad</a> or <a href="https://www.analog.com/en/resources/design-tools-and-calculators/ltspice-simulator.html">ltSpice</a></li>
 <li><input type="checkbox">Plan how your circuits will fit on your breadboard ahead of time using a breadboard simulator like <a href="https://fritzing.org/">fritzing</a> or <a href="https://www.tinkercad.com/learn/overview/OPRHCXXL20FZS3N?type=circuits">Tinkercad</a></li>
 <li><input type="checkbox">What formula describes a non-inverting amplifier’s output?</li>
@@ -207,23 +226,34 @@ ul.task-list li input[type="checkbox"] {
 <li><input type="checkbox">What formula describes a 555 timer’s duty cycle when it is configured as an oscillator?</li>
 <li><input type="checkbox">What formula describes current through a series resistor-diode?</li>
 <li><input type="checkbox">What is the maximum current allowed in our IR LEDs?</li>
+<li><input type="checkbox">What’s a rough guess at the resistances you’ll need in your photodiode test circuit and your transimpedance amplifiers.</li>
 </ul>
 </section>
 <section id="schematics" class="level2">
 <h2 class="anchored" data-anchor-id="schematics">Schematics</h2>
 <ul class="task-list">
-<li><input type="checkbox">Try drawing a schematic using schematic drawing software like XX or YY or ZZ.</li>
-<li><input type="checkbox">Draw all the schamtics for the circuits you have designed, paste copies in appropriate places in the submission sheet, and distribute schematic source to both subteams.</li>
+<li><input type="checkbox">Try drawing a schematic using schematic drawing software like <a href="https://app.diagrams.net/">draw.io</a>, <a href="https://www.analog.com/en/resources/design-tools-and-calculators/ltspice-simulator.html">ltSpice</a>, or <a href="https://www.daslhub.org/unlv/courses/me425-625/lesson-M-project/symbollibraryforppt.ppt">Powerpoint</a>.</li>
+<li><input type="checkbox">Draw all the schematics for the circuits you have designed, paste copies in appropriate places in the submission sheet, and distribute schematic source files to both subteams.</li>
 <li><input type="checkbox">Have a professor review your schematics for style considerations in office hours.</li>
 <li><input type="checkbox">Can you quickly modify your schematic if you find that you need to change a component value in the lab?</li>
-<li><input type="checkbox">What’s an implicit connection?</li>
+<li><input type="checkbox">What does connect-by-name mean in the context of electrical schematics?</li>
 </ul>
 </section>
-<section id="turbidity" class="level2">
-<h2 class="anchored" data-anchor-id="turbidity">Turbidity</h2>
+<section id="mechanical" class="level2">
+<h2 class="anchored" data-anchor-id="mechanical">Mechanical</h2>
+<ul class="task-list">
+<li><input type="checkbox">What’s a cuvette?</li>
+<li><input type="checkbox">View the Solidworks designs for the turbidity meter fixture</li>
+<li><input type="checkbox">Make a sketch of how your breadboard, circuits and turbidity meter fixture will fit together</li>
+</ul>
 </section>
 <section id="statistics" class="level2">
 <h2 class="anchored" data-anchor-id="statistics">Statistics</h2>
+<ul class="task-list">
+<li><input type="checkbox">How do you calculate a line of best fit and appropriate uncertainty measures? How do you report the uncertainty?</li>
+<li><input type="checkbox">Write code or make a spreadsheet that can calculate a line of best fit and appropriate statistics from a set of x,y points.</li>
+<li><input type="checkbox">Write code or make a spreadsheet that can plot a set of x,y points, a line of best fit, and appropriate uncertainty indicators.</li>
+</ul>
 
 
 </section>

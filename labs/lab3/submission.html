@@ -182,8 +182,129 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<p>Keep answers as short as possible while still meeting specifications. Submit as a PDF.</p>
+<p>Team Number:</p>
+<p>Team Member Names:</p>
+<p>Several of the deliverables in this submission sheet will call for schematics, oscilloscope traces or circuit pictures. These are specific genres of technical documents, so they have conventions you need to adhere to. The specifications for all schematics, oscilloscope traces and circuit pictures are listed on this page instead of being repeated for each deliverable in the document.</p>
+<p>All schematics in this report should adhere the following specification:</p>
+<ul class="task-list">
+<li><input type="checkbox">Include the stimulus for the circuit on the left</li>
+<li><input type="checkbox">Include power supply connections and bypass capacitors.</li>
+<li><input type="checkbox">Annotate each node with a name, using the name Vin for the input voltage and Vout for the measured output voltage</li>
+<li><input type="checkbox">Annotate each resistor and capacitor with a component value.</li>
+<li><input type="checkbox">Use implicit connections to connect the power supplies.</li>
+<li><input type="checkbox">Use the op-amp symbol to indicate operational amplifiers (instead of, e.g., a pinout diagram), but annotates that symbol with the chip used to make the op-amp.</li>
+<li><input type="checkbox">Represent op-amp circuits in their typical configurations, so that they look similar to videos. Don’t use non-typical drawings that make one type of op-amp circuit look like another. (e.g.: don’t draw a non-inverting amplifier with feedback on the top of the op-amp; that’s usually how inverting amplifiers are drawn.)</li>
+<li><input type="checkbox">Generally keep signal flow left-to-right</li>
+<li><input type="checkbox">Generally keep high voltages at the top of the diagram and low voltages at the bottom.</li>
+<li><input type="checkbox">Space out components well enough and zoom in close enough that annotations are easy to read.</li>
+<li><input type="checkbox">Minimize unnecessary crossings, corners and jogs in the wires. Use connect-by-name to reduce congestion among wires. This <a href="https://learn.sparkfun.com/tutorials/how-to-read-a-schematic/reading-schematics">tutorial</a> has more information.</li>
+</ul>
+<p>All oscilloscope traces in this report should adhere to the following specification:</p>
+<ul class="task-list">
+<li><input type="checkbox">Show each of the requested quantities on a separate oscilloscope channel.</li>
+<li><input type="checkbox">Scale the horizontal axis so 3-10 cycles of the input/output voltage waves are visible</li>
+<li><input type="checkbox">Scale the vertical axis to maximize size of the input/output waves without clipping</li>
+<li><input type="checkbox">Make sure the input/output waves use the same 0 V reference voltage.</li>
+<li><input type="checkbox">Be exported using the screen capture function of the oscilloscope. Phone pictures of oscilloscope data are unacceptable. (Note that in a normal lab setting it would be essential to also capture CSV output from the oscilloscope for later mathematical processing. No need to do that in this lab, screen captures are fine.)</li>
+</ul>
+<p>All pictures of circuits in this report should adhere to the following specification:</p>
+<ul class="task-list">
+<li><input type="checkbox">Picture is taken at a level of lighting and zoom that allows a reader to trace connections in the circuit.</li>
+<li><input type="checkbox">The circuit is neatly laid out so that readers can trace connections in the circuit.</li>
+</ul>
+<div style="page-break-after: always;"></div>
+<section id="report-on-the-design-and-characterization-of-a-non-inverting-amplifier" class="level2">
+<h2 class="anchored" data-anchor-id="report-on-the-design-and-characterization-of-a-non-inverting-amplifier">Report on the Design and Characterization of a Non-Inverting Amplifier</h2>
+<p>Effort:</p>
+<ul class="task-list">
+<li><input type="checkbox">Provides a picture of the inverting amplifier</li>
+<li><input type="checkbox">Provides a schematic of the inverting amplifier and stimulus</li>
+</ul>
+<p>Complete:</p>
+<ul class="task-list">
+<li><input type="checkbox">Provides an oscilloscope trace of the input and the output for the following input: 100 mV amplitude sine wave with a 1 V offset.</li>
+<li><input type="checkbox">Provides an oscilloscope trace of the input and the output for the following input: 100 mV amplitude sine wave with a 0 V offset.</li>
+<li><input type="checkbox">Traces show correct behavior, matching designed gain and highlighting appropriate non-idealities</li>
+<li><input type="checkbox">Correctly, in 1-2 sentences, describes why the output signal in the 0 V offset trace does not fully obey the equation that describes non-inverting amplifier outputs.</li>
+</ul>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="report-on-the-design-and-characterization-of-an-offset-amplifier" class="level2">
+<h2 class="anchored" data-anchor-id="report-on-the-design-and-characterization-of-an-offset-amplifier">Report on the Design and Characterization of an Offset Amplifier</h2>
+<p>Effort:</p>
+<ul class="task-list">
+<li><input type="checkbox">Provides a picture of the offset amplifier</li>
+<li><input type="checkbox">Provides a schematic of the offset amplifier</li>
+</ul>
+<p>Complete:</p>
+<ul class="task-list">
+<li><input type="checkbox">Describes the design process for the offset amplifier: specifies the intended gain and offset, provides equation describing offset amplifier output Voltage, manipulates that equation (and states necessary assumptions) to find resistor values and showing the appropriate equation and hand calculations to find the for offset amplifier output Voltage.</li>
+<li><input type="checkbox">Provides an oscilloscope trace of the input and the output for the following input: 100 mV amplitude sine wave with a 0 V offset.</li>
+<li><input type="checkbox">The output trace shows a complete sine wave with no op-amp introduced non-idealities.</li>
+<li><input type="checkbox">The op-amp trace behaves as predicted in the hand design.</li>
+<li><input type="checkbox">1-2 sentences of discussion of why this design performs differently than a non-inverting amplifier for the same input.</li>
+</ul>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="report-on-the-design-and-characterization-of-a-555-timer-led-driver" class="level2">
+<h2 class="anchored" data-anchor-id="report-on-the-design-and-characterization-of-a-555-timer-led-driver">Report on the Design and Characterization of a 555 Timer LED Driver</h2>
+<p>Effort:</p>
+<ul class="task-list">
+<li><input type="checkbox">Provides a picture of the 555 timer LED driver.</li>
+<li><input type="checkbox">Provides a schematic of the 555 timer LED driver.</li>
+</ul>
+<p>Complete:</p>
+<ul class="task-list">
+<li><input type="checkbox">Provides an oscilloscope trace of the output, 555 capacitor node, and Voltage in the middle of the diode-resistor string.</li>
+<li><input type="checkbox">Trace indicates 500 Hz - 1 kHz operating frequency and ~60% duty cycle.</li>
+<li><input type="checkbox">Resistor value in schematic and resistor voltage measurement indicate diode is receiving 20-40 mA of current.</li>
+<li><input type="checkbox">Includes design process for 555 timer: lists target frequency and duty cycle, and shows how resistors and capacitors were selected to hit that target.</li>
+<li><input type="checkbox">Includes calculations showing how resistor was selected to limit current in IR1503.</li>
+</ul>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="report-on-the-design-and-characterization-of-a-transimpedance-amplifier" class="level2">
+<h2 class="anchored" data-anchor-id="report-on-the-design-and-characterization-of-a-transimpedance-amplifier">Report on the Design and Characterization of a Transimpedance Amplifier</h2>
+<p>Effort:</p>
+<ul class="task-list">
+<li><input type="checkbox">Provides a picture of the transimpedance amplifier including the IR LED illuminating the photodiode</li>
+<li><input type="checkbox">Provides a schematic of the transimpedance amplifier</li>
+</ul>
+<p>Complete:</p>
+<ul class="task-list">
+<li><input type="checkbox">Includes analysis of transimpedance amplifier circuit, showing relation between VOUT, ID and RF.</li>
+<li><input type="checkbox">Provides an oscilloscope trace of 555 timer output and transimpedance amplifier output when transimpedance photodiode is illuminated by the IR LED.</li>
+</ul>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="report-on-the-design-and-characterization-of-a-turbidity-meter" class="level2">
+<h2 class="anchored" data-anchor-id="report-on-the-design-and-characterization-of-a-turbidity-meter">Report on the Design and Characterization of a Turbidity Meter</h2>
+<p>Effort:</p>
+<ul class="task-list">
+<li><input type="checkbox">Provides a picture of the prepared solutions in cuvettes. Picture is annotated to indicate turbidity of each cuvette.</li>
+<li><input type="checkbox">Provides a picture of the assembled turbidity meter.</li>
+</ul>
+<p>Complete:</p>
+<ul class="task-list">
+<li><input type="checkbox">Provides two sets of oscilloscope traces showing 555 timer output, 90° transimpedance amplifier output and transmission transimpedance amplifier output.
+<ul>
+<li>The traces are gathered while a solution of middling turbidity is in the turbidity meter, so both 90° and transmission outputs are visible.</li>
+<li>The first set of traces are gathered under normal lighting conditions.</li>
+<li>The second set of traces are gathered under shadowed lighting conditions.</li>
+</ul></li>
+<li><input type="checkbox">Plot of Vpp,90/Vpp,Transmission vs.&nbsp;Turbidity values annotated with uncertainty measures.</li>
+<li><input type="checkbox">Plotted turbidity data shows a linear relationship so measured Voltages can be used to predict turbidity.</li>
+<li><input type="checkbox">2-3 sentences explaining why we use a switching LED, why we measure peak-peak Voltages in the transimpedance outputs, and why those decisions are related to ambient light.</li>
+</ul>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="extra-credit-writeups" class="level2">
+<h2 class="anchored" data-anchor-id="extra-credit-writeups">Extra Credit Writeups:</h2>
+<p>We don’t provide complete specifications for extra credit writeups, but they will be graded for effort and completeness like normal sections. You need to provide a “mini-report” of &lt;1 page for each extra credit section that you attempt. Put a page break between each extra credit mini-report.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
