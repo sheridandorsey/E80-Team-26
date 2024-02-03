@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.340">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -45,7 +45,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -54,8 +60,10 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
@@ -66,9 +74,9 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">E80 SP24</span>
     </a>
@@ -80,79 +88,79 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html" rel="" target="">
- <span class="menu-text">Home</span></a>
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../lectures/" rel="" target="">
- <span class="menu-text">Lectures</span></a>
+    <a class="nav-link" href="../../lectures/"> 
+<span class="menu-text">Lectures</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-labs" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-labs" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Labs</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-labs">    
         <li>
-    <a class="dropdown-item" href="../../labs/lab_overview" rel="" target="">
+    <a class="dropdown-item" href="../../labs/lab_overview">
  <span class="dropdown-text">Lab Overview</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../labs/lab0" rel="" target="">
+    <a class="dropdown-item" href="../../labs/lab0">
  <span class="dropdown-text">Lab 0: Tutorial &amp; Skills Review</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../labs/lab1" rel="" target="">
+    <a class="dropdown-item" href="../../labs/lab1">
  <span class="dropdown-text">Lab 1: Go Autonomous</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../labs/lab2" rel="" target="">
+    <a class="dropdown-item" href="../../labs/lab2">
  <span class="dropdown-text">Lab 2: BEM</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../labs/lab3" rel="" target="">
+    <a class="dropdown-item" href="../../labs/lab3">
  <span class="dropdown-text">Lab 3: Op-Amps</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../labs/lab4" rel="" target="">
+    <a class="dropdown-item" href="../../labs/lab4">
  <span class="dropdown-text">Lab 4: Temperature</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../labs/lab5" rel="" target="">
+    <a class="dropdown-item" href="../../labs/lab5">
  <span class="dropdown-text">Lab 5: Acoustics</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../labs/lab6" rel="" target="">
+    <a class="dropdown-item" href="../../labs/lab6">
  <span class="dropdown-text">Lab 6: Fluids</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../labs/lab7" rel="" target="">
+    <a class="dropdown-item" href="../../labs/lab7">
  <span class="dropdown-text">Lab 7: Navigation</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../../project/" rel="" target="">
- <span class="menu-text">Project</span></a>
+    <a class="nav-link" href="../../project/"> 
+<span class="menu-text">Project</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../reference/" rel="" target="">
- <span class="menu-text">Reference Designs</span></a>
+    <a class="nav-link" href="../../reference/"> 
+<span class="menu-text">Reference Designs</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../history/" rel="" target="">
- <span class="menu-text">History</span></a>
+    <a class="nav-link" href="../../history/"> 
+<span class="menu-text">History</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/HMC-E80/E80" rel="" target=""><i class="bi bi-github" role="img" aria-label="GitHub">
+    <a class="nav-link" href="https://github.com/HMC-E80/E80"> <i class="bi bi-github" role="img" aria-label="GitHub">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
-</div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -191,68 +199,70 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
+
 </header>
+
 
 <p>This help sheet is not going to be as comprehensive as the prelab help sheet for lab 1, and next week will be even less thorough. Part of the goal of this class is for you to be able to devise prelab activities on your own. So if you’re running out of ideas for things to do, please review last week’s help sheet.</p>
 <p>Think carefully about which group members you want to complete each section. Many of the topics here are interconnected, so it often helps to make sure everyone does them (or, at minimum, that you meet and share out what you learned during prelab.) We especially encourage everyone to do the reading and watch the videos.</p>
 <section id="reading-and-reference" class="level2">
 <h2 class="anchored" data-anchor-id="reading-and-reference">Reading and Reference</h2>
 <ul class="task-list">
-<li><input type="checkbox">Watch lecture videos.</li>
-<li><input type="checkbox">Watch op-amp videos 1 &amp; 2.</li>
-<li><input type="checkbox">Read the lab.</li>
-<li><input type="checkbox">Flag parts of the lab that didn’t make sense for discussion with your team or a prof.</li>
-<li><input type="checkbox">Read the submission sheet and notice:
+<li><label><input type="checkbox">Watch lecture videos.</label></li>
+<li><label><input type="checkbox">Watch op-amp videos 1 &amp; 2.</label></li>
+<li><label><input type="checkbox">Read the lab.</label></li>
+<li><label><input type="checkbox">Flag parts of the lab that didn’t make sense for discussion with your team or a prof.</label></li>
+<li><label><input type="checkbox">Read the submission sheet and notice:</label>
 <ol type="1">
 <li>What are the deliverables?</li>
 <li>What are the specifications on those deliverables?</li>
 </ol></li>
-<li><input type="checkbox">Read the reference document about diodes</li>
-<li><input type="checkbox">Read the reference document about turbidity, and make note of the visual reference of what different turbidities look like.</li>
-<li><input type="checkbox">Read the turbidity meter instruction manual</li>
-<li><input type="checkbox">Read all linked datasheets</li>
+<li><label><input type="checkbox">Read the reference document about diodes</label></li>
+<li><label><input type="checkbox">Read the reference document about turbidity, and make note of the visual reference of what different turbidities look like.</label></li>
+<li><label><input type="checkbox">Read the turbidity meter instruction manual</label></li>
+<li><label><input type="checkbox">Read all linked datasheets</label></li>
 </ul>
 </section>
 <section id="circuit-design" class="level2">
 <h2 class="anchored" data-anchor-id="circuit-design">Circuit Design</h2>
 <ul class="task-list">
-<li><input type="checkbox">Design all the circuits in advance and analyze them on paper. Analysis should include predicted output Voltages and component selection calculations.</li>
-<li><input type="checkbox">Test out your designs using a simulator program like <a href="https://falstad.com/circuit/">Falstad</a> or <a href="https://www.analog.com/en/resources/design-tools-and-calculators/ltspice-simulator.html">ltSpice</a></li>
-<li><input type="checkbox">Plan how your circuits will fit on your breadboard ahead of time using a breadboard simulator like <a href="https://fritzing.org/">fritzing</a> or <a href="https://www.tinkercad.com/learn/overview/OPRHCXXL20FZS3N?type=circuits">Tinkercad</a></li>
-<li><input type="checkbox">What formula describes a non-inverting amplifier’s output?</li>
-<li><input type="checkbox">What formula describes an offset amplifier’s output?</li>
-<li><input type="checkbox">What formula describes a transimpedance amplifier’s output?</li>
-<li><input type="checkbox">What formula describes a 555 timer’s frequency when it is configured as an oscillator?</li>
-<li><input type="checkbox">What formula describes a 555 timer’s duty cycle when it is configured as an oscillator?</li>
-<li><input type="checkbox">What formula describes current through a series resistor-diode?</li>
-<li><input type="checkbox">What is the maximum current allowed in our IR LEDs?</li>
-<li><input type="checkbox">What’s a rough guess at the resistances you’ll need in your photodiode test circuit and your transimpedance amplifiers.</li>
+<li><label><input type="checkbox">Design all the circuits in advance and analyze them on paper. Analysis should include predicted output Voltages and component selection calculations.</label></li>
+<li><label><input type="checkbox">Test out your designs using a simulator program like <a href="https://falstad.com/circuit/">Falstad</a> or <a href="https://www.analog.com/en/resources/design-tools-and-calculators/ltspice-simulator.html">ltSpice</a></label></li>
+<li><label><input type="checkbox">Plan how your circuits will fit on your breadboard ahead of time using a breadboard simulator like <a href="https://fritzing.org/">fritzing</a> or <a href="https://www.tinkercad.com/learn/overview/OPRHCXXL20FZS3N?type=circuits">Tinkercad</a></label></li>
+<li><label><input type="checkbox">What formula describes a non-inverting amplifier’s output?</label></li>
+<li><label><input type="checkbox">What formula describes an offset amplifier’s output?</label></li>
+<li><label><input type="checkbox">What formula describes a transimpedance amplifier’s output?</label></li>
+<li><label><input type="checkbox">What formula describes a 555 timer’s frequency when it is configured as an oscillator?</label></li>
+<li><label><input type="checkbox">What formula describes a 555 timer’s duty cycle when it is configured as an oscillator?</label></li>
+<li><label><input type="checkbox">What formula describes current through a series resistor-diode?</label></li>
+<li><label><input type="checkbox">What is the maximum current allowed in our IR LEDs?</label></li>
+<li><label><input type="checkbox">What’s a rough guess at the resistances you’ll need in your photodiode test circuit and your transimpedance amplifiers.</label></li>
 </ul>
 </section>
 <section id="schematics" class="level2">
 <h2 class="anchored" data-anchor-id="schematics">Schematics</h2>
 <ul class="task-list">
-<li><input type="checkbox">Try drawing a schematic using schematic drawing software like <a href="https://app.diagrams.net/">draw.io</a>, <a href="https://www.analog.com/en/resources/design-tools-and-calculators/ltspice-simulator.html">ltSpice</a>, or <a href="https://www.daslhub.org/unlv/courses/me425-625/lesson-M-project/symbollibraryforppt.ppt">Powerpoint</a>.</li>
-<li><input type="checkbox">Draw all the schematics for the circuits you have designed, paste copies in appropriate places in the submission sheet, and distribute schematic source files to both subteams.</li>
-<li><input type="checkbox">Have a professor review your schematics for style considerations in office hours.</li>
-<li><input type="checkbox">Can you quickly modify your schematic if you find that you need to change a component value in the lab?</li>
-<li><input type="checkbox">What does connect-by-name mean in the context of electrical schematics?</li>
+<li><label><input type="checkbox">Try drawing a schematic using schematic drawing software like <a href="https://app.diagrams.net/">draw.io</a>, <a href="https://www.analog.com/en/resources/design-tools-and-calculators/ltspice-simulator.html">ltSpice</a>, or <a href="https://www.daslhub.org/unlv/courses/me425-625/lesson-M-project/symbollibraryforppt.ppt">Powerpoint</a>.</label></li>
+<li><label><input type="checkbox">Draw all the schematics for the circuits you have designed, paste copies in appropriate places in the submission sheet, and distribute schematic source files to both subteams.</label></li>
+<li><label><input type="checkbox">Have a professor review your schematics for style considerations in office hours.</label></li>
+<li><label><input type="checkbox">Can you quickly modify your schematic if you find that you need to change a component value in the lab?</label></li>
+<li><label><input type="checkbox">What does connect-by-name mean in the context of electrical schematics?</label></li>
 </ul>
 </section>
 <section id="mechanical" class="level2">
 <h2 class="anchored" data-anchor-id="mechanical">Mechanical</h2>
 <ul class="task-list">
-<li><input type="checkbox">What’s a cuvette?</li>
-<li><input type="checkbox">View the Solidworks designs for the turbidity meter fixture</li>
-<li><input type="checkbox">Make a sketch of how your breadboard, circuits and turbidity meter fixture will fit together</li>
+<li><label><input type="checkbox">What’s a cuvette?</label></li>
+<li><label><input type="checkbox">View the Solidworks designs for the turbidity meter fixture</label></li>
+<li><label><input type="checkbox">Make a sketch of how your breadboard, circuits and turbidity meter fixture will fit together</label></li>
 </ul>
 </section>
 <section id="statistics" class="level2">
 <h2 class="anchored" data-anchor-id="statistics">Statistics</h2>
 <ul class="task-list">
-<li><input type="checkbox">How do you calculate a line of best fit and appropriate uncertainty measures? How do you report the uncertainty?</li>
-<li><input type="checkbox">Write code or make a spreadsheet that can calculate a line of best fit and appropriate statistics from a set of x,y points.</li>
-<li><input type="checkbox">Write code or make a spreadsheet that can plot a set of x,y points, a line of best fit, and appropriate uncertainty indicators.</li>
+<li><label><input type="checkbox">How do you calculate a line of best fit and appropriate uncertainty measures? How do you report the uncertainty?</label></li>
+<li><label><input type="checkbox">Write code or make a spreadsheet that can calculate a line of best fit and appropriate statistics from a set of x,y points.</label></li>
+<li><label><input type="checkbox">Write code or make a spreadsheet that can plot a set of x,y points, a line of best fit, and appropriate uncertainty indicators.</label></li>
 </ul>
 
 
@@ -338,10 +348,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -351,8 +360,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -365,6 +383,125 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -408,6 +545,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -433,6 +571,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -493,6 +657,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.340">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -45,7 +45,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -54,8 +60,10 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
@@ -66,9 +74,9 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">E80 SP24</span>
     </a>
@@ -80,79 +88,79 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html" rel="" target="">
- <span class="menu-text">Home</span></a>
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../lectures/" rel="" target="">
- <span class="menu-text">Lectures</span></a>
+    <a class="nav-link" href="../../lectures/"> 
+<span class="menu-text">Lectures</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-labs" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-labs" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Labs</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-labs">    
         <li>
-    <a class="dropdown-item" href="../../labs/lab_overview" rel="" target="">
+    <a class="dropdown-item" href="../../labs/lab_overview">
  <span class="dropdown-text">Lab Overview</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../labs/lab0" rel="" target="">
+    <a class="dropdown-item" href="../../labs/lab0">
  <span class="dropdown-text">Lab 0: Tutorial &amp; Skills Review</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../labs/lab1" rel="" target="">
+    <a class="dropdown-item" href="../../labs/lab1">
  <span class="dropdown-text">Lab 1: Go Autonomous</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../labs/lab2" rel="" target="">
+    <a class="dropdown-item" href="../../labs/lab2">
  <span class="dropdown-text">Lab 2: BEM</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../labs/lab3" rel="" target="">
+    <a class="dropdown-item" href="../../labs/lab3">
  <span class="dropdown-text">Lab 3: Op-Amps</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../labs/lab4" rel="" target="">
+    <a class="dropdown-item" href="../../labs/lab4">
  <span class="dropdown-text">Lab 4: Temperature</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../labs/lab5" rel="" target="">
+    <a class="dropdown-item" href="../../labs/lab5">
  <span class="dropdown-text">Lab 5: Acoustics</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../labs/lab6" rel="" target="">
+    <a class="dropdown-item" href="../../labs/lab6">
  <span class="dropdown-text">Lab 6: Fluids</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../labs/lab7" rel="" target="">
+    <a class="dropdown-item" href="../../labs/lab7">
  <span class="dropdown-text">Lab 7: Navigation</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../../project/" rel="" target="">
- <span class="menu-text">Project</span></a>
+    <a class="nav-link" href="../../project/"> 
+<span class="menu-text">Project</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../reference/" rel="" target="">
- <span class="menu-text">Reference Designs</span></a>
+    <a class="nav-link" href="../../reference/"> 
+<span class="menu-text">Reference Designs</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../history/" rel="" target="">
- <span class="menu-text">History</span></a>
+    <a class="nav-link" href="../../history/"> 
+<span class="menu-text">History</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/HMC-E80/E80" rel="" target=""><i class="bi bi-github" role="img" aria-label="GitHub">
+    <a class="nav-link" href="https://github.com/HMC-E80/E80"> <i class="bi bi-github" role="img" aria-label="GitHub">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
-</div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -194,7 +202,9 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
+
 </header>
+
 
 <p>Team Size: 2</p>
 <p>Submission Sheet: <a href="../../labs/lab3/submission.html">html</a> <a href="../../labs/lab3/submission.docx">docx</a></p>
@@ -204,15 +214,15 @@ ul.task-list li input[type="checkbox"] {
 <p>In this lab you will use operational amplifiers to build a turbidity meter, a sensor that measures the relative clarity of water. Turbidity is an interesting and useful measurement in oceanography, so this turbidity meter could be a stepping stone towards your final project. Further, the op-amp techniques that you use to construct this turbidity meter will be useful in any final project you select; the ability to buffer, shift and scale Voltages and currents is essential to many instruments. Extra credit sections offer the opportunity to explore other interesting marine sensors, and those sensors are also excellent candidates for final project sensors.</p>
 <p>After successful completion of this lab, you will be able to</p>
 <ul class="task-list">
-<li><input type="checkbox">Design and build an offset amplifier using an operational amplifier</li>
-<li><input type="checkbox">Design and build a transimpedance amplifier using an operational amplifier</li>
-<li><input type="checkbox">Design and build an oscillator using a 555 timer</li>
-<li><input type="checkbox">Understand the basic use of LEDs and photodiodes</li>
-<li><input type="checkbox">Explain clipping behavior in op-amps</li>
-<li><input type="checkbox">Explain how modulating a signal can help separate it from background signals</li>
-<li><input type="checkbox">Explain the basic theory of turbidity and turbidity measurements</li>
-<li><input type="checkbox">Build and test a complex design by thoughtfully testing and assembling individual parts</li>
-<li><input type="checkbox">Use linear regression to extract slope, offset, and appropriate error measures from data</li>
+<li><label><input type="checkbox">Design and build an offset amplifier using an operational amplifier</label></li>
+<li><label><input type="checkbox">Design and build a transimpedance amplifier using an operational amplifier</label></li>
+<li><label><input type="checkbox">Design and build an oscillator using a 555 timer</label></li>
+<li><label><input type="checkbox">Understand the basic use of LEDs and photodiodes</label></li>
+<li><label><input type="checkbox">Explain clipping behavior in op-amps</label></li>
+<li><label><input type="checkbox">Explain how modulating a signal can help separate it from background signals</label></li>
+<li><label><input type="checkbox">Explain the basic theory of turbidity and turbidity measurements</label></li>
+<li><label><input type="checkbox">Build and test a complex design by thoughtfully testing and assembling individual parts</label></li>
+<li><label><input type="checkbox">Use linear regression to extract slope, offset, and appropriate error measures from data</label></li>
 </ul>
 <p>This lab will be carried out as sub-teams of two. Policies for sub-teams are discussed in <a href="../../labs/lab2/index.html">lab 2</a></p>
 <p>This lab asks you to prepare solutions and handle chemicals. Though we aren’t working with anything hazardous (or which can’t be flushed down the drain), be sure to observe good chemical hygiene practices and use gloves and goggles when handling chemicals or sensitive equipment. Always use gloves when handling any glassware that will go into the turbidity meter.</p>
@@ -268,7 +278,7 @@ Why Series Resistors on LEDs?
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>LEDs, like all diodes, have an exponential relationship between the voltage applied across them and the current that passes through them. That means applying voltage carelessly can easily blow them up. We prevent such explosions by installing a resistor in series with our IR1503 when we use them. Note that you don’t have to calculate the exponential behavior of the diode because graphs and tables in the datasheet have all the information you need.</p>
-<p>The OP950 has similar behavior, so hook it up in series with resistors when you’re testing it on its own. However, we usually use OP950s in transimpedance amplifiers (see <a href="#sec-transimpedance">Section&nbsp;4</a>), which protects them from careless overvoltage conditions.</p>
+<p>The OP950 has similar behavior, so hook it up in series with resistors when you’re testing it on its own. However, we usually use OP950s in transimpedance amplifiers (see <a href="#sec-transimpedance" class="quarto-xref">Section&nbsp;4</a>), which protects them from careless overvoltage conditions.</p>
 <p><a href="http://www.physics.unlv.edu/~bill/PHYS483/LED_PIN.pdf">This reference</a> provides background information on LEDs and photodiodes.</p>
 </div>
 </div>
@@ -276,17 +286,21 @@ Why Series Resistors on LEDs?
 </section>
 <section id="sec-transimpedance" class="level2" data-number="4">
 <h2 data-number="4" class="anchored" data-anchor-id="sec-transimpedance"><span class="header-section-number">4</span> Transimpedance Amplifiers</h2>
-<p>We will need to measure the amount of light that passes through a solution (either by transmission or 90° scattering) in our turbidity meter. The current through a photodiode is linear in irradiance (see the Light Current vs.&nbsp;Irradiance figure in the OP950 datasheet), so measuring the current passing through a photodiode is equivalent to making a linear measure of incident optical power. That’s great for us, but we don’t know how to measure currents yet. Fortunately, op-amps can help with this, but only if we build a new kind of circuit, called a transmipedance amplifier, which is pictured in <a href="#fig-transimpedance">Figure&nbsp;1</a>.</p>
-<div id="fig-transimpedance" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="../..\labs/lab3/img/transimpedance_3.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Figure&nbsp;1: Schematic for a transimpedance amplifier</figcaption>
+<p>We will need to measure the amount of light that passes through a solution (either by transmission or 90° scattering) in our turbidity meter. The current through a photodiode is linear in irradiance (see the Light Current vs.&nbsp;Irradiance figure in the OP950 datasheet), so measuring the current passing through a photodiode is equivalent to making a linear measure of incident optical power. That’s great for us, but we don’t know how to measure currents yet. Fortunately, op-amps can help with this, but only if we build a new kind of circuit, called a transmipedance amplifier, which is pictured in <a href="#fig-transimpedance" class="quarto-xref">Figure&nbsp;1</a>.</p>
+<div id="fig-transimpedance" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-transimpedance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../../labs/lab3/img/transimpedance_3.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-transimpedance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Schematic for a transimpedance amplifier
+</figcaption>
 </figure>
 </div>
 <ol type="1">
 <li>Analyze the transimpedance amplifier circuit to determine a formula that relates the diode current, ID, the feedback resistance, RF, and the output voltage, VOUT. Note that the diode acts like a current source pointing away from the op-amp when the photodiode is illuminated.</li>
 <li>Build a transimpedance amplifier using the <a href="https://www.digikey.com/en/products/detail/microchip-technology/MCP6004-I-P/523060">MCP6004</a> and an OP950. Configure unused op-amps as unity gain buffers with their inputs and outputs grounded.</li>
-<li>Use your LED light source from <a href="#sec-led">Section&nbsp;3</a> to test the transimpedance amplifier. If you are seeing no signal, try flipping your OP950 around. Adjust the feedback resistor so you are seeing a large output signal.</li>
+<li>Use your LED light source from <a href="#sec-led" class="quarto-xref">Section&nbsp;3</a> to test the transimpedance amplifier. If you are seeing no signal, try flipping your OP950 around. Adjust the feedback resistor so you are seeing a large output signal.</li>
 <li>Build and test a second copy of this op-amp circuit for use in your turbidity meter.</li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -308,7 +322,7 @@ Transimpedance Deep Cuts
 </section>
 <section id="turbidity-measurements" class="level2" data-number="5">
 <h2 data-number="5" class="anchored" data-anchor-id="turbidity-measurements"><span class="header-section-number">5</span> Turbidity Measurements</h2>
-<p>Now it is time to assemble and use the turbidity meter. You will prepare solutions of known turbidity using the <a href="https://drive.google.com/file/d/1aRRGL3DGFiiZZP9Hb7o4LIQauYPwHxP3/view?usp=sharing">TU-2016</a> calibrated laboratory turbidity meter, illuminate them with the LED from <a href="#sec-led">Section&nbsp;3</a>, then measure the transmitted and 90° scattered light using the transimpedance amplifiers from <a href="#sec-transimpedance">Section&nbsp;4</a>. Arranging all of these elements – the sample cuvette holding your solutions, the LEDs and the photodiodes – requires a little bit of mechanical finesse, so we provide a 3D printed fixture (<a href="https://drive.google.com/open?id=1-pEcuCK1zzoU1dhB6DvrvpxaZKwmPZqh">instructions</a>, <a href="https://drive.google.com/open?id=1peSZif9B1dCVGjBPbByFevaRjnXc4YCT">Solidworks for base</a>, <a href="https://drive.google.com/open?id=1zrdfRXLA9rLq4WYW_jSm_Pb-nRgdP9Iq">Solidworks for cover</a>) for holding the cuvette, LED and photodiodes.</p>
+<p>Now it is time to assemble and use the turbidity meter. You will prepare solutions of known turbidity using the <a href="https://drive.google.com/file/d/1aRRGL3DGFiiZZP9Hb7o4LIQauYPwHxP3/view?usp=sharing">TU-2016</a> calibrated laboratory turbidity meter, illuminate them with the LED from <a href="#sec-led" class="quarto-xref">Section&nbsp;3</a>, then measure the transmitted and 90° scattered light using the transimpedance amplifiers from <a href="#sec-transimpedance" class="quarto-xref">Section&nbsp;4</a>. Arranging all of these elements – the sample cuvette holding your solutions, the LEDs and the photodiodes – requires a little bit of mechanical finesse, so we provide a 3D printed fixture (<a href="https://drive.google.com/open?id=1-pEcuCK1zzoU1dhB6DvrvpxaZKwmPZqh">instructions</a>, <a href="https://drive.google.com/open?id=1peSZif9B1dCVGjBPbByFevaRjnXc4YCT">Solidworks for base</a>, <a href="https://drive.google.com/open?id=1zrdfRXLA9rLq4WYW_jSm_Pb-nRgdP9Iq">Solidworks for cover</a>) for holding the cuvette, LED and photodiodes.</p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -466,10 +480,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -479,8 +492,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -493,6 +515,125 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -536,6 +677,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -561,6 +703,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -621,6 +789,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 

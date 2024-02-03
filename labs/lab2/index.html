@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.340">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -45,7 +45,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -54,13 +60,42 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -68,9 +103,9 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">E80 SP24</span>
     </a>
@@ -82,79 +117,79 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html" rel="" target="">
- <span class="menu-text">Home</span></a>
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../lectures/" rel="" target="">
- <span class="menu-text">Lectures</span></a>
+    <a class="nav-link" href="../../lectures/"> 
+<span class="menu-text">Lectures</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-labs" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-labs" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Labs</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-labs">    
         <li>
-    <a class="dropdown-item" href="../../labs/lab_overview" rel="" target="">
+    <a class="dropdown-item" href="../../labs/lab_overview">
  <span class="dropdown-text">Lab Overview</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../labs/lab0" rel="" target="">
+    <a class="dropdown-item" href="../../labs/lab0">
  <span class="dropdown-text">Lab 0: Tutorial &amp; Skills Review</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../labs/lab1" rel="" target="">
+    <a class="dropdown-item" href="../../labs/lab1">
  <span class="dropdown-text">Lab 1: Go Autonomous</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../labs/lab2" rel="" target="">
+    <a class="dropdown-item" href="../../labs/lab2">
  <span class="dropdown-text">Lab 2: BEM</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../labs/lab3" rel="" target="">
+    <a class="dropdown-item" href="../../labs/lab3">
  <span class="dropdown-text">Lab 3: Op-Amps</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../labs/lab4" rel="" target="">
+    <a class="dropdown-item" href="../../labs/lab4">
  <span class="dropdown-text">Lab 4: Temperature</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../labs/lab5" rel="" target="">
+    <a class="dropdown-item" href="../../labs/lab5">
  <span class="dropdown-text">Lab 5: Acoustics</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../labs/lab6" rel="" target="">
+    <a class="dropdown-item" href="../../labs/lab6">
  <span class="dropdown-text">Lab 6: Fluids</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../labs/lab7" rel="" target="">
+    <a class="dropdown-item" href="../../labs/lab7">
  <span class="dropdown-text">Lab 7: Navigation</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../../project/" rel="" target="">
- <span class="menu-text">Project</span></a>
+    <a class="nav-link" href="../../project/"> 
+<span class="menu-text">Project</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../reference/" rel="" target="">
- <span class="menu-text">Reference Designs</span></a>
+    <a class="nav-link" href="../../reference/"> 
+<span class="menu-text">Reference Designs</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../history/" rel="" target="">
- <span class="menu-text">History</span></a>
+    <a class="nav-link" href="../../history/"> 
+<span class="menu-text">History</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/HMC-E80/E80" rel="" target=""><i class="bi bi-github" role="img" aria-label="GitHub">
+    <a class="nav-link" href="https://github.com/HMC-E80/E80"> <i class="bi bi-github" role="img" aria-label="GitHub">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
-</div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -195,7 +230,9 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
+
 </header>
+
 
 <p>Team size: 2</p>
 <p>Submission Sheet: <a href="../../labs/lab2/submission.html">html</a> <a href="../../labs/lab2/submission.docx">Word</a></p>
@@ -207,11 +244,11 @@ ul.task-list li input[type="checkbox"] {
 <p>In this lab you review the use of electrical test equipment, calculate the uncertainty in a measurement based on its components, and apply equivalent circuit models to understand instrument loading and op-amp buffers. Electrical instruments and op-amps are used in every lab in this course, so we are doing this lab to build your toolkit for making experimental measurements. Another goal of the lab is for you to practice error analysis and propagation.</p>
 <p>After successful completion of this lab, you will be able to…</p>
 <ul class="task-list">
-<li><input type="checkbox">Use a multimeter, function generator, power supply, and oscilloscope.</li>
-<li><input type="checkbox">Describe what “instrument loading” means and explain why it happens.</li>
-<li><input type="checkbox">Build operational amplifier buffers to reduce instrument loading.</li>
-<li><input type="checkbox">Explain how to relate RMS voltages and amplitudes of sinusoidal voltage signals.</li>
-<li><input type="checkbox">Apply error propagation techniques to resistive voltage dividers to make uncertainty predictions in voltage measurements.</li>
+<li><label><input type="checkbox">Use a multimeter, function generator, power supply, and oscilloscope.</label></li>
+<li><label><input type="checkbox">Describe what “instrument loading” means and explain why it happens.</label></li>
+<li><label><input type="checkbox">Build operational amplifier buffers to reduce instrument loading.</label></li>
+<li><label><input type="checkbox">Explain how to relate RMS voltages and amplitudes of sinusoidal voltage signals.</label></li>
+<li><label><input type="checkbox">Apply error propagation techniques to resistive voltage dividers to make uncertainty predictions in voltage measurements.</label></li>
 </ul>
 <p>This lab will be completed in sub-teams of two students. Before the lab you must decide how you will split your team. Two other labs (labs 3 and 4) will also be completed as sub-teams, and you must use a different sub-team for each of these labs. Each sub-team will be responsible for its own submission sheet. Pre-lab work may still be carried out with your whole team, but be sure each sub-team is ready to tackle the in-lab work independently. Even though your team will be split into two sub-teams, you will only have access to one motherboard/Teensy assembly. Plan your work carefully so that you share it equitably. You will let us know about your sub-team choices using a Canvas feature called “self-selected teams,” so give yourself a little extra time to turn in your submission sheet and sort that feature out.</p>
 </section>
@@ -302,16 +339,24 @@ Serial.println("Waiting..."); } </code></pre>
 </section>
 <section id="sec-dividers" class="level2" data-number="3">
 <h2 data-number="3" class="anchored" data-anchor-id="sec-dividers"><span class="header-section-number">3</span> Resistor Dividers and Instrument Loading</h2>
-<p>This section is designed to give you practice on two skills: accounting for instrument loading (i.e.: source and load impedance), and calculating uncertainties using error propagation. You will do this by predicting and measuring the Voltage at the output of a series of resistor dividers specified by <a href="#fig-divider">Figure&nbsp;1</a> and <a href="#tbl-experiment">Table&nbsp;1</a>:</p>
-<div id="fig-divider" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="../..\labs/lab2/img/voltagedividerwsiggen.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Figure&nbsp;1: A voltage divider</figcaption>
+<p>This section is designed to give you practice on two skills: accounting for instrument loading (i.e.: source and load impedance), and calculating uncertainties using error propagation. You will do this by predicting and measuring the Voltage at the output of a series of resistor dividers specified by <a href="#fig-divider" class="quarto-xref">Figure&nbsp;1</a> and <a href="#tbl-experiment" class="quarto-xref">Table&nbsp;1</a>:</p>
+<div id="fig-divider" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-divider-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../../labs/lab2/img/voltagedividerwsiggen.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-divider-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: A voltage divider
+</figcaption>
 </figure>
 </div>
-<div id="tbl-experiment" class="anchored">
+<div id="tbl-experiment" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-experiment-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Impedance values and measurement instruments for experiment
+</figcaption>
+<div aria-describedby="tbl-experiment-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="table">
-<caption>Table&nbsp;1: Impedance values and measurement instruments for experiment</caption>
 <thead>
 <tr class="header">
 <th>Z1</th>
@@ -398,19 +443,21 @@ Serial.println("Waiting..."); } </code></pre>
 </tbody>
 </table>
 </div>
+</figure>
+</div>
 <p>You will be asked to measure the output Voltage with the devices in the “Measure With” column, but some of the devices in the “Measure With” column may be unfamiliar to you. The devices are described below, and datasheet links are provided for each of them. To finish this section, you will need to read these datasheets to find the input impedance and the measurement uncertainty of each device.</p>
 <ul>
 <li>“Multimeter” refers to the multimeter chained to your desk. Our multimeters are the <a href="https://cdn.greenlee.com/resources/media?key=7fe82ac7-208f-4c14-910c-a522a2949b3c&amp;languageCode=en&amp;type=document">Greenlee DM-210A Digital Multimeter</a>. Since the <span class="math inline">\(V_{out}\)</span> node will very with time, you should be sure to measure it with your multimeter set to AC mode. The uncertainty listings for multimeters can use unusual units (e.g.: dgt and rdg), so don’t forget about <a href="https://www.designworldonline.com/how-to-determine-digital-multimeter-accuracy/">this document on multimeter specifications</a> that we also link on the lectures page.</li>
 <li>“1x scope probe” refers to using a BNC cable with hooks directly connected to an oscilloscope input. BNC cables don’t have datasheets worth reading for this lab because they’re just wires, so they have a low series impedance. However, the oscilloscope itself (an <a href="http://literature.cdn.keysight.com/litweb/pdf/75015-97045.pdf">Agilent 2024A</a>, which has this <a href="http://literature.cdn.keysight.com/litweb/pdf/5990-6618EN.pdf">datasheet</a>) has an input impedance and accuracy that you will need to look up. You can also create a 1x probe by using an oscilloscope probe with a switch set to 1x mode, and it will behave the same way as a BNC cable. When you are using a 1x probe, you must change the channel setting of the oscilloscope to be 1x. Note that some scopes call the channel setting 1:1 instead of 1x.</li>
 <li>“10x scope probe” refers to connecting a standard oscilloscope probe (set to 10x mode if there’s a switch) to an oscilloscope input. The gray scope probes in the lab are <a href="https://assets.testequity.com/te1/Documents/pdf/keysight/N28xxA-ds.pdf">Keysight N2842A</a> probes, and the black scope probes in 10x mode have a similar input impedance. Note that the input impedance of a scope probe is added <em>in series</em> with that of the oscilloscope itself, so the datasheet may report a total “terminated impedance” that includes the input impedance of the oscilloscope. When you are using a 10x probe, you must change the channel setting of the oscilloscope to be 10x. Note that some scopes call the channel setting 10:1 instead of 10x.</li>
-<li>“Teensy” refers to making an analog measurement with your Teensy. You made similar to the measurements in <a href="#sec-teensy-analog">Section&nbsp;2</a>. You made some calculations of the uncertainty of the Teensy, whcih arises from the size of the Teensy unit, in <a href="#sec-teensy-analog">Section&nbsp;2</a>, and you can find infomation about Teensy input impedance in the videos.</li>
+<li>“Teensy” refers to making an analog measurement with your Teensy. You made similar to the measurements in <a href="#sec-teensy-analog" class="quarto-xref">Section&nbsp;2</a>. You made some calculations of the uncertainty of the Teensy, whcih arises from the size of the Teensy unit, in <a href="#sec-teensy-analog" class="quarto-xref">Section&nbsp;2</a>, and you can find infomation about Teensy input impedance in the videos.</li>
 <li>Though this is not in the “Measure With” column, you will also need to find the output impedance and amplitude undertainty of your signal generator. If you are using the scope-integrated WaveGen output, then you can infer the output impedance and find the uncertainty in the oscilloscope manual. If you are, unusually, using a stand-alone function generators (an <a href="https://www.keysight.com/us/en/assets/7018-06809/data-sheets/5968-0125.pdf">HP33120A</a>), you can find these values in the datasheet.</li>
 </ul>
 <p>Do the following</p>
 <ol type="1">
-<li>For the circuit shown in <a href="#fig-divider">Figure&nbsp;1</a>, and for each of the values of Z1 and Z2 and the measuring instruments in <a href="#tbl-experiment">Table&nbsp;1</a>, calculate the expected output voltages with confidence intervals accounting for uncertainty in both components and instruments. Assume the resistors are 5% resistors. Be sure to include the effects of instrument loading in your calculations. Note that these analytical calculations can be made during prelab.<br>
+<li>For the circuit shown in <a href="#fig-divider" class="quarto-xref">Figure&nbsp;1</a>, and for each of the values of Z1 and Z2 and the measuring instruments in <a href="#tbl-experiment" class="quarto-xref">Table&nbsp;1</a>, calculate the expected output voltages with confidence intervals accounting for uncertainty in both components and instruments. Assume the resistors are 5% resistors. Be sure to include the effects of instrument loading in your calculations. Note that these analytical calculations can be made during prelab.<br>
 </li>
-<li>Build several copies of the circuit in <a href="#fig-divider">Figure&nbsp;1</a>, one for each pair of Z1/Z2 values in <a href="#tbl-experiment">Table&nbsp;1</a>. These can all be built simultaneously on the same breadboard if you lay it out carefully. Please trim your resistor leads so that they lie flat on the breadboard.</li>
+<li>Build several copies of the circuit in <a href="#fig-divider" class="quarto-xref">Figure&nbsp;1</a>, one for each pair of Z1/Z2 values in <a href="#tbl-experiment" class="quarto-xref">Table&nbsp;1</a>. These can all be built simultaneously on the same breadboard if you lay it out carefully. Please trim your resistor leads so that they lie flat on the breadboard.</li>
 <li>Measure and record the value of each component used in your construction, then recalculate the output voltages using your measured component values.</li>
 <li>Drive the circuits using a signal generator and measure the output voltage with each of the instruments in the table.</li>
 <li>Check whether or not the measured voltages lie within the predicted confidence intervals. Recall that you have two sets of predicted voltages, one based on nominal component values and one based on measured component values, so there are two sets of confidence intervals to check against. Also look at the percent error between the predictions and the measurements.</li>
@@ -452,31 +499,51 @@ Here are some common mistakes with lab equipment
 </section>
 <section id="resistor-dividers-with-op-amps" class="level2" data-number="4">
 <h2 data-number="4" class="anchored" data-anchor-id="resistor-dividers-with-op-amps"><span class="header-section-number">4</span> Resistor Dividers with Op Amps</h2>
-<p>Build the circuits in <a href="#fig-opamp-low-z">Figure&nbsp;2 (a)</a> and <a href="#fig-opamp-hi-z">Figure&nbsp;2 (b)</a>, and measure <span class="math inline">\(V_{out}\)</span> for both circuits with the multimeter. In both cases, power the op-amp with ±15 V. Compare and contrast your results with equivalent cases (same Z1 &amp; Z2, measured with multimeter) from <a href="#sec-dividers">Section&nbsp;3</a>. What is the function of the op-amp in each of these measurements?</p>
+<p>Build the circuits in <a href="#fig-opamp-low-z" class="quarto-xref">Figure&nbsp;2 (a)</a> and <a href="#fig-opamp-hi-z" class="quarto-xref">Figure&nbsp;2 (b)</a>, and measure <span class="math inline">\(V_{out}\)</span> for both circuits with the multimeter. In both cases, power the op-amp with ±15 V. Compare and contrast your results with equivalent cases (same Z1 &amp; Z2, measured with multimeter) from <a href="#sec-dividers" class="quarto-xref">Section&nbsp;3</a>. What is the function of the op-amp in each of these measurements?</p>
 <div id="fig-opamp-buffers" class="quarto-layout-panel">
-<figure class="figure">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div id="fig-opamp-low-z" class="quarto-figure quarto-figure-center anchored" style="flex-basis: 50.0%;justify-content: center;">
-<figure class="figure">
-<p><img src="../..\labs/lab2/img/Opamp_Follower_Lowimpedance.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">(a) An op-amp buffer connected to a low impedance divider.</figcaption>
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-opamp-buffers-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-opamp-buffers" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-opamp-low-z" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-opamp-low-z-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../../labs/lab2/img/Opamp_Follower_Lowimpedance.png" class="img-fluid figure-img" data-ref-parent="fig-opamp-buffers">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-opamp-low-z-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) An op-amp buffer connected to a low impedance divider.
+</figcaption>
 </figure>
 </div>
-<div id="fig-opamp-hi-z" class="quarto-figure quarto-figure-center anchored" style="flex-basis: 50.0%;justify-content: center;">
-<figure class="figure">
-<p><img src="../..\labs/lab2/img/Opamp_Follower_Highimpedance.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">(b) An op-amp buffer connected to a high impedance divider.</figcaption>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-opamp-buffers" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-opamp-hi-z" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-opamp-hi-z-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../../labs/lab2/img/Opamp_Follower_Highimpedance.png" class="img-fluid figure-img" data-ref-parent="fig-opamp-buffers">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-opamp-hi-z-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) An op-amp buffer connected to a high impedance divider.
+</figcaption>
 </figure>
 </div>
 </div>
-<p></p><figcaption class="figure-caption">Figure&nbsp;2: Op-amp buffers for divider experiments.</figcaption><p></p>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-opamp-buffers-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Op-amp buffers for divider experiments.
+</figcaption>
 </figure>
 </div>
 <p>Because this is your first time building op-amps (look forward to many more in lab 3!), we provide this diagram that may help with wiring up your first OP07. Each of the connections on the diagram is labeled wtih the OP07 pin number. Don’t forget that pin numbers start in the upper left of the chip and wrap around it counter-clockwise. The capacitors, called decoupling capacitors, are important to include even if their purpose may seem unclear. See the callout note below for more details.</p>
-<div id="fig-opamp-supplies" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="../..\labs/lab2/img/unitygainwithcaps.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Figure&nbsp;3: An op-amp schematic showing all connections.</figcaption>
+<div id="fig-opamp-supplies" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-opamp-supplies-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../../labs/lab2/img/unitygainwithcaps.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-opamp-supplies-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: An op-amp schematic showing all connections.
+</figcaption>
 </figure>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -511,21 +578,25 @@ Op-amp breadboarding tips
 </section>
 <section id="extra-credit-1" class="level2" data-number="5">
 <h2 data-number="5" class="anchored" data-anchor-id="extra-credit-1"><span class="header-section-number">5</span> Extra Credit 1</h2>
-<p>Build a divider in the stles of <a href="#sec-dividers">Section&nbsp;3</a> where Z1 is 100kΩ and Z2 is a 100kΩ thermistor, then derive a formula to calculate the temperature from Vin and Vout. Determine the error specifications for all of the components in your system. Measure Vin and Vout with the 10x Scope probe and use your results to calculate the room temperature. Propagate errors to calculate the uncertainty in your temperature measurement.</p>
+<p>Build a divider in the stles of <a href="#sec-dividers" class="quarto-xref">Section&nbsp;3</a> where Z1 is 100kΩ and Z2 is a 100kΩ thermistor, then derive a formula to calculate the temperature from Vin and Vout. Determine the error specifications for all of the components in your system. Measure Vin and Vout with the 10x Scope probe and use your results to calculate the room temperature. Propagate errors to calculate the uncertainty in your temperature measurement.</p>
 <p>Try to reduce your uncertainty by measuring the actual resistance of Z1 instead of using its printed value. Note that we’re only measuring Z1 because we are using the output voltage of the thermistor voltage divider to guess Z2. Repeat the measurement and calculation. How much did the uncertainty change?</p>
 <p>Compare your calculated temperatures with the room temperature measured by one of the digital thermometers. Do the measurements agree within the uncertainty of the measurements? Explore how the measured temperature changes with Vin as you vary from 1 Vpp to the maximum the signal generator can generate. Why does it change?</p>
 <p>Check Lynn’s work on Canvas -&gt; lab 2 top and agenda</p>
 </section>
 <section id="extra-credit-2" class="level2" data-number="6">
 <h2 data-number="6" class="anchored" data-anchor-id="extra-credit-2"><span class="header-section-number">6</span> Extra Credit 2</h2>
-<p>How do the accuracies of the Teensy and Elenco vary as you adjust the input frequency to 100 Hz, 200 Hz, 500 Hz, 1000 Hz, 2000 Hz, 5000 Hz,10,000 Hz, 20,000 Hz, 50,000 Hz, and 100,000 Hz? Be sure you select appropriate input signals as you conduct this experiment. In particular, reflect on the Teensy’s behavior in <strong>?@sec-sec-teensy-analog</strong> and <a href="#sec-dividers">Section&nbsp;3</a> when selecting the signal.</p>
+<p>How do the accuracies of the Teensy and Elenco vary as you adjust the input frequency to 100 Hz, 200 Hz, 500 Hz, 1000 Hz, 2000 Hz, 5000 Hz,10,000 Hz, 20,000 Hz, 50,000 Hz, and 100,000 Hz? Be sure you select appropriate input signals as you conduct this experiment. In particular, reflect on the Teensy’s behavior in <strong>?@sec-sec-teensy-analog</strong> and <a href="#sec-dividers" class="quarto-xref">Section&nbsp;3</a> when selecting the signal.</p>
 <p>The definition of “accuracy” can be slippery here, so you should think carefully about it as you compose your answer. This is particularly true for the Teensy, which will return a sample to you that consists of many numbers. Will you consider the accuracy of a single data point (compared to what)? Of a single cycle? Or of some kind of aggregation of cycles that includes uncertainty? Consider carefully.</p>
 </section>
 <section id="extra-credit-3" class="level2" data-number="7">
 <h2 data-number="7" class="anchored" data-anchor-id="extra-credit-3"><span class="header-section-number">7</span> Extra Credit 3</h2>
-<div id="tbl-rc" class="anchored">
+<div id="tbl-rc" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-rc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Table of RC divider measurements
+</figcaption>
+<div aria-describedby="tbl-rc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="table">
-<caption>Table&nbsp;2: Table of RC divider measurements</caption>
 <colgroup>
 <col style="width: 30%">
 <col style="width: 30%">
@@ -562,7 +633,9 @@ Op-amp breadboarding tips
 </tbody>
 </table>
 </div>
-<p>Build the circuits in table <a href="#tbl-rc">Table&nbsp;2</a> in the same manner as the dividers in <a href="#sec-dividers">Section&nbsp;3</a>, then repeat the predictions and measurements as in <a href="#sec-dividers">Section&nbsp;3</a>. Vary the input frequency to each of the values listed in the “Test Frequencies” column as you perform these measurements. Use an input amplitude of 5Vpp and, if using the Teensy, be sure to offset the signal. Note that the multimeter can measure capacitance. Measure the output voltages with any appropriate equipment (justify your choice). Measure the phase difference between the input and output Voltages where possible. Explain the results of your measurements and possible function for each circuit. Consider carefully in what (graphical) format(s) you want to present your results.</p>
+</figure>
+</div>
+<p>Build the circuits in table <a href="#tbl-rc" class="quarto-xref">Table&nbsp;2</a> in the same manner as the dividers in <a href="#sec-dividers" class="quarto-xref">Section&nbsp;3</a>, then repeat the predictions and measurements as in <a href="#sec-dividers" class="quarto-xref">Section&nbsp;3</a>. Vary the input frequency to each of the values listed in the “Test Frequencies” column as you perform these measurements. Use an input amplitude of 5Vpp and, if using the Teensy, be sure to offset the signal. Note that the multimeter can measure capacitance. Measure the output voltages with any appropriate equipment (justify your choice). Measure the phase difference between the input and output Voltages where possible. Explain the results of your measurements and possible function for each circuit. Consider carefully in what (graphical) format(s) you want to present your results.</p>
 
 
 </section>
@@ -647,10 +720,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -660,8 +732,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -674,6 +755,125 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -717,6 +917,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -742,6 +943,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -802,6 +1029,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 
