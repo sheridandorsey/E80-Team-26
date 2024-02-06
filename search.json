@@ -280,6 +280,13 @@
     "text": "In this writing assignment you will create a figure, write a caption for it, and write a paragraph of text to reference and explain the figure. In doing this, you will learn how to create a well-designed figure to clearly and effectively present captured data. You will also learn how to refer to the figure in supporting text by writing a short paragraph to explain the significance of the data and the important takeaways."
   },
   {
+    "objectID": "labs/lab1/lab1-writing.html#statement-of-work",
+    "href": "labs/lab1/lab1-writing.html#statement-of-work",
+    "title": "Lab 1 Writing Assignment",
+    "section": "Statement of Work",
+    "text": "Statement of Work\nYou must prepare a figure showing the acceleration plots recorded from your robot in the tank. The figure should plot the measured acceleration in x, y, and z overlaid on a single axis. The figure must be accompanied by a descriptive caption. In addition to the figure, you must write a short 150-200 word paragraph explaining and interpreting the acceleration data. In your text, you should describe the planned trajectory of your robot, the actual trajectory that it took, and describe how this actual trajectory corresponds to the plotted acceleration data."
+  },
+  {
     "objectID": "labs/lab1/lab1-writing.html#learning-objectives",
     "href": "labs/lab1/lab1-writing.html#learning-objectives",
     "title": "Lab 1 Writing Assignment",
