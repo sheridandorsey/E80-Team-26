@@ -67,6 +67,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -192,8 +221,254 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>Keep answers as short as possible while still meeting specifications. Submit as a PDF.</p>
+<p>Team Number:</p>
+<p>Team Member Names:</p>
+<p>Several of the deliverables in this submission sheet will call for schematics, oscilloscope traces or circuit pictures. These are specific genres of technical documents, so they have conventions you need to adhere to. The specifications for all schematics, oscilloscope traces and circuit pictures are listed on this page instead of being repeated for each deliverable in the document.</p>
+<p>All schematics in this report should adhere the following specification:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Include the stimulus for the circuit on the left</label></li>
+<li><label><input type="checkbox">Include power supply connections and bypass capacitors.</label></li>
+<li><label><input type="checkbox">Annotate each node with a name, using the name Vin for the input voltage and Vout for the measured output voltage</label></li>
+<li><label><input type="checkbox">Annotate each resistor and capacitor with a component value.</label></li>
+<li><label><input type="checkbox">Use implicit connections to connect the power supplies.</label></li>
+<li><label><input type="checkbox">Use the op-amp symbol to indicate operational amplifiers (instead of, e.g., a pinout diagram), but annotates that symbol with the chip used to make the op-amp.</label></li>
+<li><label><input type="checkbox">Represent op-amp circuits in their typical configurations, so that they look similar to videos. Don’t use non-typical drawings that make one type of op-amp circuit look like another. (e.g.: don’t draw a non-inverting amplifier with feedback on the top of the op-amp; that’s usually how inverting amplifiers are drawn.)</label></li>
+<li><label><input type="checkbox">Generally keep signal flow left-to-right</label></li>
+<li><label><input type="checkbox">Generally keep high voltages at the top of the diagram and low voltages at the bottom.</label></li>
+<li><label><input type="checkbox">Space out components well enough and zoom in close enough that annotations are easy to read.</label></li>
+<li><label><input type="checkbox">Minimize unnecessary crossings, corners and jogs in the wires. Use connect-by-name to reduce congestion among wires. This <a href="https://learn.sparkfun.com/tutorials/how-to-read-a-schematic/reading-schematics">tutorial</a> has more information.</label></li>
+</ul>
+<p>All pictures of circuits in this report should adhere to the following specification:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Picture is taken at a level of lighting and zoom that allows a reader to trace connections in the circuit.</label></li>
+<li><label><input type="checkbox">The circuit is neatly laid out so that readers can trace connections in the circuit.</label></li>
+</ul>
+<div style="page-break-after: always;"></div>
+<section id="report-on-the-design-and-characterization-of-a-pressure-sensor-interface-circuit" class="level2">
+<h2 class="anchored" data-anchor-id="report-on-the-design-and-characterization-of-a-pressure-sensor-interface-circuit">Report on the Design and Characterization of a Pressure Sensor Interface Circuit</h2>
+<p>Effort:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Provides a picture of the pressure sensor interface circuit, including the pressure sensor</label></li>
+<li><label><input type="checkbox">Provides a schematic of the pressure sensor interface circuit, including the pressure sensor</label></li>
+<li><label><input type="checkbox">Equation relating depth to pressure sensor output Voltage is included.</label></li>
+<li><label><input type="checkbox">Equation relating op-amp input Voltage to op-amp output Voltage is included. May be incorrect if it looks like a good faith effort.</label></li>
+</ul>
+<p>Complete:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Equation relating op-amp input to op-amp output is correct.</label></li>
+<li><label><input type="checkbox">Equations are combined into an overall equation relating depth and op-amp output Voltage.</label></li>
+<li><label><input type="checkbox">Provides a table of results that matches the form below with at least five data points. Note the following:</label>
+<ul>
+<li>VOP is predicted output Voltage</li>
+<li><span class="math inline">\(\lambda\)</span>V is uncertainty in predicted output Voltage</li>
+<li>VOM is measured output Voltage</li>
+<li><span class="math inline">\(\lambda\)</span>M is uncertainty in measured output Voltage</li>
+<li>ERR is error between prediction and measurement</li>
+</ul></li>
+<li><label><input type="checkbox">Predicted Voltages and measured voltages match to within uncertainty and are consistent with equations.</label></li>
+<li><label><input type="checkbox">Predicted and measured Voltage at zero depth is close to 0.3 V.</label></li>
+<li><label><input type="checkbox">Predicted Voltage at 1m depth is close to 3.0V</label></li>
+</ul>
+<table class="table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 12%">
+<col style="width: 22%">
+<col style="width: 12%">
+<col style="width: 22%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Depth (cm)</th>
+<th>VOP (V)</th>
+<th><span class="math inline">\(\lambda\)</span>V (V)</th>
+<th>VOM (V)</th>
+<th><span class="math inline">\(\lambda\)</span>M (V)</th>
+<th>ERR (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>…</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="report-on-the-design-and-characterization-of-a-thermistor-interface-circuit" class="level2">
+<h2 class="anchored" data-anchor-id="report-on-the-design-and-characterization-of-a-thermistor-interface-circuit">Report on the Design and Characterization of a Thermistor Interface Circuit</h2>
+<p>Effort:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Provides a picture of the thermistor interface circuit, including the pressure sensor</label></li>
+<li><label><input type="checkbox">Provides a schematic of the thermistor interface circuit, including the pressure sensor</label></li>
+<li><label><input type="checkbox">Equation relating op-amp input Voltage to op-amp output Voltage is included. May be incorrect if it looks like a good faith effort.</label></li>
+</ul>
+<p>Complete:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Equation relating op-amp input to op-amp output is correct.</label></li>
+<li><label><input type="checkbox">Predicted and measured resistance values are reported with uncertainty for 0 °C and 20 °C temperatures.</label></li>
+<li><label><input type="checkbox">Predicted and measured output voltages are reported with uncertainty for 0 °C and 20 °C temperatures.</label></li>
+<li><label><input type="checkbox">Predicted Voltages and measured voltages match to within uncertainty and are consistent with equations.</label></li>
+<li><label><input type="checkbox">Predicted and measured Voltage at 0 °C is close to 0.3 V.</label></li>
+<li><label><input type="checkbox">Predicted and measured Voltage at 20 °C is close to 3.0 V.</label></li>
+</ul>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="report-on-steinhart-hart-fitting-of-thermistor" class="level2">
+<h2 class="anchored" data-anchor-id="report-on-steinhart-hart-fitting-of-thermistor">Report on Steinhart-Hart Fitting of Thermistor</h2>
+<p>Provide a table of results that matches the form below. Note the following: - T is the temperature measured by the digital thermometer - <span class="math inline">\(\lambda\)</span>T is uncertainty in T. - R is the resistance measured by the multimeter. - <span class="math inline">\(\lambda\)</span>R is uncertainty in R.</p>
+<p>Also provide extracted Steinhart-Hart coefficients with uncertainty and two graphs. One graph overlays R-T data, the Steinhart-Hart fit and the fit from the datasheet. The other provides residuals from the Steinhart-Hart fit.</p>
+<p>Effort:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">At least four of table rows are filled in. May omit uncertainty columns.</label></li>
+<li><label><input type="checkbox">Provides graph of 1/T vs.&nbsp;R data.</label></li>
+</ul>
+<p>Complete:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">All table rows are filled in.</label></li>
+<li><label><input type="checkbox">All uncertainties are included and correct.</label></li>
+<li><label><input type="checkbox">Includes code showing how to</label></li>
+<li><label><input type="checkbox">Includes a plot of 1/T vs.&nbsp;R that shows measured points with uncertainty, fit based on datasheet equation, and fit based on extracted Steinhart-Hart coefficients.</label></li>
+<li><label><input type="checkbox">Include plot of residuals from Steinhart-Hart fit.</label></li>
+</ul>
+<table class="table">
+<thead>
+<tr class="header">
+<th>T (°C)</th>
+<th><span class="math inline">\(\lambda\)</span>T (°C)</th>
+<th>R (k<span class="math inline">\(\Omega\)</span>)</th>
+<th><span class="math inline">\(\lambda\)</span>R (k<span class="math inline">\(\Omega\)</span>)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="report-on-measurements-of-thermocouple" class="level2">
+<h2 class="anchored" data-anchor-id="report-on-measurements-of-thermocouple">Report on Measurements of Thermocouple</h2>
+<p>Provide a table of results that matches the form below. Note the following: - TT is the temperature measured by the digital thermometer - <span class="math inline">\(\lambda\)</span>T is uncertainty in TT. - TK is the temperature measured by the type-K thermocouple when the multimeter was in temperature mode. - <span class="math inline">\(\lambda\)</span>K is uncertainty in TK. - V is the thermocouple Voltage when the multimeter was in Voltage mode. - <span class="math inline">\(\lambda\)</span>V is the uncertainty in V. - CJC is the cold junction compensation Voltage. - TD is the temperature decoded from the Voltage in Thermocouple mode. - <span class="math inline">\(\lambda\)</span>D is the uncertainty in TD.</p>
+<p>Effort:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">At least two of table rows are filled in. May omit uncertainty columns.</label></li>
+<li><label><input type="checkbox">CJC column has at least a reasonable guess.</label></li>
+</ul>
+<p>Complete:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">All table rows are filled in.</label></li>
+<li><label><input type="checkbox">All uncertainties are included and correct.</label></li>
+<li><label><input type="checkbox">CJC column and decoded temperature are correct for measured Voltages.</label></li>
+</ul>
+<table class="table">
+<colgroup>
+<col style="width: 7%">
+<col style="width: 15%">
+<col style="width: 7%">
+<col style="width: 15%">
+<col style="width: 7%">
+<col style="width: 15%">
+<col style="width: 8%">
+<col style="width: 7%">
+<col style="width: 15%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>TT (°C)</th>
+<th><span class="math inline">\(\lambda\)</span>T (°C)</th>
+<th>TK (°C)</th>
+<th><span class="math inline">\(\lambda\)</span>K (°C)</th>
+<th>V (mV)</th>
+<th><span class="math inline">\(\lambda\)</span>V (mV)</th>
+<th>CJC (mV)</th>
+<th>TD (°C)</th>
+<th><span class="math inline">\(\lambda\)</span>D (°C)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="report-on-settling-times-of-temperature-sensors" class="level2">
+<h2 class="anchored" data-anchor-id="report-on-settling-times-of-temperature-sensors">Report on Settling Times of Temperature Sensors</h2>
+<p>Effort:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Includes picture of all three sensors next to measurement setup.</label></li>
+<li><label><input type="checkbox">Reports three settling times, one for each sensor.</label></li>
+</ul>
+<p>Complete:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Settling times are consistent with results from lecture.</label></li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
