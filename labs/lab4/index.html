@@ -312,18 +312,18 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The MPX5700 is sensitive to supply Voltage and it can mess up your measurements. Set your power supply to exactly 5 V and verify its value with a multimeter.</p>
+<p>The MPX5700 is sensitive to supply Voltage, which can mess up your measurements. Set your power supply to exactly 5 V and verify its value with a multimeter.</p>
 </div>
 </div>
 </section>
 <section id="build-a-thermistor-interface-circuit" class="level2" data-number="3">
 <h2 data-number="3" class="anchored" data-anchor-id="build-a-thermistor-interface-circuit"><span class="header-section-number">3</span> Build a Thermistor Interface Circuit</h2>
 <p>In another echo of E79, this section is about building a thermistor-based temperature sensor. The sensor will consist of a resistor/thermistor divider circuit and an op-amp circuit. The op-amp circuit will shift and scale the divider circuit’s output Voltage range to better match the Teensy’s input Voltage range. The thermistor you will use is a <a href="./assets/NXFT15WB473FA2B150.pdf">Murata NXFT15WB473FA2B150</a>. You will need to predict the resistance as a function of temperature, and the formula you will use here shown in <a href="#eq-RB-thermistor" class="quarto-xref">Equation&nbsp;1</a> where <span class="math inline">\(R\)</span> is the current resistance of the thermistor at temperature <span class="math inline">\(T\)</span> in Kelvins, <span class="math inline">\(R_0\)</span> is the known resistance at reference temperature <span class="math inline">\(T_0\)</span> in Kelvins, and <span class="math inline">\(B\)</span> is a constant in the datasheet.</p>
-<p><span id="eq-RB-thermistor"><span class="math display">\[ R=R_0 \exp{B(1/T-1/T_0)}  \tag{1}\]</span></span></p>
+<p><span id="eq-RB-thermistor"><span class="math display">\[ R=R_0 \exp{\left(B(1/T-1/T_0)\right)}  \tag{1}\]</span></span></p>
 <ol type="1">
 <li>Predict the resistance you will see from the thermistor when it is in a 0 °C bath to a 20 °C bath.</li>
 <li>Design a Voltage divider that converts the thermistor resistance to Voltage. The divider should use a supply Voltage of 5V, a thermistor in the top position, and a resistor of your choice in the bottom position. Predict the output Voltages of this circuit when the thermistor is in a 0 °C bath to a 20 °C bath. Use appropriate measures of uncertainty.</li>
-<li>Design an op-amp circuit that will shift and scale the output of the thermistor divider into the Teensy Voltage range (0.3V to 3.0V). Use an MCP601 op-amp with a supply Voltage of 5V.</li>
+<li>Design an op-amp circuit using one or more op-amps that will shift and scale the output of the thermistor divider into the Teensy Voltage range (0.3V to 3.0V). Use single-rail op-amps with a supply Voltage of 5V. Note that you need to be careful of loading in this circuit because <strong>op-amp circuits can load sensors</strong> just like the instruments in lab 2. Think carefully whether adding a second op-amp can improve your results.</li>
 <li>Build the divider and op-amp circuits, test them individually, hook them together, then test the combination using a 0 °C bath and a 20 °C bath and compare results to predictions.</li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled">
