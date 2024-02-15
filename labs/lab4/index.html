@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.4.550">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -238,10 +238,21 @@ window.Quarto = {
 <p>Team size: 2</p>
 <p>Submission Sheet: <a href="../../labs/lab4/submission.html">html</a> <a href="./submission.docx">docx</a></p>
 <p>Prelab Help Sheet: <a href="../../labs/lab4/prelab.html">html</a></p>
+<p>Writing Assignment: <a href="../../labs/lab4/lab4-writing.html">html</a></p>
+<p>Writing Template: <a href="../../labs/lab4/lab4-writing-template.html">html</a> <a href="./lab4-writing-template.docx">Word</a></p>
 <section id="introduction" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">1</span> Introduction</h2>
 <p>In this lab you will build some common sensors for the final project – a pressure sensor and a thermistor-based temperature sensor – perform a non-linear fit to thermistor data, and experiment with a thermocouple. Temperature and pressure have been called the “monarchs of measurements” by some Mudd professors because of their wide applicability in chemical and industrial processes, aerospace applications, and natural sciences (including oceanography), which is why we are working with these measurements this week. You might find some time in this lab to prepare a resubmission, possibly by revisiting data from labs 1-3.</p>
 <p>After successful completion of this lab, you will be able to:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Relate the resistance of a thermistor to its temperature using the Steinhart-Hart Equation.</label></li>
+<li><label><input type="checkbox">Perform a fit to a non-linear function of data</label></li>
+<li><label><input type="checkbox">Use NIST tables to interpret thermocouple Voltages</label></li>
+<li><label><input type="checkbox">Use a multimeter to measure temperature with a thermocouple</label></li>
+<li><label><input type="checkbox">Describe the basics of cold junction compensation</label></li>
+<li><label><input type="checkbox">Comment on the relative speed of solid-state linear temperature sensors, thermistors and thermocouples.</label></li>
+</ul>
+<p>This lab will be carried out as sub-teams of two. Policies for sub-teams are discussed in <a href="../../labs/lab2/index.html">Lab 2</a>.</p>
 <ul class="task-list">
 <li><label><input type="checkbox">Relate the resistance of a thermistor to its temperature using the Steinhart-Hart Equation.</label></li>
 <li><label><input type="checkbox">Perform a fit to a non-linear function of data</label></li>
@@ -294,7 +305,7 @@ Note
 </section>
 <section id="build-a-pressure-sensor-interface-circuit" class="level2" data-number="2">
 <h2 data-number="2" class="anchored" data-anchor-id="build-a-pressure-sensor-interface-circuit"><span class="header-section-number">2</span> Build a Pressure Sensor Interface Circuit</h2>
-<p>E79 and E80 both rely on the same pressure sensor, the <a href="./assets/MPX5700-783436.pdf">MPX5700</a>, which has a reasonable range of output Voltages over the depths that E79/E80 robots can easily traverse. However, that range of output voltages is small compared to the input range of the Teensy, so if you want to use this sensor in your final project, you will get large errors from Teensy quantization unless you build an amplifier. In this section, you will design an op-amp circuit that shifts and scales MPX5700 output Voltage range into the Teensy input range, which is approximately 0 V to 3.3 V. Use the <a href="http://ww1.microchip.com/downloads/en/DeviceDoc/21314g.pdf">MCP601</a> op-amp and Vdd=5V for both the MPX5700 and the MCP601.</p>
+<p>E79 and E80 both rely on the same pressure sensor, the <a href="./assets/MPX5700-783436.pdf">MPX5700</a>, which has a reasonable range of output voltages over the depths that E79/E80 robots can easily traverse. However, that range of output voltages is small compared to the input range of the Teensy, so if you want to use this sensor in your final project, you will get large errors from Teensy quantization unless you build an amplifier. In this section, you will design an op-amp circuit that shifts and scales MPX5700 output Voltage range into the Teensy input range, which is approximately 0 V to 3.3 V. Use the <a href="./assets/21314g.pdf">MCP601</a> op-amp and Vdd = 5 V.</p>
 <ol type="1">
 <li>Find the Voltages the MPX5700 will produce when at depths between 0 m and 40 cm. Recall that the sensor will experience atmospheric pressure at 0m. We will call this Voltage range the target Voltage range.</li>
 <li>Design an op-amp circuit that will shift and scale MPX5700 output Voltages from the target voltage range to a new Voltage range that is suitable for reading by the Teensy. The new Voltage range should have a maximum of 3.0 V and a minimum of 0.3 V.</li>
