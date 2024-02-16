@@ -192,8 +192,120 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>Keep answers as short as possible while still meeting specifications. Submit as a PDF.</p>
+<p>Team Number:</p>
+<p>Team Member Names:</p>
+<p>All schematics in this report should adhere the following specification:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Include the stimulus for the circuit on the left</label></li>
+<li><label><input type="checkbox">Include power supply connections and bypass capacitors.</label></li>
+<li><label><input type="checkbox">Annotate each node with a name, using the name Vin for the input voltage and Vout for the measured output voltage</label></li>
+<li><label><input type="checkbox">Annotate each resistor and capacitor with a component value.</label></li>
+<li><label><input type="checkbox">Use implicit connections to connect the power supplies.</label></li>
+<li><label><input type="checkbox">Use the op-amp symbol to indicate operational amplifiers (instead of, e.g., a pinout diagram), but annotates that symbol with the chip used to make the op-amp.</label></li>
+<li><label><input type="checkbox">Represent op-amp circuits in their typical configurations, so that they look similar to videos. Don’t use non-typical drawings that make one type of op-amp circuit look like another. (e.g.: don’t draw a non-inverting amplifier with feedback on the top of the op-amp; that’s usually how inverting amplifiers are drawn.)</label></li>
+<li><label><input type="checkbox">Generally keep signal flow left-to-right</label></li>
+<li><label><input type="checkbox">Generally keep high voltages at the top of the diagram and low voltages at the bottom.</label></li>
+<li><label><input type="checkbox">Space out components well enough and zoom in close enough that annotations are easy to read.</label></li>
+<li><label><input type="checkbox">Minimize unnecessary crossings, corners and jogs in the wires. Use connect-by-name to reduce congestion among wires. This <a href="https://learn.sparkfun.com/tutorials/how-to-read-a-schematic/reading-schematics">tutorial</a> has more information.</label></li>
+</ul>
+<p>All pictures of circuits in this report should adhere to the following specification:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Picture is taken at a level of lighting and zoom that allows a reader to trace connections in the circuit.</label></li>
+<li><label><input type="checkbox">The circuit is neatly laid out so that readers can trace connections in the circuit.</label></li>
+</ul>
+<div style="page-break-after: always;"></div>
+<section id="report-on-the-fft-of-signals-directly-applied-to-the-scope" class="level2">
+<h2 class="anchored" data-anchor-id="report-on-the-fft-of-signals-directly-applied-to-the-scope">Report on the FFT of Signals Directly Applied to the Scope</h2>
+<p>The manual for this section requests five oscilloscope traces, which will be referred to here as traces 1-5 based on the list below. Traces should follow the instructions in the manual (50 cycles on screen, FFT span is 100 kHz, FFT center is 50 kHz). Further, the input signal should be on channel 1 and the math mode should be scaled to be clearly visible:</p>
+<ol type="1">
+<li>Signal 1</li>
+<li>Signal 2</li>
+<li>Signal 3 with rectangular window</li>
+<li>Signal 3 with Hanning window</li>
+<li>Signal 3 with rectangular window and changed x-axis</li>
+</ol>
+<p>The manual also requests two Matlab plots</p>
+<ol type="1">
+<li>Matlab plot of FFT magnitude for signal 3 with rectangular window</li>
+<li>Matlab plot of FFT magnitude for signal 3 with Hanning window</li>
+</ol>
+<p>These traces and plots should be included in this section with a specific organization. They should be displayed as five side-by-side pairs of figures, each with ~1 sentence commenting on the differences between the left and the right figure. The commentary should specifically relate the changes to FFT theory. The pairs are:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Trace 1 vs.&nbsp;Trace 2</label></li>
+<li><label><input type="checkbox">Trace 1 vs.&nbsp;Trace 3</label></li>
+<li><label><input type="checkbox">Trace 3 vs.&nbsp;Trace 4</label></li>
+<li><label><input type="checkbox">Trace 4 vs.&nbsp;Trace 5</label></li>
+<li><label><input type="checkbox">Trace 3 vs.&nbsp;Matlab Plot 1</label></li>
+<li><label><input type="checkbox">Trace 4 vs.&nbsp;Matlab plot 2</label></li>
+</ul>
+<p>Effort:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Includes all side-by-side comparisons described in this section.</label></li>
+<li><label><input type="checkbox">All plots adhere to instructions in this section and in the manual (50 cycles on screen, FFT span 100 kHz, FFT center is 50 kHz), and all plots are easily legible.</label></li>
+<li><label><input type="checkbox">Includes a derivation that explains how frequency peaks in signal 3 relate to the input frequency and the shape of the wave.</label></li>
+</ul>
+<p>Complete:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">All 1 sentence descriptions correctly relate features in side-by-side comparisons to FFT behavior.</label></li>
+<li><label><input type="checkbox">Derivation of frequency peak locations is succinct and correct.</label></li>
+<li><label><input type="checkbox">Includes a further 2-3 sentences discussion of windowing functions explaining how they work (by appealing to Fourier analysis) and what the tradeoffs are in choosing one over another.</label></li>
+</ul>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="report-on-design-and-characterization-of-microphone-interface-circuit" class="level2">
+<h2 class="anchored" data-anchor-id="report-on-design-and-characterization-of-microphone-interface-circuit">Report on Design and Characterization of Microphone Interface Circuit</h2>
+<p>Effort:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Provides a picture of the microphone interface circuit, including the microphone.</label></li>
+<li><label><input type="checkbox">Provides a schematic of the microphone interface circuit, including the microphone.</label></li>
+<li><label><input type="checkbox">Includes some good-faith calculations predicting the bandwidth of each amplifier stage in the interface using the gain-bandwidth product.</label></li>
+</ul>
+<p>Complete:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Calculations of gain-bandwidth product are correct</label></li>
+<li><label><input type="checkbox">Provides an oscilloscope trace of the hand clap with overlaid FFT. The horizontal axis on this trace should be scaled to capture the entire clap, the vertical axis should be scaled so the time domain signal is as large as possible without clipping, the vertical offset should be set to 0V. The FFT span and center should be set to clearly show clap frequencies. Trace must be exported using screen capture, not a cell phone photo.</label></li>
+<li><label><input type="checkbox">The clap signal shows proper circuit operation: clap signal is centered at 0V, clap peak amplitude is measured as &gt; 100mV.</label></li>
+<li><label><input type="checkbox">Brief discussion of what frequencies are present in the hand clap and how those frequencies compare to the range of human audible frequencies and to the range of typical human speech.</label></li>
+</ul>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="graphs-of-microphone-voltage-vs.-position-for-beacon-based-localization" class="level2">
+<h2 class="anchored" data-anchor-id="graphs-of-microphone-voltage-vs.-position-for-beacon-based-localization">Graphs of Microphone Voltage vs.&nbsp;Position for Beacon-Based Localization</h2>
+<p>Effort:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Makes claims about which beacon emits each frequency, and includes pictures and oscilloscope traces that support the claims.</label></li>
+<li><label><input type="checkbox">Include three plots of received Voltage magnitudes vs.&nbsp;distance, one for each emitter. Plots are clearly legible and labeled.</label></li>
+</ul>
+<p>Complete:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Includes calculations suggesting how frequently multipath patterns will repeat in data and how close to space x-axis samples to capture those patterns.</label></li>
+<li><label><input type="checkbox">Plots show multipath effects overlaid onto typical magnitude decay behavior.</label></li>
+<li><label><input type="checkbox">Analytical model for received Voltage magnitude is overlaid onto the plots.</label></li>
+</ul>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="graphs-of-microphone-voltage-sampled-at-different-frequencies-with-teensy-rig" class="level2">
+<h2 class="anchored" data-anchor-id="graphs-of-microphone-voltage-sampled-at-different-frequencies-with-teensy-rig">Graphs of Microphone Voltage Sampled at Different Frequencies with Teensy Rig</h2>
+<p>Effort:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Includes plots of FFT magnitude for 10 kS/s and 100 kS/s data. Plots are legible and labeled so it is clear which is which.</label></li>
+<li><label><input type="checkbox">Includes plots of time samples for 10 kS/s and 100 kS/s data. Plots are legible and labeled so it is clear which is which.</label></li>
+</ul>
+<p>Complete:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Explains discrepancies between measured data and data that is being transmitted in the tank using appropriate theory. 4-5 sentences.</label></li>
+<li><label><input type="checkbox">Includes calculations of minimum sampling rate for the tank.</label></li>
+<li><label><input type="checkbox">Includes plots of time data and FFT magnitude for tank data sampled at the minimum frequency.</label></li>
+</ul>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="extra-credit-writeups" class="level2">
+<h2 class="anchored" data-anchor-id="extra-credit-writeups">Extra Credit Writeups:</h2>
+<p>We don’t provide complete specifications for extra credit writeups, but they will be graded for effort and completeness like normal sections. You need to provide a “mini-report” of &lt;1 page for each extra credit section that you attempt. Put a page break between each extra credit mini-report.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
