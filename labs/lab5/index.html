@@ -178,7 +178,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#sec-interface" id="toc-sec-interface" class="nav-link" data-scroll-target="#sec-interface"><span class="header-section-number">3</span> Circuit Interfaces to Microphones</a></li>
   <li><a href="#distance-measurement-based-on-amplitude" id="toc-distance-measurement-based-on-amplitude" class="nav-link" data-scroll-target="#distance-measurement-based-on-amplitude"><span class="header-section-number">4</span> Distance Measurement Based On Amplitude</a></li>
   <li><a href="#sampling-audio-with-a-teensy" id="toc-sampling-audio-with-a-teensy" class="nav-link" data-scroll-target="#sampling-audio-with-a-teensy"><span class="header-section-number">5</span> Sampling Audio with a Teensy</a></li>
-  <li><a href="#extra-credit-distance-measurement-based-on-time-of-flight-measurements" id="toc-extra-credit-distance-measurement-based-on-time-of-flight-measurements" class="nav-link" data-scroll-target="#extra-credit-distance-measurement-based-on-time-of-flight-measurements"><span class="header-section-number">6</span> Extra Credit: Distance Measurement Based on Time-of-Flight Measurements</a></li>
+  <li><a href="#sec-tof" id="toc-sec-tof" class="nav-link" data-scroll-target="#sec-tof"><span class="header-section-number">6</span> Extra Credit: Distance Measurement Based on Time-of-Flight Measurements</a></li>
   <li><a href="#extra-credit-velocity-detection-from-doppler-shift" id="toc-extra-credit-velocity-detection-from-doppler-shift" class="nav-link" data-scroll-target="#extra-credit-velocity-detection-from-doppler-shift"><span class="header-section-number">7</span> Extra Credit: Velocity Detection from Doppler Shift</a></li>
   <li><a href="#extra-credit-self-powered-velocity-measurements" id="toc-extra-credit-self-powered-velocity-measurements" class="nav-link" data-scroll-target="#extra-credit-self-powered-velocity-measurements"><span class="header-section-number">8</span> Extra Credit: Self-Powered Velocity Measurements</a></li>
   <li><a href="#a-note-for-the-project" id="toc-a-note-for-the-project" class="nav-link" data-scroll-target="#a-note-for-the-project"><span class="header-section-number">9</span> A Note for the Project:</a></li>
@@ -354,14 +354,44 @@ Warning
 <p>We are using both benchtop electronics and water in this lab, and the two don’t mix, so BE EXTREMELY CAREFUL when putting anything in the water, removing anything from the water or mounting anything near the water. Instructors will stop your experiments if they think they pose a water hazard to equipment.</p>
 </div>
 </div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Though this section shows that it’s possible to measure a robot’s position using power decay from a beacon, it’s much more common and reliable to measure a robot’s position using the time-of-flight of an acoustic pulse. See <a href="#sec-tof" class="quarto-xref">Section&nbsp;6</a> for more details on how to use time-of-flight measurements for sounding.</p>
+</div>
+</div>
 </section>
 <section id="sampling-audio-with-a-teensy" class="level2" data-number="5">
 <h2 data-number="5" class="anchored" data-anchor-id="sampling-audio-with-a-teensy"><span class="header-section-number">5</span> Sampling Audio with a Teensy</h2>
-<p>This section requires that you use the <a href="https://drive.google.com/file/d/1E3q6aML1yzfEQCIf2IRF8aNnYXfuPZUK/view?usp=sharing">Teensy sampling rigs</a> that have been set up in the tank room. The rigs consist of an amplifier with an offset attached to an E80 motherboard that samples the amplifier output. We provide software, <a href="https://github.com/HMC-E80/E80-SP2023/blob/main/MATLAB/E80_Lab_05_Teensy_Rig.m">E80_Lab05_Teensy_Rig.m</a> and <a href="https://github.com/HMC-E80/E80-SP2023/blob/main/E80_Lab_05_Teensy_Rig/E80_Lab_05_Teensy_Rig.ino">E80_Lab05_Teensy_Rig.ino</a> (which is already running on the rig), that allows you to adjust the sample rate of the Teensy, and we’re going to use that power to explore how sample rate affects real world data samples.</p>
+<p>This section requires that you use the Teensy sampling rigs (shown in <a href="#fig-sampling-rig" class="quarto-xref">Figure&nbsp;1</a>) that have been set up in the tank room. The rigs consist of an amplifier with an offset attached to an E80 motherboard that samples the amplifier output. We provide software, <a href="https://github.com/HMC-E80/E80-SP2023/blob/main/MATLAB/E80_Lab_05_Teensy_Rig.m">E80_Lab05_Teensy_Rig.m</a> and <a href="https://github.com/HMC-E80/E80-SP2023/blob/main/E80_Lab_05_Teensy_Rig/E80_Lab_05_Teensy_Rig.ino">E80_Lab05_Teensy_Rig.ino</a> (which is already running on the rig), that allows you to adjust the sample rate of the Teensy, and we’re going to use that power to explore how sample rate affects real world data samples.</p>
+<div id="fig-sampling-rig" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-sampling-rig-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/teensy_sampling_rig.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sampling-rig-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Teensy sampling rig
+</figcaption>
+</figure>
+</div>
 <ol type="1">
-<li>Connect your microphone to a Teensy sampling rig,</li>
-<li>Connect the rig to your computer with a micro USB cable and then run <a href="https://github.com/HMC-E80/E80-SP2023/blob/main/MATLAB/E80_Lab_05_Teensy_Rig.m">E80_Lab05_Teensy_Rig.m</a>.</li>
-<li>Use the software to measure vectors of sample data with sample rates of 10 kS/s and 100 kS/s (kilosamples per second).</li>
+<li>Connect a tank microphone to a Teensy sampling rig,</li>
+<li>Connect the rig to your computer with a micro USB cable</li>
+<li>Use the <a href="https://github.com/HMC-E80/E80-SP2023/blob/main/MATLAB/E80_Lab_05_Teensy_Rig.m">E80_Lab05_Teensy_Rig.m</a> software to measure vectors of sample data with sample rates of 10 kS/s and 100 kS/s (kilosamples per second).
+<ol type="1">
+<li>Edit the Matlab script to set the COM port</li>
+<li>Edit the Matlab script to set the sampling frequency</li>
+<li>Run the script</li>
+<li>Your sampled data will be in the <code>micSignal</code> variable, so save that variable under another name. Note the sampling frequency and the number of samples.</li>
+<li>Repeat steps 2, 3 and 4 for the second sampling frequency.</li>
+</ol></li>
 <li>Plot the magnitude of FFTs of the 10 kS/s and 100 kS/s sampled data. Describe any differences between the resulting graphs and explain what causes the differences.</li>
 <li>Plot the first 100 points of the time data for the 10 kS/s and 100 kS/s signals. Pay attention to the x axis of the signals. Describe any differences in the measured data and explain why they are there.</li>
 <li>What is the minimum sampling rate you should use to measure signals in the tank? Prove it by sampling data at that frequency and presenting an FFT of that data.</li>
@@ -393,8 +423,8 @@ Note
 </div>
 </div>
 </section>
-<section id="extra-credit-distance-measurement-based-on-time-of-flight-measurements" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="extra-credit-distance-measurement-based-on-time-of-flight-measurements"><span class="header-section-number">6</span> Extra Credit: Distance Measurement Based on Time-of-Flight Measurements</h2>
+<section id="sec-tof" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="sec-tof"><span class="header-section-number">6</span> Extra Credit: Distance Measurement Based on Time-of-Flight Measurements</h2>
 <p>Another common acoustic measurement is time-of-flight (ToF) range finding. ToF measurement relies on sending out a specially designed acoustic pulse from a speaker and measuring how long it takes for it to reach a microphone. Often the microphone is measuring reflections of your initial speaker pulse (eg. on a sounding vessel), but we’ll get started by just sending our speaker pulse straight to our microphone.</p>
 <p>You need to be able to carefully control the signals being sent from your speaker in this section, and you need to be particularly careful to avoid broadcasting at any of the beacon frequencies. Tou will send a burst of sine waves, i.e.: a small number of sine wave cycles, at a frequency higher than 14 kHz. We can accomplish this by using internally triggered burst modulation, an advanced feature of the old signal generators (the <a href="http://www.eng.hmc.edu/NewE80/PDFs/HP33120A_UserGuide.pdf">HP/Agilent 33120A</a>). This function is not available on the function generators in your oscilloscope. You can control burst mode by pressing the series of keys shown below. Read the manual for clarification on how these key presses work.</p>
 <ul>
