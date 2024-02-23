@@ -101,7 +101,7 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-labs">    
         <li>
-    <a class="dropdown-item" href="../../labs/lab_overview">
+    <a class="dropdown-item" href="../../labs/overview">
  <span class="dropdown-text">Lab Overview</span></a>
   </li>  
         <li>
@@ -132,20 +132,54 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="../../labs/lab6">
  <span class="dropdown-text">Lab 6: Fluids</span></a>
   </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-project" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Project</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-project">    
         <li>
-    <a class="dropdown-item" href="../../labs/lab7">
- <span class="dropdown-text">Lab 7: Navigation</span></a>
+    <a class="dropdown-item" href="../../project/overview">
+ <span class="dropdown-text">Overview</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../project/proposal">
+ <span class="dropdown-text">Design and Proposal</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../project/navigation">
+ <span class="dropdown-text">Navigation Jump Start</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../project/build">
+ <span class="dropdown-text">Build and Integrate</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../project/field">
+ <span class="dropdown-text">Field Deployment</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../project/report">
+ <span class="dropdown-text">Present and Report</span></a>
   </li>  
     </ul>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="../../project/"> 
-<span class="menu-text">Project</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-references" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">References</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-references">    
+        <li>
+    <a class="dropdown-item" href="../../reference/inventory">
+ <span class="dropdown-text">Lab Inventory</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../reference/"> 
-<span class="menu-text">Reference Designs</span></a>
+        <li>
+    <a class="dropdown-item" href="../../reference/design">
+ <span class="dropdown-text">Example Designs</span></a>
   </li>  
+    </ul>
+  </li>
   <li class="nav-item">
     <a class="nav-link" href="../../history/"> 
 <span class="menu-text">History</span></a>
@@ -221,7 +255,7 @@ ul.task-list li input[type="checkbox"] {
 <li><label><input type="checkbox">Use the gain-bandwidth product of an op-amp to predict the achievable maximum gain.</label></li>
 <li><label><input type="checkbox">Describe the effect of multipath on the amplitudes of acoustic measurements.</label></li>
 </ul>
-<p>This is a rotation lab, so not all teams will be working on this lab in the same week. Odd numbered teams (11, 23, 35, etc.) will do this lab in week 6, while Even numbered teams (12, 24, 36, etc.) work on <a href="lab6/index.qmd">lab 6</a>. Even numbered teams will do this lab in week 7, while Odd numbered teams work on lab 6. Be sure to watch the correct videos, do the correct quiz, and put in prelab effort for the correct lab!</p>
+<p>This is a rotation lab, so not all teams will be working on this lab in the same week. Odd numbered teams (11, 23, 35, etc.) will do this lab in week 6, while Even numbered teams (12, 24, 36, etc.) work on <a href="../../labs/lab6/index.html">lab 6</a>. Even numbered teams will do this lab in week 7, while Odd numbered teams work on lab 6. Be sure to watch the correct videos, do the correct quiz, and put in prelab effort for the correct lab!</p>
 </section>
 <section id="introduction-to-the-fft" class="level2" data-number="2">
 <h2 data-number="2" class="anchored" data-anchor-id="introduction-to-the-fft"><span class="header-section-number">2</span> Introduction to the FFT</h2>
@@ -326,7 +360,17 @@ Other Amplifier Tips
 </section>
 <section id="distance-measurement-based-on-amplitude" class="level2" data-number="4">
 <h2 data-number="4" class="anchored" data-anchor-id="distance-measurement-based-on-amplitude"><span class="header-section-number">4</span> Distance Measurement Based On Amplitude</h2>
-<p>One way to locate your robot in the water is to listen to three acoustic beacons and calculate your distance to each of them based on the beacon power received at your robot. Three beacons are installed in the test tank and will be constantly emitting sine waves of approximately 9 kHz, 11 kHz and 13 kHz. You will need to use the microphones in the tank room, which have long wires, to put a microphone into the tank and measure the signals coming out of these beacons. Analyzing microphone data with the FFT will be essential because the signals of all of the beacons are present in the tank at the same time.</p>
+<p>One way to locate your robot in the water is to listen to three acoustic beacons and calculate your distance to each of them based on the beacon power received at your robot. Three beacons are installed in the test tank and will be constantly emitting sine waves of approximately 9 kHz, 11 kHz and 13 kHz, and that setup is pictured in <a href="#fig-tank" class="quarto-xref">Figure&nbsp;1</a>. You will need to use the microphones in the tank room, which have long wires, to put a microphone into the tank and measure the signals coming out of these beacons. Analyzing microphone data with the FFT will be essential because the signals of all of the beacons are present in the tank at the same time.</p>
+<div id="fig-tank" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-tank-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/tank_room_with_beacons.jpg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-tank-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Test tank with beacons and long microphones
+</figcaption>
+</figure>
+</div>
 <p>Prepare for your experiment by making models of what you expect to see</p>
 <ol type="1">
 <li>Find an analytical expression that describes power at a distance from an acoustic emitter.</li>
@@ -370,14 +414,14 @@ Note
 </section>
 <section id="sampling-audio-with-a-teensy" class="level2" data-number="5">
 <h2 data-number="5" class="anchored" data-anchor-id="sampling-audio-with-a-teensy"><span class="header-section-number">5</span> Sampling Audio with a Teensy</h2>
-<p>This section requires that you use the Teensy sampling rigs (shown in <a href="#fig-sampling-rig" class="quarto-xref">Figure&nbsp;1</a>) that have been set up in the tank room. The rigs consist of an amplifier with an offset attached to an E80 motherboard that samples the amplifier output. We provide software, <a href="https://github.com/HMC-E80/E80-SP2023/blob/main/MATLAB/E80_Lab_05_Teensy_Rig.m">E80_Lab05_Teensy_Rig.m</a> and <a href="https://github.com/HMC-E80/E80-SP2023/blob/main/E80_Lab_05_Teensy_Rig/E80_Lab_05_Teensy_Rig.ino">E80_Lab05_Teensy_Rig.ino</a> (which is already running on the rig), that allows you to adjust the sample rate of the Teensy, and we’re going to use that power to explore how sample rate affects real world data samples.</p>
+<p>This section requires that you use the Teensy sampling rigs (shown in <a href="#fig-sampling-rig" class="quarto-xref">Figure&nbsp;2</a>) that have been set up in the tank room. The rigs consist of an amplifier with an offset attached to an E80 motherboard that samples the amplifier output. We provide software, <a href="https://github.com/HMC-E80/E80-SP2023/blob/main/MATLAB/E80_Lab_05_Teensy_Rig.m">E80_Lab05_Teensy_Rig.m</a> and <a href="https://github.com/HMC-E80/E80-SP2023/blob/main/E80_Lab_05_Teensy_Rig/E80_Lab_05_Teensy_Rig.ino">E80_Lab05_Teensy_Rig.ino</a> (which is already running on the rig), that allows you to adjust the sample rate of the Teensy, and we’re going to use that power to explore how sample rate affects real world data samples.</p>
 <div id="fig-sampling-rig" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-sampling-rig-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="img/teensy_sampling_rig.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sampling-rig-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Teensy sampling rig
+Figure&nbsp;2: Teensy sampling rig
 </figcaption>
 </figure>
 </div>
