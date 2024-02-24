@@ -88,7 +88,7 @@
     "href": "presentation/project/project-presentation.html#agenda-for-today",
     "title": "E80 Project Kickoff Presentation",
     "section": "Agenda for Today",
-    "text": "Agenda for Today\n\nLogistics & Schedule\nResources\nProject Requirements\nDesign Activity\nProject Deliverables"
+    "text": "Agenda for Today\n\nLogistics & Schedule\nProject Resources\nProject Requirements\nDesign Activity\nProject Deliverables"
   },
   {
     "objectID": "presentation/project/project-presentation.html#soon-this-will-be-you",
@@ -147,6 +147,13 @@
     "text": "Deployments\nYou must collect data from your deployments for your final report.\n\nWeek 4: Bernard Field Station (BFS)\n\nFirst chance to get field data which is required in the final report.\nNeed a deployment plan and launch checklist.\n\n\n\nWeek 5: Dana Point\n\nBus leaves from Mudd at 6:30 am on 4/20/24 and returns ~4:00 pm. Be there!"
   },
   {
+    "objectID": "presentation/project/project-presentation.html#project-requirements",
+    "href": "presentation/project/project-presentation.html#project-requirements",
+    "title": "E80 Project Kickoff Presentation",
+    "section": "Project Requirements",
+    "text": "Project Requirements\n\nAutonomous deployment for at least one minute with active position control.\nThe deployment must end at a place where the robot can be recovered.\nSensor package\n\nDeployed on or from your AUV\nMust use at least three sensors with at least two unique electrical interfaces.\nThe IMU, GPS, and motor current sensors don’t count toward your three sensors."
+  },
+  {
     "objectID": "presentation/project/project-presentation.html#what-we-give-you-to-start-from",
     "href": "presentation/project/project-presentation.html#what-we-give-you-to-start-from",
     "title": "E80 Project Kickoff Presentation",
@@ -158,7 +165,7 @@
     "href": "presentation/project/project-presentation.html#you-have-a-few-options-for-launching-at-dana-point",
     "title": "E80 Project Kickoff Presentation",
     "section": "You have a few options for launching at Dana Point",
-    "text": "You have a few options for launching at Dana Point"
+    "text": "You have a few options for launching at Dana Point\n\nKayaks are also available to accompany your robot out into the center of the harbor."
   },
   {
     "objectID": "presentation/project/project-presentation.html#resources-staff-time",
@@ -172,7 +179,7 @@
     "href": "presentation/project/project-presentation.html#resources-stuff",
     "title": "E80 Project Kickoff Presentation",
     "section": "Resources: Stuff",
-    "text": "Resources: Stuff\n\nAnything in lab – sign out expensive stuff & submit error reports for anything that breaks.\n\nThe main E80 main PCBs and protoboards\nE80 frames, boxes and penetrator bolts\n\nStuff outside lab: $50 budget per team as long as you follow purchasing instructions"
+    "text": "Resources: Stuff\n\nAnything in lab – sign out expensive stuff & submit error reports for anything that breaks.\n\nThe E80 main PCBs and protoboards\nE80 frames, boxes and penetrator bolts\n\nStuff outside lab: $50 budget per team as long as you follow purchasing instructions"
   },
   {
     "objectID": "presentation/project/project-presentation.html#resources-strict-purchasing-protocol",
@@ -193,7 +200,7 @@
     "href": "presentation/project/project-presentation.html#resources-our-waterproof-boxes",
     "title": "E80 Project Kickoff Presentation",
     "section": "Resources: Our Waterproof Boxes",
-    "text": "Resources: Our Waterproof Boxes\nCan fit about 6 wires in a penetrator Drill on flat faces of box: need flat rubber washers on box surface."
+    "text": "Resources: Our Waterproof Boxes\n\nCan fit about 6 wires in a penetrator bolt.\nDrill on flat faces of box: need flat rubber washers on box surface."
   },
   {
     "objectID": "presentation/project/project-presentation.html#resources-our-main-pcb",
@@ -207,7 +214,7 @@
     "href": "presentation/project/project-presentation.html#resources-our-protoboard",
     "title": "E80 Project Kickoff Presentation",
     "section": "Resources: Our Protoboard",
-    "text": "Resources: Our Protoboard\nConnect to motherboard with right angle header. Place below it."
+    "text": "Resources: Our Protoboard\nProtoboard connects to the motherboard with a right angle header and mounts above the main PCB."
   },
   {
     "objectID": "presentation/project/project-presentation.html#considerations-when-picking-sensors",
@@ -221,14 +228,7 @@
     "href": "presentation/project/project-presentation.html#design-elements-to-consider",
     "title": "E80 Project Kickoff Presentation",
     "section": "Design Elements to Consider",
-    "text": "Design Elements to Consider\n\n\n\n\n\n\n\n\n\n\n\n\n\nElectronics: Audio, Digital interfaces, Communication, Telemetry\nSoftware: Time of flight Advanced navigation, Diving\nMechanical: Shape, Sensor placement, Winch, Diving, Tethers"
-  },
-  {
-    "objectID": "presentation/project/project-presentation.html#project-requirements",
-    "href": "presentation/project/project-presentation.html#project-requirements",
-    "title": "E80 Project Kickoff Presentation",
-    "section": "Project Requirements",
-    "text": "Project Requirements\n\nAutonomous deployment for at least one minute with active position control.\nThe deployment must end at a place where the robot can be recovered.\nSensor package\n\nDeployed on or from your AUV\nMust use at least three sensors with at least two unique electrical interfaces.\nThe IMU, GPS, and motor current sensors don’t count toward your three sensors."
+    "text": "Design Elements to Consider\n\n\n\n\n\n\n\n\n\n\n\n\n\nElectronics: Audio, Digital interfaces, Communication, Telemetry\nSoftware: Time of flight, Advanced navigation, Diving\nMechanical: Shape, Sensor placement, Winch, Diving, Tethers"
   },
   {
     "objectID": "presentation/project/project-presentation.html#project-ideation-activity",
@@ -291,7 +291,7 @@
     "href": "presentation/project/project-presentation.html#round-3-how-do-you-want-to-measure-it-1",
     "title": "E80 Project Kickoff Presentation",
     "section": "Round 3: How do you want to measure it?",
-    "text": "Round 3: How do you want to measure it?\n\nWhat are your…\n\nIndependent variable(s): e.g., \\(y(t)\\), \\(z(x,y)\\)\nDependent variable(s): e.g., \\(t\\), \\(x\\), \\(y\\)\n\nSpecify for each variable\n\nUnits\nExpected ranges\nResolution required (e.g., sampling frequency in time/space, sensitivity)"
+    "text": "Round 3: How do you want to measure it?\n\nWhat are your…\n\nIndependent variable(s): e.g., \\(t\\), \\(x\\), \\(y\\)\nDependent variable(s): e.g., \\(y(t)\\), \\(z(x,y)\\)\n\nSpecify for each variable\n\nUnits\nExpected ranges\nResolution required (e.g., sampling frequency in time/space, sensitivity)"
   },
   {
     "objectID": "presentation/project/project-presentation.html#round-4-what-instrumentation-will-you-use",

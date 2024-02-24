@@ -335,7 +335,7 @@
 <h2>Agenda for Today</h2>
 <ul>
 <li>Logistics &amp; Schedule</li>
-<li>Resources</li>
+<li>Project Resources</li>
 <li>Project Requirements</li>
 <li>Design Activity</li>
 <li>Project Deliverables</li>
@@ -543,6 +543,19 @@
 <h1>Project Launch</h1>
 
 </section>
+<section id="project-requirements" class="slide level2 smaller">
+<h2>Project Requirements</h2>
+<ul>
+<li>Autonomous deployment for at least one minute with active position control.</li>
+<li>The deployment must end at a place where the robot can be recovered.</li>
+<li>Sensor package
+<ul>
+<li>Deployed on or from your AUV</li>
+<li>Must use at least three sensors with at least two unique electrical interfaces.</li>
+<li>The IMU, GPS, and motor current sensors don’t count toward your three sensors.</li>
+</ul></li>
+</ul>
+</section>
 <section id="what-we-give-you-to-start-from" class="slide level2">
 <h2>What we give you to start from</h2>
 <p>Default Robot code base (under <code>/Default_Robot/</code> directory in the Git repository)</p>
@@ -556,7 +569,8 @@
 <section id="you-have-a-few-options-for-launching-at-dana-point" class="slide level2">
 <h2>You have a few options for launching at Dana Point</h2>
 
-<img data-src="img/dana-point-map.png" class="r-stretch"></section>
+<img data-src="img/dana-point-map.png" class="r-stretch"><p>Kayaks are also available to accompany your robot out into the center of the harbor.</p>
+</section>
 <section id="resources-staff-time" class="slide level2">
 <h2>Resources: Staff Time</h2>
 <ul>
@@ -571,7 +585,7 @@
 <ul>
 <li>Anything in lab – sign out expensive stuff &amp; submit error reports for anything that breaks.
 <ul>
-<li>The main E80 main PCBs and protoboards</li>
+<li>The E80 main PCBs and protoboards</li>
 <li>E80 frames, boxes and penetrator bolts</li>
 </ul></li>
 <li>Stuff outside lab: $50 budget per team as long as you follow purchasing instructions</li>
@@ -605,7 +619,10 @@
 </section>
 <section id="resources-our-waterproof-boxes" class="slide level2">
 <h2>Resources: Our Waterproof Boxes</h2>
-<p>Can fit about 6 wires in a penetrator Drill on flat faces of box: need flat rubber washers on box surface.</p>
+<ul>
+<li>Can fit about 6 wires in a penetrator bolt.</li>
+<li>Drill on flat faces of box: need flat rubber washers on box surface.</li>
+</ul>
 <table style="width:99%;">
 <colgroup>
 <col style="width: 33%">
@@ -643,7 +660,7 @@
 </section>
 <section id="resources-our-protoboard" class="slide level2">
 <h2>Resources: Our Protoboard</h2>
-<p>Connect to motherboard with right angle header. Place below it.</p>
+<p>Protoboard connects to the motherboard with a right angle header and mounts above the main PCB.</p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><img data-src="img/e80-protoboard.png"></p>
@@ -710,21 +727,8 @@
 </table>
 <ul>
 <li><strong>Electronics:</strong> Audio, Digital interfaces, Communication, Telemetry</li>
-<li><strong>Software:</strong> Time of flight Advanced navigation, Diving</li>
+<li><strong>Software:</strong> Time of flight, Advanced navigation, Diving</li>
 <li><strong>Mechanical:</strong> Shape, Sensor placement, Winch, Diving, Tethers</li>
-</ul>
-</section>
-<section id="project-requirements" class="slide level2 smaller">
-<h2>Project Requirements</h2>
-<ul>
-<li>Autonomous deployment for at least one minute with active position control.</li>
-<li>The deployment must end at a place where the robot can be recovered.</li>
-<li>Sensor package
-<ul>
-<li>Deployed on or from your AUV</li>
-<li>Must use at least three sensors with at least two unique electrical interfaces.</li>
-<li>The IMU, GPS, and motor current sensors don’t count toward your three sensors.</li>
-</ul></li>
 </ul>
 </section></section>
 <section>
@@ -810,8 +814,8 @@
 <ul>
 <li>What are your…
 <ul>
-<li>Independent variable(s): e.g., <span class="math inline">\(y(t)\)</span>, <span class="math inline">\(z(x,y)\)</span></li>
-<li>Dependent variable(s): e.g., <span class="math inline">\(t\)</span>, <span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span></li>
+<li>Independent variable(s): e.g., <span class="math inline">\(t\)</span>, <span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span></li>
+<li>Dependent variable(s): e.g., <span class="math inline">\(y(t)\)</span>, <span class="math inline">\(z(x,y)\)</span></li>
 </ul></li>
 <li>Specify for each variable
 <ul>
