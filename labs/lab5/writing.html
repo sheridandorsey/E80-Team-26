@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>E80 SP24 - Lab 2 Writing Template</title>
+<title>E80 SP24 - Lab 5 Writing Assignment</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -207,17 +241,26 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#methods" id="toc-methods" class="nav-link active" data-scroll-target="#methods">Methods</a></li>
+  <li><a href="#writing-assignment" id="toc-writing-assignment" class="nav-link active" data-scroll-target="#writing-assignment">Writing Assignment</a></li>
+  <li><a href="#statement-of-work" id="toc-statement-of-work" class="nav-link" data-scroll-target="#statement-of-work">Statement of Work</a></li>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
+  <li><a href="#required-resources" id="toc-required-resources" class="nav-link" data-scroll-target="#required-resources">Required Resources</a></li>
+  <li><a href="#specifications" id="toc-specifications" class="nav-link" data-scroll-target="#specifications">Specifications</a>
+  <ul class="collapse">
+  <li><a href="#effort" id="toc-effort" class="nav-link" data-scroll-target="#effort">Effort</a></li>
+  <li><a href="#completion" id="toc-completion" class="nav-link" data-scroll-target="#completion">Completion</a></li>
+  </ul></li>
+  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="lab2-writing-template.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></nav>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Lab 2 Writing Template</h1>
-<p class="subtitle lead">Methods, Results, Equations, and Tables</p>
+<h1 class="title">Lab 5 Writing Assignment</h1>
+<p class="subtitle lead">Mathematical Derivations and Equations</p>
 </div>
 
 
@@ -234,25 +277,125 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Name:</p>
-<section id="methods" class="level2">
-<h2 class="anchored" data-anchor-id="methods">Methods</h2>
-<p>::: {#fig-measurement-schematic} <img src="./img/voltagedividerwsiggen.png" class="img-fluid"></p>
-<p>Insert the schematic used to make your measurements here. Note that your schematic should include any additional components needed to represent any output impedances of sources or input impedances of measurement devices.</p>
-<p>Insert table here containing measurements across different resistance values <em>with the same instrument</em>.</p>
-<p>Text to explain what the table above means. The text should address and highlight:</p>
+<section id="writing-assignment" class="level2">
+<h2 class="anchored" data-anchor-id="writing-assignment">Writing Assignment</h2>
+<p>In this writing assignment you will learn to write a rigorous mathematical derivation. You will present a Fast Fourier Transform (FFT) calculated using MATLAB of a simulated square wave and provide a derivation of the square wave FFT to justify the frequency components and power levels present in the signal.</p>
+</section>
+<section id="statement-of-work" class="level2">
+<h2 class="anchored" data-anchor-id="statement-of-work">Statement of Work</h2>
+<p>Create a short MATLAB script to simulate an 11 kHz square wave with an amplitude 1.5 V and an offset 0 V. You can do this however you would like, but the following code will work.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode matlab code-with-copy"><code class="sourceCode matlab"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="va">N</span> <span class="op">=</span> <span class="fl">100</span><span class="op">;</span> <span class="co">% Number of points</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="va">freq</span> <span class="op">=</span> <span class="fl">11e3</span><span class="op">;</span> <span class="co">% Frequency [Hz]</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="va">period</span> <span class="op">=</span> <span class="fl">1</span><span class="op">/</span><span class="va">freq</span><span class="op">;</span> <span class="co">% Period [s]</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="va">dt</span> <span class="op">=</span> <span class="va">period</span><span class="op">/</span><span class="fl">10</span><span class="op">;</span> <span class="co">% Sampling period [s]</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="va">t</span> <span class="op">=</span> <span class="fl">0</span><span class="op">:</span><span class="va">dt</span><span class="op">:</span>(<span class="va">N</span><span class="op">-</span><span class="fl">1</span>)<span class="op">*</span><span class="va">dt</span><span class="op">;</span> <span class="co">% Time vector [s]</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="va">A</span> <span class="op">=</span> <span class="fl">1.5</span><span class="op">;</span> <span class="co">% Wave amplitude [V]</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="va">y</span> <span class="op">=</span> <span class="va">A</span><span class="op">*</span><span class="va">square</span>(<span class="fl">2</span><span class="op">*</span><span class="va">pi</span><span class="op">*</span><span class="va">freq</span><span class="op">*</span><span class="va">t</span>)<span class="op">;</span> <span class="co">% Create square wave (Note: must have the signal processing toolbox installed to use square())</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Provide a rigorous mathematical derivation explaining your results from taking the FFT of this square wave. This is similar to a theory/background section of a standard engineering lab report. Also include a MATLAB figure showing the FFT (calculated in MATLAB) of your simulated time domain square wave data. Explain your derivation and use it to justify the power levels and frequency components in your measured data by writing 5-7 paragraphs of accompanying text. Pay attention to units on the x and y axes of any FFT you analyze, and justify how to change between different units. You may include other figures if needed.</p>
+<p>The document should contain as many mathematical equations and/or figures as you need, and five to seven paragraphs that describe the mathematical derivations and draw conclusions about the FFT. You must include equations in your text and reference them properly. In this assignment you may need to reference the laboratory manual, MATLAB documentation or mathematical references that you referred to when putting together your derivation. Though you don’t need to write a full-fledged introduction to the experiment, you will need to be mindful to orient the reader in the first paragraph.</p>
+<p>Be mindful of tense. Tense should always agree within a paragraph, but could vary within a report. Describing the methods in past tense (e.g.: “the voltage was measured”) and the future work in future perfect (e.g., “the voltage will be used to pick a resistor”) is reasonable. Be sure to avoid use of the first person including saying “we” or “the team,” both of which count as first person because you are implying the presence of an experimenter. Two ways to avoid first person are using passive voice (discouraged where possible) and making the technical artifact the subject of the sentence.</p>
+<p>Here are some examples:</p>
+<table class="table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>1st Person</th>
+<th>Passive Voice</th>
+<th>Result as Subject</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>We measured salinity</td>
+<td>Salinity was measured</td>
+<td>The salinity was</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>We drove the robot</td>
+<td>The robot was driven</td>
+<td>The robot drove</td>
+<td>Careful! “Passive voice” and “result as subject” say different things!</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="learning-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
+<p>By the end of this writing assignment you will…</p>
 <ul>
-<li>Trends in the data</li>
-<li>Unexpected results</li>
-<li>Conclusions to be drawn</li>
+<li>Format and present equations in text</li>
+<li>Write text to support your derivation</li>
 </ul>
-<p>Insert table here containing measurements across different instruments <em>with the same resistance values</em>.</p>
-<p>Text to explain what the table above means. The text should address and highlight:</p>
+</section>
+<section id="required-resources" class="level2">
+<h2 class="anchored" data-anchor-id="required-resources">Required Resources</h2>
+<ul class="task-list">
+<li><label><input type="checkbox">Figure of an FFT of a square wave using simulated data. Your FFT should be calculated in MATLAB from the time-domain trace of the square wave.</label></li>
+</ul>
+</section>
+<section id="specifications" class="level2">
+<h2 class="anchored" data-anchor-id="specifications">Specifications</h2>
+<section id="effort" class="level3">
+<h3 class="anchored" data-anchor-id="effort">Effort</h3>
+<ul class="task-list">
+<li><label><input type="checkbox">Contains equations to mathematically describe FFT of square wave</label></li>
+<li><label><input type="checkbox">Figure present with FFT computed in MATLAB overlaid with analytical FFT.</label></li>
+</ul>
+</section>
+<section id="completion" class="level3">
+<h3 class="anchored" data-anchor-id="completion">Completion</h3>
+<section id="mathematical-derivations" class="level4">
+<h4 class="anchored" data-anchor-id="mathematical-derivations">Mathematical Derivations</h4>
+<ul class="task-list">
+<li><label><input type="checkbox">Contain a label that numbers each equation in the derivation</label></li>
+<li><label><input type="checkbox">Each equation is referenced in the text</label></li>
+<li><label><input type="checkbox">Variables of the derivations are described in the text</label></li>
+<li><label><input type="checkbox">Derivations are written out explicitly to show a sequence of steps</label></li>
+<li><label><input type="checkbox">Steps in the derivation proceed logically from one another in an appropriate level of detail for the audience</label></li>
+<li><label><input type="checkbox">Refer to appropriate theorems covered in class where appropriate, don’t reinvent every wheel</label></li>
+</ul>
+</section>
+<section id="figures" class="level4">
+<h4 class="anchored" data-anchor-id="figures">Figures</h4>
+<ul class="task-list">
+<li><label><input type="checkbox">Include FFTs from your measurements for comparison to your theoretical analysis.</label></li>
+<li><label><input type="checkbox">Proper Axis Labels &amp; Tick Size, Readable: appropriate fonts, line weights and data markers and not overly cluttered, follows other figure conventions from previous weeks.</label></li>
+<li><label><input type="checkbox">Correct Units on both X and Y Axis.</label></li>
+<li><label><input type="checkbox">Shows interesting features of frequency spectrum of the tested signal.</label></li>
+</ul>
+</section>
+<section id="text" class="level4">
+<h4 class="anchored" data-anchor-id="text">Text</h4>
+<ul class="task-list">
+<li><label><input type="checkbox">Refers to each derivation/figure.</label></li>
+<li><label><input type="checkbox">Correct sentence mechanics like cohesion and coherence between sentences and no run-ons.</label></li>
+<li><label><input type="checkbox">Correct paragraph mechanics like topic sentences and placement at breaks between ideas.</label></li>
+<li><label><input type="checkbox">Language is not stilted and jargon is kept to a reasonable minimum.</label></li>
+</ul>
+</section>
+<section id="technical-inferences-in-text" class="level4">
+<h4 class="anchored" data-anchor-id="technical-inferences-in-text">Technical Inferences in Text</h4>
+<ul class="task-list">
+<li><label><input type="checkbox">Verify the correctness of your theoretical results by referring to FFT Figure, which includes justifying both the power levels and frequency components of your measurement.</label></li>
+<li><label><input type="checkbox">Use continuous and discrete Fourier transforms and notation where appropriate to discuss the derivation of your transform and your MATLAB plot.</label></li>
+<li><label><input type="checkbox">Mathematically correct and insightful analysis of your input signal explains the output.</label></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="resources" class="level2">
+<h2 class="anchored" data-anchor-id="resources">Resources</h2>
 <ul>
-<li>Trends in the data</li>
-<li>Unexpected results</li>
-<li>Conclusions to be drawn</li>
-<li>How instrument loading influences the</li>
+<li>This document is a great place to start: “<a href="https://gradstudents.carleton.ca/2014/use-mathematical-equations-thesis/">How to Use Mathematical Equations in Your Thesis</a>”, by Rozita Rashtchi.</li>
+<li>Make sure you refer to equations as “Equation 1” or “Eq. 1” not “eq 1” or any other way, and be sure to include units wherever appropriate. Units should not be italicized.</li>
+<li>Pages 4-8 of the “<a href="https://texdoc.org/serve/amsldoc.pdf/0">User’s Guide for the <code>amsmath</code> Package</a>”</li>
 </ul>
 
 
