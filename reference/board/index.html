@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>E80 SP24 - E80 Project Proposal Checkoff Checklist</title>
+<title>E80 SP24 - Board Information</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -211,13 +211,14 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="submission.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></div>
+        
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">E80 Project Proposal Checkoff Checklist</h1>
+<h1 class="title">Board Information</h1>
 </div>
 
 
@@ -234,70 +235,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Date: Section #: Team #: Professor:</p>
-<p>Proposal:</p>
-<ul class="task-list">
-<li><label><input type="checkbox">Has a justifiable scientific goal</label></li>
-<li><label><input type="checkbox">The specified sensors will help achieve that scientific goal</label></li>
-<li><label><input type="checkbox">Some sense of whether signals are big or small. Are the measurements feasible?</label></li>
-<li><label><input type="checkbox">List exceptional or difficult design features of their robot</label></li>
-<li><label><input type="checkbox">Have considered whether specific launch times are beneficial to them. Make requests for specific times if need be. (Don’t forget that human activity is much lower in the morning.)</label></li>
-<li><label><input type="checkbox">Robot will deploy autonomously for one minute</label></li>
-<li><label><input type="checkbox">Three new sensors with two unique electrical interfaces will be installed</label></li>
-<li><label><input type="checkbox">Have listed five alternative project ideas</label></li>
-</ul>
-<p>Budget:</p>
-<ul class="task-list">
-<li><label><input type="checkbox">Are not purchasing any parts that we have in lab (Students may buy replacement speakers or pH probes because they are not available for permanent installation.)</label></li>
-<li><label><input type="checkbox">Justify any high cost sensors: students are not buying things that we can easily make</label></li>
-<li><label><input type="checkbox">Checked that sensors are not SMT or that students have sensors on breakout boards</label></li>
-<li><label><input type="checkbox">Checked interface type for each sensor is compatible with Teensy</label></li>
-<li><label><input type="checkbox">Included taxes and shipping costs in the budget</label></li>
-<li><label><input type="checkbox">Total cost less than $50</label></li>
-<li><label><input type="checkbox">Verified team knows about engineering purchase order request form</label></li>
-<li><label><input type="checkbox">Verified the team has a designated buyer &amp; knows not to buy until they’re 2x checked</label></li>
-<li><label><input type="checkbox">Have plans to generate fake sensor outputs next week if parts have not arrived</label></li>
-</ul>
-<p>Mechanical Drawing:</p>
-<ul class="task-list">
-<li><label><input type="checkbox">Mass calculated</label></li>
-<li><label><input type="checkbox">Center of gravity calculated (especially if they have a winch)</label></li>
-<li><label><input type="checkbox">Center of buoyancy calculated</label></li>
-<li><label><input type="checkbox">Ballasting calculations? (if applicable)</label></li>
-<li><label><input type="checkbox">Will it float? (Or not float if that’s the desired behavior)</label></li>
-<li><label><input type="checkbox">Low profile against wind? (unless designed for high wind drag)</label></li>
-<li><label><input type="checkbox">Low profile against currents? (unless designed for high current drag)</label></li>
-<li><label><input type="checkbox">Thrust calculations for unusual behaviors (e.g.: do you really generate enough thrust to bury yourself in the sand? To submerge? To hoist that winch?)</label></li>
-<li><label><input type="checkbox">Sensor placement good for measuring desired quantities</label></li>
-<li><label><input type="checkbox">Motors as far away from IMU as possible (to avoid magnetic field interference). Try for at least 30 cm.</label></li>
-<li><label><input type="checkbox">Plans for cabling if sensors are far away</label></li>
-<li><label><input type="checkbox">Planned out a suitable number of penetrators for waterproof box. Have picked locations.</label></li>
-<li><label><input type="checkbox">What is waterproof and what is not? Plans for waterproofing sensors out in the water.</label></li>
-</ul>
-<p>Schematic:</p>
-<ul class="task-list">
-<li><label><input type="checkbox">Bypass capacitors for every op-amp</label></li>
-<li><label><input type="checkbox">Voltage swings annotated on every node, including sensor outputs</label></li>
-<li><label><input type="checkbox">Designed gains lead to the voltage swings specified on the design</label></li>
-<li><label><input type="checkbox">Do the designed offsets prevent clipping?</label></li>
-<li><label><input type="checkbox">Inputs to Teensy bounded between 0 V and 3.3 V</label></li>
-<li><label><input type="checkbox">Signals buffered appropriately, especially as they enter the Teensy</label></li>
-<li><label><input type="checkbox">Are there enough input channels on the Teensy, do they plan to use the extra pins?</label></li>
-<li><label><input type="checkbox">Are there enough digital interfaces on the Teensy, are they on the right pins? (if needed)</label></li>
-<li><label><input type="checkbox">Considered software needed to interface with digital sensors? (Don’t forget that this includes encoders &amp; Hall flow meters. Weather vanes often easier as potentiomenters.)</label></li>
-<li><label><input type="checkbox">Have they picked good H-bridges for any extra motors they plan to use?</label></li>
-<li><label><input type="checkbox">Considered how to measure any audio signals? Are they using an envelope detector + analog channel or are they designing their own sampler in software?</label></li>
-<li><label><input type="checkbox">Is battery power sufficient to peak current load?</label></li>
-<li><label><input type="checkbox">Calculated average current draw and maximum mission life? (It can be helpful for debugging to annotate current for each branch.)</label></li>
-<li><label><input type="checkbox">Considered how to generate signals for sensors that require them? (e.g.: AC signals for salinity sensor?)</label></li>
-</ul>
-<p>Administrative/Overall:</p>
-<ul class="task-list">
-<li><label><input type="checkbox">Prof advised team on expected difficulty of their proposed project, made sure they all bought in. Especially important if the team is trying to do lots of fancy stuff.</label></li>
-<li><label><input type="checkbox">Prof reminded team of the importance of experimental design and measured data in the final evaluation of the projects.</label></li>
-<li><label><input type="checkbox">Prof reminded team of checkoff schedule for next three weeks – breadboard, soldered and integrated, deployment at BFS</label></li>
-<li><label><input type="checkbox">Prof updated the instructor checkoff spreadsheet in the Project folder (this is important so that Prof.&nbsp;Brake can approve purchase orders)</label></li>
-</ul>
+<p><strong>UNDER CONSTRUCTION</strong></p>
 
 
 

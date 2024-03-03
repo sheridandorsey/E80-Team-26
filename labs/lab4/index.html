@@ -204,8 +204,16 @@ window.Quarto = {
  <span class="dropdown-text">Lab Inventory</span></a>
   </li>  
         <li>
+    <a class="dropdown-item" href="../../reference/equipment">
+ <span class="dropdown-text">Lab Equipment</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../reference/boards">
+ <span class="dropdown-text">Board Information</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="../../reference/design">
- <span class="dropdown-text">Example Designs</span></a>
+ <span class="dropdown-text">Reference Designs</span></a>
   </li>  
     </ul>
   </li>
@@ -242,8 +250,6 @@ window.Quarto = {
   <li><a href="#sec-therm" id="toc-sec-therm" class="nav-link" data-scroll-target="#sec-therm"><span class="header-section-number">4</span> Measure and Fit Thermistor Resistance vs.&nbsp;Temperature</a></li>
   <li><a href="#measure-and-decode-thermocouple-voltage-vs.-temperature" id="toc-measure-and-decode-thermocouple-voltage-vs.-temperature" class="nav-link" data-scroll-target="#measure-and-decode-thermocouple-voltage-vs.-temperature"><span class="header-section-number">5</span> Measure and Decode Thermocouple Voltage vs.&nbsp;Temperature</a></li>
   <li><a href="#compare-temperature-sensor-settling-times" id="toc-compare-temperature-sensor-settling-times" class="nav-link" data-scroll-target="#compare-temperature-sensor-settling-times"><span class="header-section-number">6</span> Compare Temperature Sensor Settling Times</a></li>
-  <li><a href="#resubmissions" id="toc-resubmissions" class="nav-link" data-scroll-target="#resubmissions"><span class="header-section-number">7</span> Resubmissions</a></li>
-  <li><a href="#sec-ad623" id="toc-sec-ad623" class="nav-link" data-scroll-target="#sec-ad623"><span class="header-section-number">8</span> Extra Credit 1</a></li>
   </ul>
 </nav>
     </div>
@@ -278,15 +284,6 @@ window.Quarto = {
 <h2 data-number="1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">1</span> Introduction</h2>
 <p>In this lab you will build some common sensors for the final project – a pressure sensor and a thermistor-based temperature sensor – perform a non-linear fit to thermistor data, and experiment with a thermocouple. Temperature and pressure have been called the “monarchs of measurements” by some Mudd professors because of their wide applicability in chemical and industrial processes, aerospace applications, and natural sciences (including oceanography), which is why we are working with these measurements this week. You might find some time in this lab to prepare a resubmission, possibly by revisiting data from labs 1-3.</p>
 <p>After successful completion of this lab, you will be able to:</p>
-<ul class="task-list">
-<li><label><input type="checkbox">Relate the resistance of a thermistor to its temperature using the Steinhart-Hart Equation.</label></li>
-<li><label><input type="checkbox">Perform a fit to a non-linear function of data</label></li>
-<li><label><input type="checkbox">Use NIST tables to interpret thermocouple Voltages</label></li>
-<li><label><input type="checkbox">Use a multimeter to measure temperature with a thermocouple</label></li>
-<li><label><input type="checkbox">Describe the basics of cold junction compensation</label></li>
-<li><label><input type="checkbox">Comment on the relative speed of solid-state linear temperature sensors, thermistors and thermocouples.</label></li>
-</ul>
-<p>This lab will be carried out as sub-teams of two. Policies for sub-teams are discussed in <a href="../../labs/lab2/index.html">Lab 2</a>.</p>
 <ul class="task-list">
 <li><label><input type="checkbox">Relate the resistance of a thermistor to its temperature using the Steinhart-Hart Equation.</label></li>
 <li><label><input type="checkbox">Perform a fit to a non-linear function of data</label></li>
@@ -439,7 +436,7 @@ Connecting to the Thermistor
 </section>
 <section id="compare-temperature-sensor-settling-times" class="level2" data-number="6">
 <h2 data-number="6" class="anchored" data-anchor-id="compare-temperature-sensor-settling-times"><span class="header-section-number">6</span> Compare Temperature Sensor Settling Times</h2>
-<p>The response time of temperature sensors is critical to their performance. We’re going to race our temperature sensors to get a sense of their settling time. To avoid building some amplifiers (see <a href="#sec-ad623" class="quarto-xref">Section&nbsp;8</a> if you’re curious), we’re going to do this with the multimeter and a stopwatch instead of hooking everything up to the oscilloscope.</p>
+<p>The response time of temperature sensors is critical to their performance. We’re going to race our temperature sensors to get a sense of their settling time. To avoid building some amplifiers (see the thermocouple <a href="../../reference/design/index.html">reference design</a> if you’re curious), we’re going to do this with the multimeter and a stopwatch instead of hooking everything up to the oscilloscope.</p>
 <p>We are going to round out our spread of temperature sensors by revisiting the <a href="./assets/DS20001942G.pdf">MCP9701A</a> temperature sensor from E79. This part is an example of an integrated linear circuit.</p>
 <ol type="1">
 <li>Find a MCP9701A, solder leads to it and heat shrink the exposed metal.</li>
@@ -453,30 +450,19 @@ Connecting to the Thermistor
 </ol></li>
 <li>Comment on the relative speed of the sensors.</li>
 </ol>
-</section>
-<section id="resubmissions" class="level2" data-number="7">
-<h2 data-number="7" class="anchored" data-anchor-id="resubmissions"><span class="header-section-number">7</span> Resubmissions</h2>
-<p>We think you may have some spare time in this lab to gather data for resubmissions. Feel free to work towards that in place of extra credit.</p>
-</section>
-<section id="sec-ad623" class="level2" data-number="8">
-<h2 data-number="8" class="anchored" data-anchor-id="sec-ad623"><span class="header-section-number">8</span> Extra Credit 1</h2>
-<p>Thermocouples generate very small voltages, which must normally be amplified to be read by an oscilloscope, although the DMM does have sufficient range. The easiest way to do the amplification is with an instrumentation amplifier. The one we have available is the Analog Devices AD623ANZ (data sheet <a href="./assets/AD623.pdf">here</a>). In this section we’ll measure a thermocouple with an AD623.</p>
-<p>Pay special attention to the AD623 voltage supply range. It can operate with a dual rail supply Voltage of ±2.5 V to ±6 V, or it can operate with a single rail supply voltage from 0V to 5-12V. If you exceed the voltage supply range, you will destroy the chip. The op-amp standard of ±15 V will destroy it immediately. Don’t be tempted.</p>
-<p>Figure 79 in the AD623 data sheet shows the basic circuit for connecting a thermocouple. Note that in Figure 79, the amplifier is powered with a dual rail supply. You should use a single rail supply because your AUV will be powered by a battery. However, when you use a single rail you must also offset your thermocouple Volage to mid-rail (e.g., if you supply with 0-to-5 V, your thermocouple should be offset to 2.5 V). The circuit shown below in <a href="#fig-AD623-circuit" class="quarto-xref">Figure&nbsp;1</a> will accomplish that offset. Note that the offset utilizes a unity-gain, non-inverting op-amp to provide a low output impedance for the offset voltage.</p>
-<div id="fig-AD623-circuit" class="quarto-figure quarto-figure-center quarto-float anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-AD623-circuit-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="./img/AD623-circuit.png" class="img-fluid figure-img">
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-AD623-circuit-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Schematic for AD623 thermocouple circuit.
-</figcaption>
-</figure>
+<div class="callout-title-container flex-fill">
+Note
 </div>
-<p>You’ll need a thermocouple to test this amplifier, and we have spare type-E thermocouple wire available (specifically, <a href="https://www.omega.com/en-us/search/?text=FF-E-24-SLE-200">Omega FF-E-24-SLE-200</a>). The simplest way to construct a thermocouple for this task is to use one of the recycled ones. Otherwise, take a 1-foot length of thermocouple wire, strip the wires at one end and twist them firmly together so they make electrical contact. DO NOT USE SOLDER. It will not stick to the wires.</p>
-<p>Design and build a circuit to read a thermocouple using the ice bath method discussed in lecture. (See Figure 6 of <a href="https://it.omega.com/prodinfo/pdf/The-Thermocouple-Z-87-to-Z-92.pdf">this link,</a> or Figure 2 of <a href="http://circuitcellar.com/cc-blog/the-basics-of-thermocouples/">this link</a>, or click <a href="https://drive.google.com/drive/folders/1xC09jM35sX2pIvMsqE0E8lO8F7CKePlt?usp=sharing">here</a> for lecture slides). DO NOT USE SOLDER. USE A GLASS BEAKER FOR YOUR ICE BATH. To get practice for your future data logger, design the circuit to have a gain of 200 and output voltages in the 0-to-5 V range. Provide a detailed diagram of your circuit.</p>
-<p>Test your circuit at several different temperatures and create a Temperature-Voltage curve. How do your results compare to the Temperature-Voltage curve of the solid-state sensor and the thermistor? (As a reminder, you can look up the data necessary to find these two curves in datasheets. You don’t need to measure temperature-voltage curves for the thermistor or solid-state sensor.)</p>
-<p>The AD623 is expensive ($7/chip), so return undamaged chips to stock.</p>
+</div>
+<div class="callout-body-container callout-body">
+<p>Be sure to return type-K thermocouples to the electronics table.</p>
+</div>
+</div>
 
 
 </section>

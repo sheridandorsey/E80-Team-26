@@ -204,8 +204,16 @@ window.Quarto = {
  <span class="dropdown-text">Lab Inventory</span></a>
   </li>  
         <li>
+    <a class="dropdown-item" href="../../reference/equipment">
+ <span class="dropdown-text">Lab Equipment</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../reference/boards">
+ <span class="dropdown-text">Board Information</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="../../reference/design">
- <span class="dropdown-text">Example Designs</span></a>
+ <span class="dropdown-text">Reference Designs</span></a>
   </li>  
     </ul>
   </li>
@@ -240,8 +248,6 @@ window.Quarto = {
   <li><a href="#sec-teensy-analog" id="toc-sec-teensy-analog" class="nav-link" data-scroll-target="#sec-teensy-analog"><span class="header-section-number">2</span> Logging Analog Data with the Teensy</a></li>
   <li><a href="#sec-dividers" id="toc-sec-dividers" class="nav-link" data-scroll-target="#sec-dividers"><span class="header-section-number">3</span> Resistor Dividers and Instrument Loading</a></li>
   <li><a href="#resistor-dividers-with-op-amps" id="toc-resistor-dividers-with-op-amps" class="nav-link" data-scroll-target="#resistor-dividers-with-op-amps"><span class="header-section-number">4</span> Resistor Dividers with Op Amps</a></li>
-  <li><a href="#extra-credit-1" id="toc-extra-credit-1" class="nav-link" data-scroll-target="#extra-credit-1"><span class="header-section-number">5</span> Extra Credit 1</a></li>
-  <li><a href="#extra-credit-2" id="toc-extra-credit-2" class="nav-link" data-scroll-target="#extra-credit-2"><span class="header-section-number">6</span> Extra Credit 2</a></li>
   </ul>
 </nav>
     </div>
@@ -608,60 +614,6 @@ Op-amp breadboarding tips
 </div>
 </div>
 </div>
-</section>
-<section id="extra-credit-1" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="extra-credit-1"><span class="header-section-number">5</span> Extra Credit 1</h2>
-<p>How do the accuracies of the Teensy and multimeter vary as you adjust the input frequency to 100 Hz, 200 Hz, 500 Hz, 1000 Hz, 2000 Hz, 5000 Hz, 10,000 Hz, 20,000 Hz, 50,000 Hz, and 100,000 Hz? Be sure you select appropriate input signals as you conduct this experiment. In particular, reflect on the Teensy’s behavior in <a href="#sec-teensy-analog" class="quarto-xref">Section&nbsp;2</a> and <a href="#sec-dividers" class="quarto-xref">Section&nbsp;3</a> when selecting the signal.</p>
-<p>The definition of “accuracy” can be slippery here, so you should think carefully about it as you compose your answer. This is particularly true for the Teensy, which will return a sample to you that consists of many numbers. Will you consider the accuracy of a single data point (compared to what)? Of a single cycle? Or of some kind of aggregation of cycles that includes uncertainty? Consider carefully.</p>
-</section>
-<section id="extra-credit-2" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="extra-credit-2"><span class="header-section-number">6</span> Extra Credit 2</h2>
-<div id="tbl-rc" class="quarto-float anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-rc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;2: Table of RC divider measurements
-</figcaption>
-<div aria-describedby="tbl-rc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="table">
-<colgroup>
-<col style="width: 30%">
-<col style="width: 30%">
-<col style="width: 39%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Z1</th>
-<th>Z2</th>
-<th>Test Frequencies</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>10 k<span class="math inline">\(\Omega\)</span></td>
-<td>0.47 <span class="math inline">\(\mu\)</span>F</td>
-<td>1 Hz, 10 Hz, 100 Hz, 1 kHz, 10 kHz, 100 kHz</td>
-</tr>
-<tr class="even">
-<td>0.47 <span class="math inline">\(\mu\)</span>F</td>
-<td>10 k<span class="math inline">\(\Omega\)</span></td>
-<td>1 Hz, 10 Hz, 100 Hz, 1 kHz, 10 kHz, 100 kHz</td>
-</tr>
-<tr class="odd">
-<td>220 <span class="math inline">\(\Omega\)</span></td>
-<td>1 <span class="math inline">\(\mu\)</span>F</td>
-<td>1 Hz, 10 Hz, 100 Hz, 1 kHz, 10 kHz, 100 kHz</td>
-</tr>
-<tr class="even">
-<td>10 M<span class="math inline">\(\Omega\)</span></td>
-<td>1000 pF</td>
-<td>1 Hz, 10 Hz, 100 Hz, 1 kHz, 10 kHz, 100 kHz</td>
-</tr>
-</tbody>
-</table>
-</div>
-</figure>
-</div>
-<p>Build the circuits in table <a href="#tbl-rc" class="quarto-xref">Table&nbsp;2</a> in the same manner as the dividers in <a href="#sec-dividers" class="quarto-xref">Section&nbsp;3</a>, then repeat the predictions and measurements as in <a href="#sec-dividers" class="quarto-xref">Section&nbsp;3</a>. Vary the input frequency to each of the values listed in the “Test Frequencies” column as you perform these measurements. Use an input amplitude of 5Vpp and, if using the Teensy, be sure to offset the signal. Note that the multimeter can measure capacitance. Measure the output voltages with any appropriate equipment (justify your choice). Measure the phase difference between the input and output Voltages where possible. Explain the results of your measurements and possible function for each circuit. Consider carefully in what (graphical) format(s) you want to present your results.</p>
 
 
 </section>
