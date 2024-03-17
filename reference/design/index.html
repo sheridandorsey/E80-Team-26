@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.550">
+<meta name="generator" content="quarto-1.4.551">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -215,12 +215,12 @@ window.Quarto = {
     <a class="dropdown-item" href="../../reference/design">
  <span class="dropdown-text">Reference Designs</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../../reference/history">
+ <span class="dropdown-text">Old Final Projects</span></a>
+  </li>  
     </ul>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="../../history/"> 
-<span class="menu-text">History</span></a>
-  </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
@@ -422,7 +422,7 @@ Figure&nbsp;6: Schematic for AD623 thermocouple circuit.
 <section id="acoustic-time-of-flight-distance-measurements" class="level2">
 <h2 class="anchored" data-anchor-id="acoustic-time-of-flight-distance-measurements">Acoustic Time-of-flight Distance Measurements</h2>
 <p>You can measure the distance between a speaker and an object by launching a pulse of sound then measuring how long it takes to receive an echo. This is called a time-of-flight (ToF) measurement. Implementing ToF on a robot requires a transmit (TX) circuit, a receive (RX) circuit and some special software.</p>
-<p><strong>For TX</strong>, we recommend using the <a href="http://www.ti.com/lit/ds/symlink/lm384.pdf">LM384</a> audio amplifier to drive the <a href="https://drive.google.com/open?id=1Jrxe618k8KY_t4pc5sp_lyUTn6-bCDne">DAEX25W-8</a> speaker. The “Typical 5 W Amplifier” reference circuit in the LM384 datasheet is a good design for our purposes, though we can make a few small changes to improve it by omitting the volume control resistor and adding some bypass and coupling capacitors. These changes are illustrated below:</p>
+<p><strong>For TX</strong>, we recommend using the <a href="http://www.ti.com/lit/ds/symlink/lm384.pdf">LM384</a> audio amplifier to drive the <a href="https://drive.google.com/open?id=1Jrxe618k8KY_t4pc5sp_lyUTn6-bCDne">DAEX25W-8</a> speaker. The “Typical 5 W Amplifier” reference circuit in the LM384 datasheet is a good design for our purposes, though we can make a few small changes to improve it by omitting the volume control potentiometer and adding some bypass and coupling capacitors. These changes are illustrated below:</p>
 <div id="fig-tof-tx" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-tof-tx-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -475,8 +475,8 @@ In-Lab Audio Tests
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><strong>For Testing</strong>, it’s handy to be able to test your circuit from a function generator without getting all the TX Teensy code working. The old function generators (the <a href="https://www.keysight.com/us/en/assets/9018-04436/user-manuals/9018-04436.pdf">HP/Agilent 33120A</a>) and some of our lab equipment can help with that.</p>
-<p>You will send a burst of sine waves, i.e.: a small number of sine wave cycles, by using internally triggered burst modulation, an advanced feature of the old signal generators (the <a href="https://www.keysight.com/us/en/assets/9018-04436/user-manuals/9018-04436.pdf">HP/Agilent 33120A</a>). This function is not available on the function generators in your oscilloscope. You can control burst mode by pressing the series of keys shown below. Read the manual for clarification on how these key presses work.</p>
+<p><strong>For Testing</strong>, it’s handy to be able to test your circuit from a function generator without getting all the Teensy code working. The old function generators (the <a href="https://www.keysight.com/us/en/assets/9018-04436/user-manuals/9018-04436.pdf">HP/Agilent 33120A</a>) and some of our lab equipment can help with that.</p>
+<p>You can send a burst of sine waves, i.e.: a small number of sine wave cycles, by using internally triggered burst modulation, an advanced feature of the old signal generators (the <a href="https://www.keysight.com/us/en/assets/9018-04436/user-manuals/9018-04436.pdf">HP/Agilent 33120A</a>). This function is not available on the function generators in the oscilloscope. You can control burst mode by pressing the series of keys shown below. Read the manual for clarification on how these key presses work.</p>
 <ul>
 <li>Turn burst modulation mode on: Shift + the ramp/burst button / The text ‘burst’ will be highlighted at the top of the screen.</li>
 <li>Turn burst modulation mode off: Shift + the ramp/burst button / The text ‘burst’ will no longer be highlighted at the top of the screen.</li>
@@ -497,8 +497,7 @@ In-Lab Audio Tests
 <li>v / Screen says some number.” OR &gt; / “Burst Rate,” and then V / “some number.”</li>
 <li>Edit the number you see and press enter to save the setting.</li>
 </ul>
-<p>We have created a power amplifier board containing an LM384 to allow you to drive your speakers. Follow <a href="https://docs.google.com/document/d/1qWEORVg34CGcCEvArqbF1Zvz5JboWvJmLXS1v33wLos/edit?usp=sharing">these instructions</a> to use the driver board. You only have access to one power supply in the tank room, so you’ll need to power your microphone amplifier off the same rails as the LM384 amplifier board. Be careful not to provide too much voltage to the microphone amplifier.</p>
-<p>By gathering data that is synchronized with the signal you are sending and averaging over many samples, you can cancel out signals that are not at the same frequency as the burst repetition rate of your signal. This is called coherent averaging. Set this up using the following steps:</p>
+<p>Sometimes the tank room is noisy. By gathering data that is synchronized with the signal you are sending and averaging over many samples, you can cancel out signals that are not at the same frequency as the burst repetition rate of your signal. This is called coherent averaging. Set this up using the following steps:</p>
 <ul>
 <li>Use a second oscilloscope channel to probe the output of your function generator (or attach the trigger output of your function generator to your scope’s trigger input)</li>
 <li>Trigger your oscilloscope on the channel attached to the output of the function generator (or on the trigger input)</li>
@@ -616,6 +615,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/HMC-E80\.github\.io\/E80\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -650,7 +667,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
