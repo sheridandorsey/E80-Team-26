@@ -28,7 +28,22 @@ void DepthControl::dive(z_state_t * state, int currentTime_in) {
   // You can access the measured depth calculated in ZStateEstimator.cpp using state->z
   
   //////////////////////////////////////////////////////////////////////
-  // write code here
+  // 
+  douple depth des = wayPoints[currentWaypoint];  //Assign Desired Depth 
+
+  double depth = state.z; 
+
+  double depth_error = depth_des - depth;   //calculating depth error 
+
+  double Kp = 80; //adjusted value for our motor
+  double uV = Kp * depth_error;
+// Bound control effort 
+  if (uV > 200) {
+    uV = 200;
+  }else if (uV < -200) {
+    uV = -200;
+  }
+  
   //////////////////////////////////////////////////////////////////////
   
   ///////////////////////////////////////////////////////////////////////
