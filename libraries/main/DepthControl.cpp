@@ -31,12 +31,12 @@ void DepthControl::dive(z_state_t * state, int currentTime_in) {
   // 
   depth_des = wayPoints[currentWaypoint];  //Assign Desired Depth 
 
-  double depth = state.z; 
+  depth = state.z; 
 
-  double depth_error = depth_des - depth;   //calculating depth error 
+  depth_error = depth_des - depth;   //calculating depth error 
 
-  double Kp = 80; //adjusted value for our motor
-  double uV = Kp * depth_error;
+  Kp = 80; //adjusted value for our motor
+  uV = Kp * depth_error;
 // Bound control effort 
   if (uV > 200) {
     uV = 200;
