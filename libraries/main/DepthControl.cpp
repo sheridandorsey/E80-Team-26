@@ -29,7 +29,7 @@ void DepthControl::dive(z_state_t * state, int currentTime_in) {
   
   //////////////////////////////////////////////////////////////////////
   // 
-  depth_des = wayPoints[currentWaypoint];  //Assign Desired Depth 
+  depth_des = wayPoint[currentWaypoint];  //Assign Desired Depth 
 
   depth = state.z; 
 
