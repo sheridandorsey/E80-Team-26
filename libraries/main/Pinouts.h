@@ -38,7 +38,10 @@
 #define SPEAKER_PIN 20
 #define MIC_PIN 23
 
-// Depth Control
-#define PRESSURE_PIN 14 // Teensy pin A00
+#define outputA 14
+#define outputB 15
+#define siliconPressure 16
+#define waterPressure 17
+#define current 22
 
 #endif
