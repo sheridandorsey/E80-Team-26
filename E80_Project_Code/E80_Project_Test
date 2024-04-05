@@ -120,6 +120,12 @@ void setup() {
 
 void loop() {
   currentTime=millis();
+
+  if (currentTime > 20000 && currentTime <50000) {
+    motorDriver.drive(200,0,0);
+  } else {
+    motorDriver.drive(0,0,0);
+  }
     
   if ( currentTime-printer.lastExecutionTime > LOOP_PERIOD ) {
     printer.lastExecutionTime = currentTime;
