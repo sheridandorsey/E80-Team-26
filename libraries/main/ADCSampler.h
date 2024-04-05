@@ -31,7 +31,7 @@ public:
 
 private:
 
-  const int pinMap[NUM_PINS] =  {21,14,15,16,17,24,25,26,27};
+  const int pinMap[NUM_PINS] =  {21,16,17,24,25,26,27};
 
 };
 #endif

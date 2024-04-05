@@ -232,6 +232,9 @@ void loop() {
   aLastState = aState
 }
 
+waterPressure = analogRead(waterPressure);
+siliconPressure = analogRead(siliconPressure);
+
 Serial.print("Water Pressure Voltage: ");
 Serial.println(analogRead(waterPressure));
 Serial.print("Silicon Pressure Voltage: ");
