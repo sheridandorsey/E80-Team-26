@@ -55,7 +55,7 @@ private:
   int currentWayPoint = 0;
   
   int diveDelay;
-  int delayStartTime = 0;
+  int delayStartTime = 10000;
   int currentTime;
   bool delayed;
 };

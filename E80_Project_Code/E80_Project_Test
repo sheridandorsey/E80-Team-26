@@ -1,5 +1,5 @@
 /********
-E80 Lab 7 Dive Activity Code
+E80 Project Test Code
 Authors:
     Omar Aleman (oaleman@g.hmc.edu) '21 (contributed 2019)
     Wilson Ives (wives@g.hmc.edu) '20 (contributed in 2018)
@@ -30,6 +30,19 @@ Authors:
 #include <GPSLockLED.h>
 
 /////////////////////////* Global Variables *////////////////////////
+
+int counter = 0;
+int aState;
+int alastState;
+int delay = 1000;
+// 0 for CW 1 for CCW
+int currDirection = 0;
+
+#define outputA 15
+#define outputB 16
+#define siliconPressure 17
+#define waterPressure 18
+#define current 22
 
 MotorDriver motor_driver;
 XYStateEstimator xy_state_estimator;
@@ -77,7 +90,7 @@ void setup() {
   int diveDelay = 10000; // how long robot will stay at depth waypoint before continuing (ms)
 
   const int num_depth_waypoints = 2;
-  double depth_waypoints [] = { 0.3, 0.7 };  // listed as z0,z1,... etc.
+  double depth_waypoints [] = { 0.2, 0.4, 0.6, 0.8 };  // listed as z0,z1,... etc.
   depth_control.init(num_depth_waypoints, depth_waypoints, diveDelay);
   
   xy_state_estimator.init(); 
@@ -95,9 +108,13 @@ void setup() {
   depth_control.lastExecutionTime      = loopStartTime - LOOP_PERIOD + DEPTH_CONTROL_LOOP_OFFSET;
   logger.lastExecutionTime             = loopStartTime - LOOP_PERIOD + LOGGER_LOOP_OFFSET;
 
+  Serial.begin(9600);
+
+  // delays start time
+  delay(delay);
+
+  aLastState = analogRead(outputA);
 }
-
-
 
 //////////////////////////////* Loop */////////////////////////
 
@@ -196,6 +213,23 @@ void loop() {
     logger.lastExecutionTime = currentTime;
     logger.log();
   }
+
+  aState = analogRead(outputA);
+  if (aState != aLastState && aState == 1) {
+      if (analogRead(outputB) != aState) {
+          counter--;
+          currDirection = 1;
+      } else {
+          counter++;
+          currDirection = 0;
+      }
+      Serial.print("Position: ");
+      // needs to be converted to depth
+      Serial.println(counter);
+      Serial.print("Direction: ");
+      Serial.println(currDirection)
+  }
+  aLastState = aState
 }
 
 void EFA_Detected(void){
@@ -209,3 +243,5 @@ void EFB_Detected(void){
 void EFC_Detected(void){
   EF_States[2] = 0;
 }
+
+

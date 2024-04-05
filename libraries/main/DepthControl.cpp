@@ -29,13 +29,13 @@ void DepthControl::dive(z_state_t * state, int currentTime_in) {
   
   //////////////////////////////////////////////////////////////////////
   // 
-  depth_des = wayPoint[currentWaypoint];  //Assign Desired Depth 
+  depth_des = wayPoints[currentWayPoint];  //Assign Desired Depth 
 
-  depth = state.z; 
+  depth = state->z; 
 
   depth_error = depth_des - depth;   //calculating depth error 
 
-  Kp = 80; //adjusted value for our motor
+  Kp = 60; //adjusted value for our motor
   uV = Kp * depth_error;
 // Bound control effort 
   if (uV > 200) {
@@ -67,7 +67,7 @@ void DepthControl::surface(z_state_t * state) {
   }
   else { // not at surface yet
     atSurface = 0;
-    uV = -30; // go upward
+    uV = -200; // go upward
   }
   printer.printMessage(surfaceMessage,smTime);
 }
