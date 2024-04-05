@@ -4,7 +4,7 @@
 extern Printer printer;
 
 rotary::rotary(void) 
-  : DataSource("outputA, outputB, counter","bool, bool, int") // from DataSource
+  : DataSource("counter","int") // from DataSource
 {}
 
 
