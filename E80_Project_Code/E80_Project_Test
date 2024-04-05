@@ -232,6 +232,11 @@ void loop() {
   aLastState = aState
 }
 
+Serial.print("Water Pressure Voltage: ");
+Serial.println(analogRead(waterPressure));
+Serial.print("Silicon Pressure Voltage: ");
+Serial.println(analogRead(siliconPressure))
+
 void EFA_Detected(void){
   EF_States[0] = 0;
 }
