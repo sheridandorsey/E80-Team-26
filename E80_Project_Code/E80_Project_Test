@@ -38,11 +38,6 @@ int delay = 1000;
 // 0 for CW 1 for CCW
 int currDirection = 0;
 
-#define outputA 15
-#define outputB 16
-#define siliconPressure 17
-#define waterPressure 18
-#define current 22
 
 MotorDriver motor_driver;
 XYStateEstimator xy_state_estimator;
@@ -220,6 +215,7 @@ void loop() {
     logger.log();
   }
 
+
   aState = analogRead(outputA);
   if (aState != aLastState && aState == 1) {
       if (analogRead(outputB) != aState) {
@@ -235,7 +231,7 @@ void loop() {
       Serial.print("Direction: ");
       Serial.println(currDirection)
   }
-  aLastState = aState
+  aLastState = aState;
 }
 
 waterPressure = analogRead(waterPressure);
