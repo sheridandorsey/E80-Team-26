@@ -52,6 +52,7 @@ SensorIMU imu;
 Logger logger;
 Printer printer;
 GPSLockLED led;
+rotary r;
 
 // loop start recorder
 int loopStartTime;
@@ -102,6 +103,7 @@ void setup() {
   z_state_estimator.lastExecutionTime  = loopStartTime - LOOP_PERIOD + Z_STATE_ESTIMATOR_LOOP_OFFSET;
   depth_control.lastExecutionTime      = loopStartTime - LOOP_PERIOD + DEPTH_CONTROL_LOOP_OFFSET;
   logger.lastExecutionTime             = loopStartTime - LOOP_PERIOD + LOGGER_LOOP_OFFSET;
+  r.lastExecutionTime                  = loopStartTime - LOOP_PERIOD + ROTARY_OFFSET;
 
   Serial.begin(9600);
 
