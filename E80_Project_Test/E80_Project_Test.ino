@@ -32,12 +32,7 @@ Authors:
 
 /////////////////////////* Global Variables *////////////////////////
 
-int counter = 0;
-int aState;
-int alastState;
 int d = 1000;
-// 0 for CW 1 for CCW
-int currDirection = 0;
 
 
 MotorDriver motor_driver;
@@ -89,7 +84,7 @@ void setup() {
   int diveDelay = 10000; // how long robot will stay at depth waypoint before continuing (ms)
 
   const int num_depth_waypoints = 2;
-  double depth_waypoints [] = { 0.2, 0.4, 0.6, 0.8 };  // listed as z0,z1,... etc.
+  double depth_waypoints [] = { 0.2, 0.4, 0.6, 0.8, 1.0, 1.2, 1.4, 1.6, 1.8, 2.0 };  // listed as z0,z1,... etc.
   depth_control.init(num_depth_waypoints, depth_waypoints, diveDelay);
   
   xy_state_estimator.init(); 
@@ -106,6 +101,7 @@ void setup() {
   z_state_estimator.lastExecutionTime  = loopStartTime - LOOP_PERIOD + Z_STATE_ESTIMATOR_LOOP_OFFSET;
   depth_control.lastExecutionTime      = loopStartTime - LOOP_PERIOD + DEPTH_CONTROL_LOOP_OFFSET;
   logger.lastExecutionTime             = loopStartTime - LOOP_PERIOD + LOGGER_LOOP_OFFSET;
+  r.lastExecutionTime                  = loopStartTime - LOOP_PERIOD;
 
   Serial.begin(9600);
 
@@ -119,11 +115,6 @@ void setup() {
 void loop() {
   currentTime=millis();
 
-  if (currentTime > 20000 && currentTime <50000) {
-    motor_driver.drive(200,0,0);
-  } else {
-    motor_driver.drive(0,0,0);
-  }
     
   if ( currentTime-printer.lastExecutionTime > LOOP_PERIOD ) {
     printer.lastExecutionTime = currentTime;
@@ -138,6 +129,7 @@ void loop() {
     printer.printValue(8,motor_driver.printState());
     printer.printValue(9,imu.printRollPitchHeading());        
     printer.printValue(10,imu.printAccels());
+    printer.printValue(11,r.printState());
     printer.printToSerial();  // To stop printing, just comment this line out
   }
 
@@ -162,7 +154,7 @@ void loop() {
       else if ( depth_control.complete ) { 
         delete[] depth_control.wayPoints;   // destroy depth waypoint array from the Heap
       }
-      motor_driver.drive(0,0,depth_control.uV);
+      motor_driver.drive(depth_control.uV,depth_control.uV,depth_control.uV);
     }
   }
   
@@ -205,7 +197,7 @@ void loop() {
 
   if ( currentTime-z_state_estimator.lastExecutionTime > LOOP_PERIOD ) {
     z_state_estimator.lastExecutionTime = currentTime;
-    z_state_estimator.updateState(analogRead(outputA));
+    z_state_estimator.updateState(analogRead(siliconPressure));
   }
   
   if ( currentTime-led.lastExecutionTime > LOOP_PERIOD ) {
@@ -213,14 +205,16 @@ void loop() {
     led.flashLED(&gps.state);
   }
 
+  if ( currentTime-r.lastExecutionTime > LOOP_PERIOD ) {
+    r.lastExecutionTime = currentTime;
+    r.updateState();
+  }
+
   if ( currentTime- logger.lastExecutionTime > LOOP_PERIOD && logger.keepLogging ) {
     logger.lastExecutionTime = currentTime;
     logger.log();
   }
 
-
-  Serial.println(analogRead(outputA));
-  Serial.println(analogRead(outputB));
 }
 
 

@@ -10,9 +10,7 @@ rotary::rotary(void)
 
 void rotary::init(void)
 {
-  pinMode(outputA,INPUT);
-  pinMode(outputB,INPUT);
-  pinMode(SW, INPUT_PULLUP);
+  pinMode(reed,INPUT_PULLUP);
   // when the button is not pressed the voltage
   // at USER_BUTTON will be high
 }
@@ -21,7 +19,11 @@ void rotary::init(void)
 void rotary::updateState(void)
 // This function is called in the main loop of Default_Robot.ino
 {
-  
+  reedState = digitalRead(reed);
+  if (reedState == LOW) {
+    counter++;
+  }
+  else {}
 }
 
 
