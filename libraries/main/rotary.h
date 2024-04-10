@@ -19,6 +19,7 @@ public:
 
   // Managing state
   int counter;
+  int reedState;
   void updateState(void);
   String printState(void);
 
