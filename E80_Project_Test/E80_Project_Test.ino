@@ -32,8 +32,6 @@ Authors:
 /////////////////////////* Global Variables *////////////////////////
 
 int counter = 0;
-int aState;
-int alastState;
 int d = 1000;
 // 0 for CW 1 for CCW
 int currDirection = 0;
@@ -200,7 +198,7 @@ void loop() {
 
   if ( currentTime-z_state_estimator.lastExecutionTime > LOOP_PERIOD ) {
     z_state_estimator.lastExecutionTime = currentTime;
-    z_state_estimator.updateState(analogRead(PRESSURE_PIN));
+    z_state_estimator.updateState(analogRead(siliconPressure));
   }
   
   if ( currentTime-led.lastExecutionTime > LOOP_PERIOD ) {
@@ -213,31 +211,11 @@ void loop() {
     logger.log();
   }
 
-  aState = analogRead(outputA);
-  if (aState != aLastState && aState == 1) {
-      if (analogRead(outputB) != aState) {
-          counter--;
-          currDirection = 1;
-      } else {
-          counter++;
-          currDirection = 0;
-      }
-      Serial.print("Position: ");
-      // needs to be converted to depth
-      Serial.println(counter);
-      Serial.print("Direction: ");
-      Serial.println(currDirection)
-  }
-  aLastState = aState
-}
-
-waterPressure = analogRead(waterPressure);
-siliconPressure = analogRead(siliconPressure);
-
 Serial.print("Water Pressure Voltage: ");
 Serial.println(analogRead(waterPressure));
 Serial.print("Silicon Pressure Voltage: ");
-Serial.println(analogRead(siliconPressure))
+Serial.println(analogRead(siliconPressure));
+}
 
 void EFA_Detected(void){
   EF_States[0] = 0;
