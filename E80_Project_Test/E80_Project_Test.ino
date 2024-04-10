@@ -34,15 +34,9 @@ Authors:
 int counter = 0;
 int aState;
 int alastState;
-int delay = 1000;
+int d = 1000;
 // 0 for CW 1 for CCW
 int currDirection = 0;
-
-#define outputA 15
-#define outputB 16
-#define siliconPressure 17
-#define waterPressure 18
-#define current 22
 
 MotorDriver motor_driver;
 XYStateEstimator xy_state_estimator;
@@ -111,9 +105,8 @@ void setup() {
   Serial.begin(9600);
 
   // delays start time
-  delay(delay);
+  delay(d);
 
-  aLastState = analogRead(outputA);
 }
 
 //////////////////////////////* Loop */////////////////////////

@@ -45,7 +45,7 @@ String rotary::printState(void)
 size_t rotary::writeDataBytes(unsigned char * buffer, size_t idx)
 // This function writes data to the micro SD card
 {
-  bool * data_slot = (bool *) &buffer[idx];
-  data_slot[0] = buttonState;
-  return idx + sizeof(bool);
+  int * data_slot = (int *) &buffer[idx];
+  data_slot[0] = rotary;
+  return idx + sizeof(int);
 }
