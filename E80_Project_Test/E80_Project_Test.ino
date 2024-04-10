@@ -73,7 +73,7 @@ void setup() {
   logger.include(&adc);
   logger.include(&ef);
   logger.include(&button_sampler);
-  logger.include(&rotary);
+  logger.include(&r);
   logger.init();
 
   printer.init();
@@ -84,7 +84,7 @@ void setup() {
   gps.init(&GPS);
   motor_driver.init();
   led.init();
-  rotary.init();
+  r.init();
 
   int diveDelay = 10000; // how long robot will stay at depth waypoint before continuing (ms)
 
@@ -106,12 +106,11 @@ void setup() {
   z_state_estimator.lastExecutionTime  = loopStartTime - LOOP_PERIOD + Z_STATE_ESTIMATOR_LOOP_OFFSET;
   depth_control.lastExecutionTime      = loopStartTime - LOOP_PERIOD + DEPTH_CONTROL_LOOP_OFFSET;
   logger.lastExecutionTime             = loopStartTime - LOOP_PERIOD + LOGGER_LOOP_OFFSET;
-  r.lastExecutionTime                  = loopStartTime - LOOP_PERIOD + ROTARY_OFFSET;
 
   Serial.begin(9600);
 
   // delays start time
-  delay(delay);
+  delay(d);
 
 }
 
@@ -121,9 +120,9 @@ void loop() {
   currentTime=millis();
 
   if (currentTime > 20000 && currentTime <50000) {
-    motorDriver.drive(200,0,0);
+    motor_driver.drive(200,0,0);
   } else {
-    motorDriver.drive(0,0,0);
+    motor_driver.drive(0,0,0);
   }
     
   if ( currentTime-printer.lastExecutionTime > LOOP_PERIOD ) {
@@ -206,7 +205,7 @@ void loop() {
 
   if ( currentTime-z_state_estimator.lastExecutionTime > LOOP_PERIOD ) {
     z_state_estimator.lastExecutionTime = currentTime;
-    z_state_estimator.updateState(analogRead(PRESSURE_PIN));
+    z_state_estimator.updateState(analogRead(outputA));
   }
   
   if ( currentTime-led.lastExecutionTime > LOOP_PERIOD ) {
@@ -224,13 +223,6 @@ void loop() {
   Serial.println(analogRead(outputB));
 }
 
-waterPressure = analogRead(waterPressure);
-siliconPressure = analogRead(siliconPressure);
-
-Serial.print("Water Pressure Voltage: ");
-Serial.println(analogRead(waterPressure));
-Serial.print("Silicon Pressure Voltage: ");
-Serial.println(analogRead(siliconPressure))
 
 void EFA_Detected(void){
   EF_States[0] = 0;

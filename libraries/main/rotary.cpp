@@ -36,6 +36,6 @@ size_t rotary::writeDataBytes(unsigned char * buffer, size_t idx)
 // This function writes data to the micro SD card
 {
   bool * data_slot = (bool *) &buffer[idx];
-  data_slot[0] = buttonState;
+  data_slot[0] = 0; //change
   return idx + sizeof(bool);
 }
