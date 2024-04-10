@@ -218,22 +218,8 @@ void loop() {
   }
 
 
-  aState = analogRead(outputA);
-  if (aState != aLastState && aState == 1) {
-      if (analogRead(outputB) != aState) {
-          counter--;
-          currDirection = 1;
-      } else {
-          counter++;
-          currDirection = 0;
-      }
-      Serial.print("Position: ");
-      // needs to be converted to depth
-      Serial.println(counter);
-      Serial.print("Direction: ");
-      Serial.println(currDirection)
-  }
-  aLastState = aState;
+  Serial.println(analogRead(outputA));
+  Serial.println(analogRead(outputB));
 }
 
 waterPressure = analogRead(waterPressure);
