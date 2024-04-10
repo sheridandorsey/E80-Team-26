@@ -110,7 +110,6 @@ void setup() {
   // delays start time
   delay(delay);
 
-  aLastState = analogRead(outputA);
 }
 
 //////////////////////////////* Loop */////////////////////////
