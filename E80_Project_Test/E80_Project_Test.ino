@@ -28,13 +28,14 @@ Authors:
 #include <DepthControl.h>
 #define UartSerial Serial1
 #include <GPSLockLED.h>
+#include <rotary.h>
 
 /////////////////////////* Global Variables *////////////////////////
 
 int counter = 0;
 int aState;
 int alastState;
-int delay = 1000;
+int d = 1000;
 // 0 for CW 1 for CCW
 int currDirection = 0;
 
@@ -72,6 +73,7 @@ void setup() {
   logger.include(&adc);
   logger.include(&ef);
   logger.include(&button_sampler);
+  logger.include(&rotary);
   logger.init();
 
   printer.init();
@@ -82,6 +84,7 @@ void setup() {
   gps.init(&GPS);
   motor_driver.init();
   led.init();
+  rotary.init();
 
   int diveDelay = 10000; // how long robot will stay at depth waypoint before continuing (ms)
 

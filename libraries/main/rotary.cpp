@@ -21,17 +21,7 @@ void rotary::init(void)
 void rotary::updateState(void)
 // This function is called in the main loop of Default_Robot.ino
 {
-  aState = digitalRead(outputA);
-  if (aState != aLastState && aState == 1) {
-      if (digitalRead(outputB) != aState) {
-          counter--;
-          currDirection = 1;
-      } else {
-          counter++;
-          currDirection = 0;
-      }
-  }
-  aLastState = aState
+  
 }
 
 

@@ -42,6 +42,5 @@
 #define outputB 15
 #define siliconPressure 16
 #define waterPressure 17
-#define current 22
 
 #endif
