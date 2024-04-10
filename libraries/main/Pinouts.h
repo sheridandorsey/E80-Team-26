@@ -38,8 +38,7 @@
 #define SPEAKER_PIN 20
 #define MIC_PIN 23
 
-#define outputA 14
-#define outputB 15
+#define reed 14
 #define siliconPressure 16
 #define waterPressure 17
 
