@@ -32,7 +32,7 @@ Authors:
 
 /////////////////////////* Global Variables *////////////////////////
 
-int d = 1000;
+int d = 60000;
 
 
 MotorDriver motor_driver;
@@ -133,6 +133,11 @@ void loop() {
     printer.printToSerial();  // To stop printing, just comment this line out
   }
 
+  Serial.print("Silicon Pressure: ");
+  Serial.println(analogRead(siliconPressure));
+  Serial.print("Water Pressure: ");
+  Serial.println(analogRead(waterPressure));
+
   /* ROBOT CONTROL Finite State Machine */
   if ( currentTime-depth_control.lastExecutionTime > LOOP_PERIOD ) {
     depth_control.lastExecutionTime = currentTime;
@@ -154,7 +159,7 @@ void loop() {
       else if ( depth_control.complete ) { 
         delete[] depth_control.wayPoints;   // destroy depth waypoint array from the Heap
       }
-      motor_driver.drive(depth_control.uV,depth_control.uV,depth_control.uV);
+      motor_driver.drive(depth_control.uV,depth_control.uV,0);
     }
   }
   
