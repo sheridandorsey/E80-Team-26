@@ -32,18 +32,8 @@ Authors:
 
 /////////////////////////* Global Variables *////////////////////////
 
-int counter = 0;
-int aState;
-int alastState;
-int delay = 1000;
-// 0 for CW 1 for CCW
-int currDirection = 0;
+int d = 120000;
 
-#define outputA 15
-#define outputB 16
-#define siliconPressure 17
-#define waterPressure 18
-#define current 22
 
 MotorDriver motor_driver;
 XYStateEstimator xy_state_estimator;
@@ -143,6 +133,11 @@ void loop() {
     printer.printToSerial();  // To stop printing, just comment this line out
   }
 
+  Serial.print("Silicon Pressure: ");
+  Serial.println(analogRead(siliconPressure));
+  Serial.print("Water Pressure: ");
+  Serial.println(analogRead(waterPressure));
+
   /* ROBOT CONTROL Finite State Machine */
   if ( currentTime-depth_control.lastExecutionTime > LOOP_PERIOD ) {
     depth_control.lastExecutionTime = currentTime;
@@ -155,7 +150,7 @@ void loop() {
         depth_control.diveState = false; 
         depth_control.surfaceState = true;
       }
-      motor_driver.drive(0,0,depth_control.uV);
+      motor_driver.drive(depth_control.uV,depth_control.uV,0);
     }
     if ( depth_control.surfaceState ) {     // SURFACE STATE //
       if ( !depth_control.atSurface ) { 
@@ -164,7 +159,7 @@ void loop() {
       else if ( depth_control.complete ) { 
         delete[] depth_control.wayPoints;   // destroy depth waypoint array from the Heap
       }
-      motor_driver.drive(depth_control.uV,depth_control.uV,depth_control.uV);
+      motor_driver.drive(depth_control.uV,depth_control.uV,0);
     }
   }
   
@@ -225,31 +220,8 @@ void loop() {
     logger.log();
   }
 
-  aState = analogRead(outputA);
-  if (aState != aLastState && aState == 1) {
-      if (analogRead(outputB) != aState) {
-          counter--;
-          currDirection = 1;
-      } else {
-          counter++;
-          currDirection = 0;
-      }
-      Serial.print("Position: ");
-      // needs to be converted to depth
-      Serial.println(counter);
-      Serial.print("Direction: ");
-      Serial.println(currDirection)
-  }
-  aLastState = aState
 }
 
-waterPressure = analogRead(waterPressure);
-siliconPressure = analogRead(siliconPressure);
-
-Serial.print("Water Pressure Voltage: ");
-Serial.println(analogRead(waterPressure));
-Serial.print("Silicon Pressure Voltage: ");
-Serial.println(analogRead(siliconPressure))
 
 void EFA_Detected(void){
   EF_States[0] = 0;

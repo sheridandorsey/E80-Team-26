@@ -10,9 +10,7 @@ rotary::rotary(void)
 
 void rotary::init(void)
 {
-  pinMode(outputA,INPUT);
-  pinMode(outputB,INPUT);
-  pinMode(SW, INPUT_PULLUP);
+  pinMode(reed,INPUT_PULLUP);
   // when the button is not pressed the voltage
   // at USER_BUTTON will be high
 }
@@ -21,17 +19,11 @@ void rotary::init(void)
 void rotary::updateState(void)
 // This function is called in the main loop of Default_Robot.ino
 {
-  aState = digitalRead(outputA);
-  if (aState != aLastState && aState == 1) {
-      if (digitalRead(outputB) != aState) {
-          counter--;
-          currDirection = 1;
-      } else {
-          counter++;
-          currDirection = 0;
-      }
+  reedState = digitalRead(reed);
+  if (reedState == LOW) {
+    counter++;
   }
-  aLastState = aState
+  else {}
 }
 
 
@@ -46,6 +38,6 @@ size_t rotary::writeDataBytes(unsigned char * buffer, size_t idx)
 // This function writes data to the micro SD card
 {
   bool * data_slot = (bool *) &buffer[idx];
-  data_slot[0] = buttonState;
+  data_slot[0] = 0; //change
   return idx + sizeof(bool);
 }
