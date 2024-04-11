@@ -32,8 +32,23 @@ Authors:
 
 /////////////////////////* Global Variables *////////////////////////
 
+<<<<<<< HEAD
 int d = 60000;
 
+=======
+int counter = 0;
+int aState;
+int alastState;
+int delay = 1000;
+// 0 for CW 1 for CCW
+int currDirection = 0;
+
+#define outputA 15
+#define outputB 16
+#define siliconPressure 17
+#define waterPressure 18
+#define current 22
+>>>>>>> ca20018b181dbc706163a208e5d577eb4785ca50
 
 MotorDriver motor_driver;
 XYStateEstimator xy_state_estimator;
@@ -220,8 +235,31 @@ void loop() {
     logger.log();
   }
 
+  aState = analogRead(outputA);
+  if (aState != aLastState && aState == 1) {
+      if (analogRead(outputB) != aState) {
+          counter--;
+          currDirection = 1;
+      } else {
+          counter++;
+          currDirection = 0;
+      }
+      Serial.print("Position: ");
+      // needs to be converted to depth
+      Serial.println(counter);
+      Serial.print("Direction: ");
+      Serial.println(currDirection)
+  }
+  aLastState = aState
 }
 
+waterPressure = analogRead(waterPressure);
+siliconPressure = analogRead(siliconPressure);
+
+Serial.print("Water Pressure Voltage: ");
+Serial.println(analogRead(waterPressure));
+Serial.print("Silicon Pressure Voltage: ");
+Serial.println(analogRead(siliconPressure))
 
 void EFA_Detected(void){
   EF_States[0] = 0;
